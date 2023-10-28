@@ -1,5 +1,7 @@
+@import "./src/styles/variables.scss";
+
 .coolitude {
-  background-color: #136467;
+  background-color: $coolitude;
   color: white;
   text-align: center;
   padding: 1vh;
