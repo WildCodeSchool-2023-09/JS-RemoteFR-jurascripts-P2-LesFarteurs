@@ -6,7 +6,7 @@ const Coolitude = () => {
     <div className="coolitude">
       <p>
         Phrases motivantes défilantes - Phrases motivantes défilantes - Phrases
-        motivantes défilantes - Phrases motivantes défilantes- Phrases
+        motivantes défilantes - Phrases motivantes défilantes - Phrases
         motivantes défilantes{" "}
       </p>
     </div>
