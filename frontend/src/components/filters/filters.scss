@@ -1,0 +1,64 @@
+.filtersContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.calendar,
+.levels,
+.localisation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+}
+
+.calendarButton,
+.levelButton,
+.localisationButton {
+  background: #ceeae8;
+  box-shadow: 5px 5px 5px lightblue;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+  padding: 5px 30px;
+  position: relative;
+}
+
+.calendar img,
+.levels img,
+.localisation img {
+  cursor: pointer;
+  width: 50%;
+  height: auto;
+}
+
+.levelButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.calendar ul li,
+.levels ul li,
+.localisation ul li {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 15px;
+  display: none;
+  text-decoration: none;
+}
+
+.calendar ul.visible li,
+.levels ul.visible li,
+.localisation ul.visible li {
+  display: block;
+}
