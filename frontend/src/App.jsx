@@ -1,42 +1,60 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
-import "./App.css";
+/* eslint-disable react/no-unstable-nested-components */
+/* eslint-disable react/function-component-definition */
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Coolitude from "./components/coolitude/Coolitude";
+import Navbar from "./components/navbar/Navbar";
+import Header from "./components/header/Header";
+import Filters from "./components/filters/Filters";
+import Spots from "./components/spots/Spots";
+import Footer from "./components/footer/Footer";
+import Home from "./pages/home/Home";
+import Infos from "./pages/infos/Infos";
+import Contact from "./pages/contact/Contact";
+import Login from "./pages/login/Login";
+import "./styles/index.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
+  const Layout = () => {
+    return (
+      <div className="main">
+        <Coolitude />
+        <Navbar />
+        <Header />
+        <Filters />
+        <Spots />
+        <Footer />
+      </div>
+    );
+  };
 
-        <Counter />
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/infos",
+          element: <Infos />,
+        },
 
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  );
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+
+        {
+          path: "/login",
+          element: <Login />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
