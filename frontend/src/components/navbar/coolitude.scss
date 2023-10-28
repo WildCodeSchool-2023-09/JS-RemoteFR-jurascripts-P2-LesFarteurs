@@ -1,0 +1,22 @@
+.coolitude {
+  background-color: #136467;
+  color: white;
+  text-align: center;
+  padding: 1vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.coolitude p {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
