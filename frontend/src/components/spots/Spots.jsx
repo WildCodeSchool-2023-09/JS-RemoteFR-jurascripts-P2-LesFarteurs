@@ -4,7 +4,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/function-component-definition */
 import { useState } from "react";
+import Array from "../array/Array";
 import "./spots.scss";
+import "../array/array.scss";
 
 const Spots = () => {
   const [isDescriptionVisible, setDescriptionVisible] = useState(true);
@@ -55,6 +57,7 @@ const Spots = () => {
             </p>
           ) : null}
         </div>
+        <Array />
       </div>
     </div>
   );

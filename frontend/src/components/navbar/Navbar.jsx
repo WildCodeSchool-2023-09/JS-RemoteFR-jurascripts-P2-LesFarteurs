@@ -9,7 +9,7 @@ function Navbar() {
           <a href="home">Home</a>
         </li>
         <li>
-          <a href="infos">Infos</a>
+          <a href="infos">Infos et définitions</a>
         </li>
         <li>
           <a href="contact">Contact</a>
