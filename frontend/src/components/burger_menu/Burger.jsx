@@ -1,5 +1,5 @@
 /* eslint-disable react/function-component-definition */
-import "./burger.scss";
+import "./_burger.scss";
 
 const Burger = () => {
   return (

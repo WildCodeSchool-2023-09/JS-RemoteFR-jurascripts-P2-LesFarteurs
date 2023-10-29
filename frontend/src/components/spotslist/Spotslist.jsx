@@ -1,5 +1,5 @@
 /* eslint-disable react/function-component-definition */
-import "./spotslist.scss";
+import "./_spotslist.scss";
 
 const Spotslist = () => {
   return (

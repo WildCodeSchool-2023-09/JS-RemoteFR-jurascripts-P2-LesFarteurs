@@ -1,28 +1,18 @@
 /* eslint-disable react/self-closing-comp */
-import "./header.scss";
+import "./_header.scss";
 
 function Header() {
   return (
     <header>
-      <div className="intro">
-        <h1>Surf sur ton spot !</h1>
-        <br />
-        <div className="subtitle">
-          <h2> Sous-titre </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            voluptatibus possimus placeat? Ullam, iusto neque! Illo maiores
-            incidunt vitae provident.æ
-          </p>
-        </div>
-        <br />
-        <div className="alert">
-          <h3>Alerte</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
-            alias!
-          </p>
-        </div>
+      <div className="title">
+        <h1>Surf au bon endroit !</h1>
+      </div>
+      <br />
+      <div className="subtitle">
+        <p>
+          Simple : choisis la date, ton niveau de surf et la ville la plus
+          proche de chez toi. LE spot idéal est choisi en suivant !
+        </p>
       </div>
     </header>
   );
