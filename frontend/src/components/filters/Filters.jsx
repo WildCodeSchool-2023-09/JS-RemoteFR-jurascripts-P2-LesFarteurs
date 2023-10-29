@@ -1,10 +1,11 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react/function-component-definition */
 import { useState } from "react";
-import "./filters.scss";
+import "./_filters.scss";
 
 const Filters = () => {
   const [isCalendarVisible, setCalendarVisible] = useState(false);
@@ -24,7 +25,11 @@ const Filters = () => {
   return (
     <section className="filtersContainer">
       <div className="calendar">
-        <img src="./src/assets/img/calendar.png" alt="calendrier"></img>
+        <img
+          id="cal"
+          src="./src/assets/img/calendar.png"
+          alt="calendrier"
+        ></img>
         <button className="calendarButton" onClick={toggleCalendar}>
           Calendrier {isCalendarVisible ? "-" : "+"}
         </button>
@@ -32,6 +37,7 @@ const Filters = () => {
       <div className="levels">
         <div className="levelButtonContainer">
           <img
+            id="lev"
             src="./src/assets/img/level.png"
             alt="niveau"
             onClick={toggleLevel}
@@ -53,7 +59,11 @@ const Filters = () => {
         </ul>
       </div>
       <div className="localisation">
-        <img src="./src/assets/img/localisation.png" alt="localisation"></img>
+        <img
+          id="loc"
+          src="./src/assets/img/localisation.png"
+          alt="localisation"
+        ></img>
         <button className="localisationButton" onClick={toggleLocalisation}>
           Localisation {isLocationVisible ? "-" : "+"}
         </button>

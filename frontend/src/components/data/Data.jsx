@@ -1,5 +1,5 @@
 /* eslint-disable react/function-component-definition */
-import "./data.scss";
+import "./_data.scss";
 
 const Data = () => {
   return (

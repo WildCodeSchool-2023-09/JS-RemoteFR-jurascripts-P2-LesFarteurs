@@ -3,14 +3,14 @@
 /* eslint-disable camelcase */
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./array.scss";
+import "./_array.scss";
 
 const meteo = (weatherCode) => {
-  if (weatherCode >= 1 && weatherCode <= 3) return "Ensoleillé";
-  if (weatherCode >= 45 && weatherCode <= 48) return "Éclaircies";
-  if (weatherCode >= 51 && weatherCode <= 55) return "Nuageux";
-  if (weatherCode >= 56 && weatherCode <= 95) return "Pluvieux";
-  if (weatherCode > 95) return "Orage";
+  if (weatherCode === 0) return "Ensoleillé";
+  if (weatherCode >= 1 && weatherCode <= 3) return "Éclaircies";
+  if (weatherCode >= 45 && weatherCode <= 48) return "Nuageux";
+  if (weatherCode >= 51 && weatherCode <= 94) return "Pluvieux";
+  if (weatherCode >= 95) return "Orage";
 };
 
 const wind = (windDirection) => {

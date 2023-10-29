@@ -1,0 +1,29 @@
+@mixin flexDesktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin arrow_filter {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid #205464;
+  border-left: 10px solid #205464;
+  border-right: 10px solid #205464;
+}
+
+@mixin arrow_spot {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid white;
+  border-left: 10px solid white;
+  border-right: 10px solid white;
+}

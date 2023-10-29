@@ -1,0 +1,106 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.spotsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5vh;
+  background: linear-gradient(to top right, #205464, #108888);
+  box-shadow:
+    0 45px 100px rgba(14, 21, 47, 0.4),
+    0 16px 40px rgba(14, 21, 47, 0.4);
+}
+
+.titleSpot {
+  padding: 1vw;
+  margin: 1vh 0;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  color: white;
+  font-size: $fs-h3;
+}
+
+.infoSpot {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin: 20px;
+}
+
+.descriptionSpot,
+.others {
+  background-color: #126a6c;
+  color: white;
+  padding: 1vw;
+  margin-bottom: 2vh;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  grid-column: 1 / 2;
+  font-size: $fs-p;
+}
+
+.imgSpot {
+  display: flex;
+  align-self: center;
+  width: 95%;
+  height: 95%;
+  background-image: url("./src/assets/img/plage.jpeg");
+  background-size: cover;
+  border: none;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.descriptionSpot.visible,
+.others.visible {
+  white-space: normal;
+  text-overflow: clip;
+}
+
+.descriptionSpot.hidden,
+.others.hidden {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.toggleButton {
+  cursor: pointer;
+}
+
+//MEDIA QUERY//
+@media screen and (max-width: 768px) {
+  .spotsContainer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+
+  .imgSpot {
+    width: 100%;
+    height: 30vh;
+    grid-row: 1 / 2;
+    grid-column: 1;
+  }
+
+  .titleSpot {
+    margin: 0.5vh auto;
+    grid-row: 2 / 3;
+  }
+
+  .infoSpot {
+    margin: 1vh 3vw;
+    grid-row: 3 / 4;
+  }
+
+  .descriptionSpot,
+  .others {
+    padding: 1vw;
+    margin-bottom: 2vh;
+  }
+}
