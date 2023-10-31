@@ -1,0 +1,14 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.title {
+  margin-top: 35vh;
+  margin-left: 20vw;
+  font-size: $fs-h3;
+}
+
+.subtitle {
+  margin-left: 20vw;
+  width: 50%;
+  font-size: $fs-nav;
+}

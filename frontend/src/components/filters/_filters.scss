@@ -1,0 +1,77 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.filtersContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 5vh;
+}
+
+.calendar,
+.localisation,
+.levels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+
+  img {
+    cursor: pointer;
+    width: calc(50px + 2vw);
+    height: auto;
+  }
+
+  ul li {
+    line-height: 40px;
+    text-align: center;
+    display: none;
+    text-decoration: none;
+  }
+
+  ul.visible {
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ul.visible li {
+    display: block;
+  }
+}
+
+.calendarButton,
+.levelButton,
+.localisationButton {
+  background: $btn_filter;
+
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-top: 1vh;
+  text-align: center;
+  padding: 0.5vh 2vw;
+  position: relative;
+  color: $txt_filter;
+  font-size: $fs-p;
+  font-weight: bold;
+  box-shadow:
+    0 45px 100px rgba(14, 21, 47, 0.4),
+    0 16px 40px rgba(14, 21, 47, 0.4);
+  position: relative;
+}
+
+#lev {
+  width: calc(80px + 2vw);
+  height: auto;
+}
+
+#loc {
+  width: calc(70px + 2vw);
+  height: auto;
+}
+
+//MEDIA QUERY//

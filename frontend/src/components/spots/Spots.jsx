@@ -5,8 +5,8 @@
 /* eslint-disable react/function-component-definition */
 import { useState } from "react";
 import Array from "../array/Array";
-import "./spots.scss";
-import "../array/array.scss";
+import "./_spots.scss";
+import "../array/_array.scss";
 
 const Spots = () => {
   const [isDescriptionVisible, setDescriptionVisible] = useState(true);

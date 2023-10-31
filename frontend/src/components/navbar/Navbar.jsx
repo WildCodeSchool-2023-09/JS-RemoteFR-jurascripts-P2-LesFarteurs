@@ -1,5 +1,5 @@
 /* eslint-disable react/self-closing-comp */
-import "./navbar.scss";
+import "./_navbar.scss";
 
 function Navbar() {
   return (

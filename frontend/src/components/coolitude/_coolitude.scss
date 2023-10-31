@@ -1,4 +1,5 @@
-@import "./src/styles/variables.scss";
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
 
 .coolitude {
   background-color: $coolitude;
@@ -7,11 +8,12 @@
   padding: 1vh;
   overflow: hidden;
   white-space: nowrap;
-}
 
-.coolitude p {
-  display: inline-block;
-  animation: scroll 30s linear infinite;
+  p {
+    display: inline-block;
+    animation: scroll 45s linear infinite;
+    font-size: $fs-p;
+  }
 }
 
 @keyframes scroll {

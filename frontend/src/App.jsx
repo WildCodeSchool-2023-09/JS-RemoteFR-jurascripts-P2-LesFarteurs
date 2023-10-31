@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Coolitude from "./components/coolitude/Coolitude";
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
+import Alert from "./components/alert/Alert";
 import Filters from "./components/filters/Filters";
 import Spots from "./components/spots/Spots";
-import Array from "./components/array/Array";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Infos from "./pages/infos/Infos";
@@ -21,9 +21,9 @@ function App() {
         <Coolitude />
         <Navbar />
         <Header />
+        <Alert />
         <Filters />
         <Spots />
-        <Array />
         <Footer />
       </div>
     );
