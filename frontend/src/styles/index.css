@@ -7,5 +7,9 @@ input,
   box-sizing: border-box;
   font-family: "Poppins", "Roboto", sans-serif;
   color: white;
+}
+
+body {
   background-color: #205464;
-} /*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */

@@ -7,6 +7,8 @@
   background-color: $nav;
   padding: 1.5vh;
   width: 100%;
+  top: 42px;
+  z-index: 1;
 
   .links {
     display: flex;
@@ -43,15 +45,8 @@
   }
 }
 
-.logo {
-  width: 100%;
-  height: 1000px;
-  background-image: url("./src/assets/img/logo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.5;
+@media screen and (max-width: 500px) {
+  .navbar {
+    display: none;
+  }
 }
