@@ -2,13 +2,40 @@
 @import "src/styles/_mixins.scss";
 
 .title {
-  margin-top: 35vh;
-  margin-left: 20vw;
+  margin-top: -10vh;
+  margin-left: 4vw;
   font-size: $fs-h3;
 }
 
 .subtitle {
-  margin-left: 20vw;
+  margin-left: 4vw;
   width: 50%;
   font-size: $fs-nav;
+}
+
+.bandeau {
+  width: 100%;
+  height: 100%;
+}
+
+.mask {
+  -webkit-mask-image: url("./src/assets/vague-mask.png");
+  mask-image: url("./src/assets/vague-mask.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  z-index: 1;
+  img {
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title {
+    margin-top: 0vh;
+  }
+  .subtitle {
+    width: 80%;
+  }
 }
