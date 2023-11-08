@@ -1,0 +1,50 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.footerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./src/assets/img/footer.png");
+  background-size: cover;
+  opacity: 0.9;
+  color: white;
+  padding: 1.5vh;
+  font-size: $fs-p;
+
+  .socialNetwork {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+      margin-left: 20px;
+
+      a {
+        text-decoration: none;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+
+        &:after {
+          content: "";
+          display: block;
+          margin: auto;
+          height: 1.5px;
+          width: 0;
+          background: transparent;
+          transition:
+            width 0.5s ease,
+            background-color 0.5s ease;
+        }
+
+        &:hover:after {
+          width: 100%;
+          background: black;
+        }
+      }
+    }
+  }
+}

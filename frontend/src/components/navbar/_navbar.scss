@@ -1,0 +1,52 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: $nav;
+  padding: 1.5vh;
+  width: 100%;
+  top: 42px;
+  z-index: 1;
+
+  .links {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+
+    li {
+      margin-left: 2vw;
+
+      a {
+        text-decoration: none;
+        line-height: 40px;
+        text-align: center;
+        color: white;
+        font-size: $fs-nav;
+
+        &:after {
+          content: "";
+          display: block;
+          margin: auto;
+          height: 2px;
+          width: 0;
+          transition:
+            width 0.5s ease,
+            background-color 0.5s ease;
+        }
+
+        &:hover:after {
+          width: 100%;
+          background: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    display: none;
+  }
+}

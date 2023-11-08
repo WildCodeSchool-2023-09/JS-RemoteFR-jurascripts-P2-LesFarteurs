@@ -1,0 +1,26 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.coolitude {
+  background-color: $coolitude;
+  color: white;
+  text-align: center;
+  padding: 1vh;
+  overflow: hidden;
+  white-space: nowrap;
+
+  p {
+    display: inline-block;
+    animation: scroll 45s linear infinite;
+    font-size: $fs-p;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

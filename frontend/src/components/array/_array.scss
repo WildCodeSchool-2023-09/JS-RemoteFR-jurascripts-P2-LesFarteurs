@@ -1,0 +1,31 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.dataContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 10px auto;
+  font-size: $fs-p;
+
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .windD {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    height: calc(30px + 1vh);
+    width: auto;
+  }
+}

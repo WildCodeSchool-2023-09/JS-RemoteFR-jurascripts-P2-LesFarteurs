@@ -1,0 +1,26 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.alert {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-content: center;
+  margin: 4vh auto;
+
+  p {
+    background-color: $danger;
+    font-size: $fs-p;
+    padding: 0.5vh 2vw;
+    margin-left: 3vw;
+    border-radius: 5px;
+    box-shadow:
+      0 45px 100px rgba(14, 21, 47, 0.4),
+      0 16px 40px rgba(14, 21, 47, 0.4);
+  }
+
+  img {
+    height: calc(50px + 1vh);
+    width: auto;
+  }
+}
