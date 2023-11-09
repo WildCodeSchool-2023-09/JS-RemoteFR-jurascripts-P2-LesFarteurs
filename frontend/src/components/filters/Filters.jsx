@@ -1,3 +1,4 @@
+/* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
@@ -9,6 +10,7 @@
 import { useState } from "react";
 import data from "../data/data";
 import "./_filters.scss";
+import Popup from "../popup/Popup";
 
 const Filters = () => {
   const [localisation, setLocalisation] = useState("1");
@@ -25,6 +27,7 @@ const Filters = () => {
     setDate(event.target.value);
   }
 
+  const [buttonPopup, setButtonPopup] = useState(false);
   return (
     <section className="filtersContainer">
       <div className="calendar">
@@ -45,16 +48,39 @@ const Filters = () => {
       <div className="levels">
         <div className="levelButtonContainer">
           <img id="lev" src="./src/assets/img/level.png" alt="niveau"></img>
-          <button className="levels">
-            Niveau
-            <select className="levelButton" onChange={handleSelectLev}>
-              <option value="novice">Novice</option>
-              <option value="inter">Intermédiaire</option>
-              <option value="pro">Confirmé</option>
-            </select>
-          </button>
+          <div className="niveau">
+            <button className="levelTitle">
+              {" "}
+              Niveau
+              <select className="levelButton" onChange={handleSelectLev}>
+                <option value="novice">Novice</option>
+                <option value="inter">Intermédiaire</option>
+                <option value="pro">Confirmé</option>
+              </select>
+            </button>
+
+            <button className="infolevel" onClick={() => setButtonPopup(true)}>
+              i
+            </button>
+          </div>
         </div>
+
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <div className="infoLevel">
+            <h3>Mon niveau</h3>
+            <br></br>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              beatae, quaerat enim minus, animi eligendi voluptate molestias
+              veniam, dicta in ipsam consectetur mollitia eos. Excepturi ullam
+              consequatur quas, itaque maxime, reiciendis veritatis explicabo
+              illum quo nulla ea saepe quisquam ducimus sit pariatur unde
+              doloribus dolor quos possimus a harum dolore?
+            </p>
+          </div>
+        </Popup>
       </div>
+
       <div className="localisation">
         <img
           id="loc"
