@@ -14,9 +14,15 @@
     padding: 0.5vh 2vw;
     margin-left: 3vw;
     border-radius: 5px;
+    border: 1px solid transparent;
     box-shadow:
       0 45px 100px rgba(14, 21, 47, 0.4),
       0 16px 40px rgba(14, 21, 47, 0.4);
+    cursor: pointer;
+    &:hover {
+      border: 1px solid white;
+      background-color: #e4a366;
+    }
   }
 
   img {

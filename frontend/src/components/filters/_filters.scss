@@ -52,18 +52,38 @@
   }
 }
 
+.levelTitle,
+.infolevel {
+  background-color: $bg;
+  border-style: none;
+}
+
+.infolevel {
+  border: 2px solid $coolitude;
+  border-radius: 50%;
+  padding: 5px 12px;
+  color: $coolitude;
+  font-weight: bold;
+}
+
+.levelButtonContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .calendarButton,
 .levelButton,
 .localisationButton {
   background: $btn_filter;
-
   border: none;
   cursor: pointer;
   display: block;
   margin-top: 1vh;
   text-align: center;
   padding: 0.5vh 2vw;
-  position: relative;
   color: $txt_filter;
   font-size: $fs-p;
   font-weight: bold;
@@ -91,6 +111,10 @@
 option {
   color: $nav;
   font-size: 0.7rem;
+}
+
+.infoLevel {
+  text-align: left;
 }
 
 //MEDIA QUERY//
