@@ -5,6 +5,7 @@ const Infos = () => {
   // eslint-disable-next-line no-unreachable
   <div className="infos">
     {" "}
+
     Infos et consignes;
     <section className="def">
       <h2> Définitions</h2>
@@ -17,6 +18,7 @@ const Infos = () => {
       <h2>Consignes</h2>
       <h5>Les priorités à droite</h5>
       <p>srjhterjdtjrfdjdfkjf</p>
+
     </section>
   </div>;
 };

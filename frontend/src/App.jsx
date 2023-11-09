@@ -1,5 +1,7 @@
-/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react/function-component-definition */
+/* eslint-disable react/no-unstable-nested-components */
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Coolitude from "./components/coolitude/Coolitude";
 import Navbar from "./components/navbar/Navbar";
@@ -14,6 +16,7 @@ import Contact from "./pages/contact/Contact";
 import Login from "./pages/login/Login";
 
 import "./styles/index.css";
+import Burger from "./components/burger/Burger";
 
 function App() {
   const Layout = () => {
@@ -21,6 +24,7 @@ function App() {
       <div className="main">
         <Coolitude />
         <Navbar />
+        <Burger />
         <Header />
         <Alert />
         <Filters />
