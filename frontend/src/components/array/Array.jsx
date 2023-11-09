@@ -15,14 +15,14 @@ const meteo = (weatherCode) => {
 };
 
 const wind = (windDirection) => {
-  if (windDirection >= 0 && windDirection < 22.5) return "N";
-  if (windDirection >= 22.5 && windDirection < 67.5) return "NNE";
-  if (windDirection >= 67.5 && windDirection < 112.5) return "NE";
-  if (windDirection >= 112.5 && windDirection < 157.5) return "ENE";
-  if (windDirection >= 157.5 && windDirection < 202.5) return "E";
-  if (windDirection >= 202.5 && windDirection < 247.5) return "ESE";
-  if (windDirection >= 247.5 && windDirection < 292.5) return "SE";
-  if (windDirection >= 292.5 && windDirection < 337.5) return "SSE";
+  if (windDirection >= 0 && windDirection < 22.5) return "hygNORD";
+  if (windDirection >= 22.5 && windDirection < 67.5) return "NORD NORD EST";
+  if (windDirection >= 67.5 && windDirection < 112.5) return "NORD EST";
+  if (windDirection >= 112.5 && windDirection < 157.5) return "EST NORD EST";
+  if (windDirection >= 157.5 && windDirection < 202.5) return "EST";
+  if (windDirection >= 202.5 && windDirection < 247.5) return "EST SUD EST";
+  if (windDirection >= 247.5 && windDirection < 292.5) return "SUD EST";
+  if (windDirection >= 292.5 && windDirection < 337.5) return "SUD SUD EST";
   return windDirection;
 };
 
@@ -33,19 +33,25 @@ function Array() {
     wave_height: "",
     windspeed_10m: "",
     winddirection_10m: "",
+    wave_period: "",
   });
 
   const dataResponse = async () => {
     const marineResponse = await axios.get(
-      "https://marine-api.open-meteo.com/v1/marine?latitude=44.9791&longitude=-1.0796&current=wave_height&timezone=Europe%2FBerlin"
+      "https://marine-api.open-meteo.com/v1/marine?latitude=44.9791&longitude=-1.0796&current=wave_height,wave_period&timezone=Europe%2FBerlin"
     );
 
     const forecastResponse = await axios.get(
       "https://api.open-meteo.com/v1/forecast?latitude=44.9791&longitude=-1.0796&current=temperature_2m,weathercode,windspeed_10m,winddirection_10m&timezone=Europe%2FBerlin"
     );
 
-    const { temperature_2m, weathercode, windspeed_10m, winddirection_10m } =
-      forecastResponse.data.current;
+    const {
+      temperature_2m,
+      weathercode,
+      windspeed_10m,
+      winddirection_10m,
+      wave_period,
+    } = forecastResponse.data.current;
     const { wave_height } = marineResponse.data.current;
 
     setData({
@@ -54,6 +60,7 @@ function Array() {
       wave_height,
       windspeed_10m,
       winddirection_10m,
+      wave_period,
     });
   };
 
