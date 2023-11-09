@@ -14,6 +14,7 @@ import Home from "./pages/home/Home";
 import Infos from "./pages/infos/Infos";
 import Contact from "./pages/contact/Contact";
 import Login from "./pages/login/Login";
+
 import "./styles/index.css";
 import Burger from "./components/burger/Burger";
 

@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable camelcase */
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./_array.scss";

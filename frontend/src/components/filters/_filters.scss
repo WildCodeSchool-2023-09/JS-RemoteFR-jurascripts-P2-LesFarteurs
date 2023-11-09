@@ -6,6 +6,10 @@
   justify-content: space-around;
   align-items: flex-end;
   margin-bottom: 5vh;
+
+  a {
+    padding: 5px 10px;
+  }
 }
 
 .calendar,
@@ -16,6 +20,9 @@
   align-items: center;
   text-align: center;
   list-style: none;
+  color: $btn_filter;
+  background-color: $bg;
+  border-style: none;
 
   img {
     cursor: pointer;
@@ -28,6 +35,8 @@
     text-align: center;
     display: none;
     text-decoration: none;
+    text-align: left;
+    background-color: $nav;
   }
 
   ul.visible {
@@ -62,6 +71,11 @@
     0 45px 100px rgba(14, 21, 47, 0.4),
     0 16px 40px rgba(14, 21, 47, 0.4);
   position: relative;
+  border-radius: 3px;
+
+  select {
+    font-size: 0.5rem;
+  }
 }
 
 #lev {
@@ -72,6 +86,11 @@
 #loc {
   width: calc(70px + 2vw);
   height: auto;
+}
+
+option {
+  color: $nav;
+  font-size: 0.7rem;
 }
 
 //MEDIA QUERY//
