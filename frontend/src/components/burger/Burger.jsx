@@ -2,7 +2,6 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/function-component-definition */
-/* eslint-disable prettier/prettier */
 import React, { useState } from "react";
 import "./_burger.scss";
 

@@ -2,8 +2,8 @@
 
 const departements = [
   {
-    id: 1,
-    depName: "France",
+    id: 100,
+    depName: "Departement",
   },
   {
     id: 6,
@@ -166,7 +166,7 @@ const dataSpots = [
     name: "Cap d'Agde - Plade du Mole - Hérault",
     imgSrc:
       "https://cdn.pixabay.com/photo/2017/05/06/10/32/dog-2289451_640.jpg",
-    desc: "La plage du Mole offre un spot de surf idéal lorsque les conditions de houles sont propices à la formation de vagues. Agde étant une station balnéaire reconnue, attention à la fréquentation en saison.",
+    desc: "La plage du Mole offre un spot de surf idéal lorsque les conditions de houles sont propices à la formation de vagues.",
     intro:
       "Point positif, le spot profite de nombreuses commodités à proximité (restaurants, bars, ...). Il n'y a pas de danger particulier sur ce spot qui s'adresse à tous les pratiquants, débutants à confirmés.",
     dep: 34,
