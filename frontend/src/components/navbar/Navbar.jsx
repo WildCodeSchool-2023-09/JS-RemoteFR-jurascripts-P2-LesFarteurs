@@ -1,4 +1,3 @@
-/* eslint-disable react/self-closing-comp */
 import "./_navbar.scss";
 
 function Navbar() {
