@@ -33,7 +33,7 @@
 
 .descriptionSpot,
 .others {
-  background-color: #126a6c;
+  background-color: $nav;
   color: white;
   padding: 1vw;
   margin-bottom: 2vh;
@@ -43,6 +43,11 @@
   grid-column: 1 / 2;
   font-size: $fs-p;
 }
+.introSpot {
+  font-size: $fs-p;
+  padding: 1vw;
+  margin-bottom: 1vw;
+}
 
 .imgSpot {
   display: flex;
@@ -51,6 +56,7 @@
   height: 95%;
   background-image: url("./src/assets/img/plage.jpeg");
   background-size: cover;
+  object-fit: cover;
   border: none;
   grid-column: 2 / 3;
   grid-row: 1 / 3;

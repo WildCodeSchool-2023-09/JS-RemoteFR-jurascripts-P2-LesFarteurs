@@ -5,13 +5,12 @@ import Coolitude from "./components/coolitude/Coolitude";
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
 import Alert from "./components/alert/Alert";
-import Filters from "./components/filters/Filters";
-import Spots from "./components/spots/Spots";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Infos from "./pages/infos/Infos";
 import Contact from "./pages/contact/Contact";
 import Login from "./pages/login/Login";
+import Algo from "./components/Algo/Algo";
 
 import "./styles/index.css";
 
@@ -23,8 +22,7 @@ function App() {
         <Navbar />
         <Header />
         <Alert />
-        <Filters />
-        <Spots />
+        <Algo />
         <Footer />
       </div>
     );

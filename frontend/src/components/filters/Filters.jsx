@@ -6,25 +6,13 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
-import data from "../data/data";
+/* eslint-disable camelcase */
+/* eslint-disable react/prop-types */
+import React from "react";
+import dataGen from "../data/dataGen";
 import "./_filters.scss";
 
-const Filters = () => {
-  const [localisation, setLocalisation] = useState("1");
-  const [userLevel, setUserLevel] = useState("novice");
-  const [date, setDate] = useState("today");
-
-  function handleSelectLoc(event) {
-    setLocalisation(event.target.value);
-  }
-  function handleSelectLev(event) {
-    setUserLevel(event.target.value);
-  }
-  function handleSelectDate(event) {
-    setDate(event.target.value);
-  }
-
+const Filters = ({ handleSelectDate, handleSelectLev, handleSelectLoc }) => {
   return (
     <section className="filtersContainer">
       <div className="calendar">
@@ -33,12 +21,21 @@ const Filters = () => {
           src="./src/assets/img/calendar.png"
           alt="calendrier"
         ></img>
-        <button className="calendar" onChange={handleSelectDate}>
-          Calendrier
-          <select className="levelButton">
-            <option value="today">Aujourd'hui</option>
-            <option value="tomorrow">Demain</option>
-            <option value="dayAfterTmw">Après-demain</option>
+        <button className="calendar">
+          Date
+          <select
+            className="levelButton"
+            onChange={(event) => handleSelectDate(event)}
+          >
+            <option name="today" value="today">
+              Aujourd'hui
+            </option>
+            <option name="tomorrow" value="tomorrow">
+              Demain
+            </option>
+            <option name="dayAfterTmw" value="dayAfterTmw">
+              Après-demain
+            </option>
           </select>
         </button>
       </div>
@@ -47,10 +44,19 @@ const Filters = () => {
           <img id="lev" src="./src/assets/img/level.png" alt="niveau"></img>
           <button className="levels">
             Niveau
-            <select className="levelButton" onChange={handleSelectLev}>
-              <option value="novice">Novice</option>
-              <option value="inter">Intermédiaire</option>
-              <option value="pro">Confirmé</option>
+            <select
+              className="levelButton"
+              onChange={(event) => handleSelectLev(event)}
+            >
+              <option id="level1" name="novice" value="novice">
+                Novice
+              </option>
+              <option id="level2" name="inter" value="inter">
+                Intermédiaire
+              </option>
+              <option id="level3" name="pro" value="pro">
+                Confirmé
+              </option>
             </select>
           </button>
         </div>
@@ -63,9 +69,16 @@ const Filters = () => {
         ></img>
         <button className="localisation">
           Localisation
-          <select className="localisationButton" onChange={handleSelectLoc}>
-            {data.departements.map((departement) => (
-              <option key={departement.depName} value={departement.id}>
+          <select
+            className="localisationButton"
+            onChange={(event) => handleSelectLoc(event)}
+          >
+            {dataGen.departements.map((departement) => (
+              <option
+                key={departement.depName}
+                id={departement.id}
+                value={departement.id}
+              >
                 {departement.depName}
               </option>
             ))}
