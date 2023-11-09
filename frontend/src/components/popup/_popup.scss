@@ -1,0 +1,42 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background-color: (0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.popup-inner {
+  position: relative;
+  padding: 32px;
+  width: 90%;
+  max-width: 768px;
+  background-color: antiquewhite;
+
+  h3,
+  p {
+    display: flex;
+    flex-direction: column;
+    color: $bg;
+  }
+
+  span {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: $nav;
+    text-shadow: 0 1px 0 $bg;
+    cursor: pointer;
+  }
+}

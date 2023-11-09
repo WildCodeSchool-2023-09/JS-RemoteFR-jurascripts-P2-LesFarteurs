@@ -1,3 +1,4 @@
+/* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
@@ -9,6 +10,7 @@
 import { useState } from "react";
 import data from "../data/data";
 import "./_filters.scss";
+import Popup from "../popup/Popup";
 
 const Filters = () => {
   const [localisation, setLocalisation] = useState("1");
@@ -25,6 +27,7 @@ const Filters = () => {
     setDate(event.target.value);
   }
 
+  const [buttonPopup, setButtonPopup] = useState(false);
   return (
     <section className="filtersContainer">
       <div className="calendar">
@@ -45,16 +48,49 @@ const Filters = () => {
       <div className="levels">
         <div className="levelButtonContainer">
           <img id="lev" src="./src/assets/img/level.png" alt="niveau"></img>
-          <button className="levels">
-            Niveau
-            <select className="levelButton" onChange={handleSelectLev}>
-              <option value="novice">Novice</option>
-              <option value="inter">Intermédiaire</option>
-              <option value="pro">Confirmé</option>
-            </select>
-          </button>
+          <div className="niveau">
+            <button className="levelTitle">
+              {" "}
+              Niveau
+              <select className="levelButton" onChange={handleSelectLev}>
+                <option value="novice">Novice</option>
+                <option value="inter">Intermédiaire</option>
+                <option value="pro">Confirmé</option>
+              </select>
+            </button>
+
+            <button className="infolevel" onClick={() => setButtonPopup(true)}>
+              i
+            </button>
+          </div>
         </div>
+
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <div className="infoLevel">
+            <h3>Mon niveau</h3>
+            <br></br>
+            <p>
+              Novice = Prendre 2/3 cours avec un moniteur de surf. Savoir nager
+              un minimum, jamais surfé, connait aucune règle dans l’eau et les
+              dangers (regarde la rubrique "infos et définitions").
+              <br />
+              <br />
+              intermédiaire = Savoir nager, comprend l’eau un minimum (courant,
+              remou, la mousse, une vague), connait les règles (respect des
+              autres, par où rentrer pour bien se placer et revenir sans
+              gêner...) et les dangers (courant, ta position de planche et les
+              autres surfeurs), tenir un minimum debout sur sa planche.
+              <br />
+              <br />
+              Confirmé = gère tout ça ! 😉
+              <br />
+              <br />
+              PS: Choisis bien ton équipement !
+            </p>
+          </div>
+        </Popup>
       </div>
+
       <div className="localisation">
         <img
           id="loc"
