@@ -70,12 +70,22 @@ const Filters = () => {
             <h3>Mon niveau</h3>
             <br></br>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              beatae, quaerat enim minus, animi eligendi voluptate molestias
-              veniam, dicta in ipsam consectetur mollitia eos. Excepturi ullam
-              consequatur quas, itaque maxime, reiciendis veritatis explicabo
-              illum quo nulla ea saepe quisquam ducimus sit pariatur unde
-              doloribus dolor quos possimus a harum dolore?
+              Novice = Prendre 2/3 cours avec un moniteur de surf. Savoir nager
+              un minimum, jamais surfé, connait aucune règle dans l’eau et les
+              dangers (regarde la rubrique "infos et définitions").
+              <br />
+              <br />
+              intermédiaire = Savoir nager, comprend l’eau un minimum (courant,
+              remou, la mousse, une vague), connait les règles (respect des
+              autres, par où rentrer pour bien se placer et revenir sans
+              gêner...) et les dangers (courant, ta position de planche et les
+              autres surfeurs), tenir un minimum debout sur sa planche.
+              <br />
+              <br />
+              Confirmé = gère tout ça ! 😉
+              <br />
+              <br />
+              PS: Choisis bien ton équipement !
             </p>
           </div>
         </Popup>
