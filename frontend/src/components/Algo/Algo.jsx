@@ -104,9 +104,6 @@ function Algo() {
 export default Algo;
 
 Algo.propTypes = {
-  // handleSelectDate: PropTypes.func.isRequired,
-  // handleSelectLoc: PropTypes.func.isRequired,
-  // handleSelectLev: PropTypes.func.isRequired,
   data: PropTypes.shape({
     weatherCode: PropTypes.number.isRequired,
     temperature: PropTypes.number.isRequired,
