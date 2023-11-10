@@ -78,6 +78,10 @@
   cursor: pointer;
 }
 
+button {
+  background-color: transparent;
+  border-style: none;
+}
 //MEDIA QUERY//
 @media screen and (max-width: 768px) {
   .spotsContainer {
