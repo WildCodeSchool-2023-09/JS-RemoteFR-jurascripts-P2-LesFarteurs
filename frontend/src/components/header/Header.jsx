@@ -1,4 +1,3 @@
-/* eslint-disable react/self-closing-comp */
 import "./_header.scss";
 
 function Header() {

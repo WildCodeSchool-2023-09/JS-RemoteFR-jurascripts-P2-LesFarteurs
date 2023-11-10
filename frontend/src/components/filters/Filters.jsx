@@ -1,30 +1,16 @@
-/* eslint-disable react/void-dom-elements-no-children */
-/* eslint-disable prettier/prettier */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
-/* eslint-disable react/prop-types */
 import { useState } from "react";
+import PropTypes from "prop-types";
 import dataGen from "../data/dataGen";
 import "./_filters.scss";
 import Popup from "../popup/Popup";
 
-const Filters = ({ handleSelectDate, handleSelectLev, handleSelectLoc }) => {
+function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
   const [buttonPopup, setButtonPopup] = useState(false);
   return (
     <section className="filtersContainer">
       <div className="calendar">
-        <img
-          id="cal"
-          src="./src/assets/img/calendar.png"
-          alt="calendrier"
-        ></img>
-        <button className="calendar">
+        <img id="cal" src="./src/assets/img/calendar.png" alt="calendrier" />
+        <button type="button" className="calendar">
           Date
           <select
             className="levelButton"
@@ -44,30 +30,32 @@ const Filters = ({ handleSelectDate, handleSelectLev, handleSelectLoc }) => {
       </div>
       <div className="levels">
         <div className="levelButtonContainer">
-          <img id="lev" src="./src/assets/img/level.png" alt="niveau"></img>
-          <button className="levels">
-            Niveau
-            <select
-              className="levelButton"
-              onChange={(event) => handleSelectLev(event)}
+          <img id="lev" src="./src/assets/img/level.png" alt="niveau" />
+          <div className="niveau">
+            <button type="button" className="levelTitle">
+              {" "}
+              Niveau
+              <select className="levelButton" onChange={handleSelectLev}>
+                <option value="novice">Novice</option>
+                <option value="inter">Intermédiaire</option>
+                <option value="pro">Confirmé</option>
+              </select>
+            </button>
+
+            <button
+              type="button"
+              className="infolevel"
+              onClick={() => setButtonPopup(true)}
             >
-              <option id="level1" name="novice" value="novice">
-                Novice
-              </option>
-              <option id="level2" name="inter" value="inter">
-                Intermédiaire
-              </option>
-              <option id="level3" name="pro" value="pro">
-                Confirmé
-              </option>
-            </select>
-          </button>
+              i
+            </button>
+          </div>
         </div>
 
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <div className="infoLevel">
             <h3>Mon niveau</h3>
-            <br></br>
+            <br />
             <p>
               Novice = Prendre 2/3 cours avec un moniteur de surf. Savoir nager
               un minimum, jamais surfé, connait aucune règle dans l’eau et les
@@ -95,8 +83,8 @@ const Filters = ({ handleSelectDate, handleSelectLev, handleSelectLoc }) => {
           id="loc"
           src="./src/assets/img/localisation.png"
           alt="localisation"
-        ></img>
-        <button className="localisation">
+        />
+        <button type="button" className="localisation">
           Localisation
           <select
             className="localisationButton"
@@ -116,6 +104,12 @@ const Filters = ({ handleSelectDate, handleSelectLev, handleSelectLoc }) => {
       </div>
     </section>
   );
-};
+}
 
 export default Filters;
+
+Filters.propTypes = {
+  handleSelectDate: PropTypes.func.isRequired,
+  handleSelectLoc: PropTypes.func.isRequired,
+  handleSelectLev: PropTypes.func.isRequired,
+};

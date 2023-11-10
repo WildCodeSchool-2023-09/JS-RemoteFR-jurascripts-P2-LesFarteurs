@@ -1,21 +1,18 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
+import PropTypes from "prop-types";
 import "./_popup.scss";
 
-function Popup(props) {
-  return props.trigger ? (
+function Popup({ trigger, setTrigger }) {
+  return trigger ? (
     <div className="popup">
       <div className="popup-inner">
         <button
           type="button"
           className="close"
           aria-label="Close"
-          onClick={() => props.setTrigger(false)}
+          onClick={() => setTrigger(false)}
         >
           <span aria-hidden="true">&times;</span>
         </button>
-        {props.children}
       </div>
     </div>
   ) : (
@@ -24,3 +21,8 @@ function Popup(props) {
 }
 
 export default Popup;
+
+Popup.propTypes = {
+  trigger: PropTypes.bool.isRequired,
+  setTrigger: PropTypes.bool.isRequired,
+};
