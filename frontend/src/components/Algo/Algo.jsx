@@ -39,18 +39,18 @@ function Algo() {
   });
 
   // Fontion pour récupérer : localisation, userLevel, data dans Filters
-  function handleSelectLoc(event) {
+  const handleSelectLoc = (event) => {
     setLocalisation(event.target.value);
     console.info(localisation);
-  }
-  function handleSelectLev(event) {
+  };
+  const handleSelectLev = (event) => {
     setUserLevel(event.target.value);
     console.info(userLevel);
-  }
-  function handleSelectDate(event) {
+  };
+  const handleSelectDate = (event) => {
     setDate(event.target.value);
     console.info(date);
-  }
+  };
 
   // Récupération des données API :
 
@@ -83,11 +83,8 @@ function Algo() {
   return (
     <>
       <Filters
-        // eslint-disable-next-line react/jsx-no-bind
         handleSelectLoc={handleSelectLoc}
-        // eslint-disable-next-line react/jsx-no-bind
         handleSelectDate={handleSelectDate}
-        // eslint-disable-next-line react/jsx-no-bind
         handleSelectLev={handleSelectLev}
       />
       <Spots
@@ -107,12 +104,6 @@ function Algo() {
 export default Algo;
 
 Algo.propTypes = {
-  // eslint-disable-next-line react/no-unused-prop-types
-  handleSelectDate: PropTypes.func.isRequired,
-  // eslint-disable-next-line react/no-unused-prop-types
-  handleSelectLoc: PropTypes.func.isRequired,
-  // eslint-disable-next-line react/no-unused-prop-types
-  handleSelectLev: PropTypes.func.isRequired,
   data: PropTypes.shape({
     weatherCode: PropTypes.number.isRequired,
     temperature: PropTypes.number.isRequired,
