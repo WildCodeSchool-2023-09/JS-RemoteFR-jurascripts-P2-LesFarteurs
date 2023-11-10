@@ -1,9 +1,7 @@
 import "./_login.scss";
 
-const Login = () => {
-  return;
-  // eslint-disable-next-line no-unreachable
-  <div className="contact"> Contact</div>;
-};
+function Login() {
+  return <div className="contact"> Contact</div>;
+}
 
 export default Login;

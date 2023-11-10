@@ -1,9 +1,7 @@
-/* eslint-disable react/self-closing-comp */
-
 const departements = [
   {
     id: 100,
-    depName: "Departement",
+    depName: "Département",
   },
   {
     id: 6,
@@ -326,13 +324,12 @@ const surfLevels = [
   {
     level: 3,
     levelName: "pro",
-    maxWaveHeightt: 1, //indiqué ds le tableau de Xavier :"1.lenght", traduction?
+    maxWaveHeightt: 1,
     minWindSpeed: 30,
-    //maxWindSpeed: 30,
     bestMaxWindSpeed: 12,
     minWaveFreq: 6,
     maxWaveFreq: 18,
   },
 ];
 
-export default { departements, dataSpots };
+export default { departements, dataSpots, surfLevels };

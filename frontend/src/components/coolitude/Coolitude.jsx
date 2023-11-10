@@ -1,7 +1,6 @@
-/* eslint-disable react/function-component-definition */
 import "./_coolitude.scss";
 
-const Coolitude = () => {
+function Coolitude() {
   return (
     <div className="coolitude">
       <p>
@@ -11,6 +10,6 @@ const Coolitude = () => {
       </p>
     </div>
   );
-};
+}
 
 export default Coolitude;

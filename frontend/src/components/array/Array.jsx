@@ -1,44 +1,43 @@
-/* eslint-disable consistent-return */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable camelcase */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import "./_array.scss";
+import PropTypes from "prop-types";
 
-function Array({
-  data,
-  meteo,
-  wind,
-  weathercode,
-  temperature_2m,
-  wave_height,
-  windspeed_10m,
-  winddirection_10m,
-}) {
+function Array({ data, meteo, wind }) {
   return (
     <div className="dataContainer">
       <span className="weather">
         <img src="./src/assets/img/ensoleillé.png" alt="logo1" />
-        {meteo(data.weathercode)}
+        {meteo(data.weatherCode)}
       </span>
 
       <span className="temp">
         <img src="./src/assets/img/temp.png" alt="logo2" />
-        {data.temperature_2m}°C
+        {data.temperature}°C
       </span>
 
       <span className="waveHeight">
         <img src="./src/assets/img/waveHeight.png" alt="logo3" />
-        {data.wave_height} m
+        {data.waveHeight} m
       </span>
 
       <span className="windS">
         <img src="./src/assets/img/windSD.png" alt="logo4" />
-        {data.windspeed_10m} km/h
+        {data.windSpeed} km/h
       </span>
-      <span className="windD">{wind(data.winddirection_10m)}</span>
+      <span className="windD">{wind(data.windDirection)}</span>
     </div>
   );
 }
 
 export default Array;
+
+Array.propTypes = {
+  meteo: PropTypes.number.isRequired,
+  wind: PropTypes.number.isRequired,
+  data: PropTypes.shape({
+    weatherCode: PropTypes.number.isRequired,
+    temperature: PropTypes.number.isRequired,
+    waveHeight: PropTypes.number.isRequired,
+    windSpeed: PropTypes.number.isRequired,
+    windDirection: PropTypes.string.isRequired,
+  }).isRequired,
+};

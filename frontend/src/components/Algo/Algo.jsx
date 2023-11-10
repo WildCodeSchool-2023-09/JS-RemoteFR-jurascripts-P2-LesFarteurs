@@ -1,25 +1,19 @@
-/* eslint-disable consistent-return */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable camelcase */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable react/jsx-no-bind */
-
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import Filters from "../filters/Filters";
 import Spots from "../spots/Spots";
 
-const meteo = (weatherCode) => {
+function meteo(weatherCode) {
   if (weatherCode === 0) return "Ensoleillé";
   if (weatherCode >= 1 && weatherCode <= 3) return "Éclaircies";
   if (weatherCode >= 45 && weatherCode <= 48) return "Nuageux";
   if (weatherCode >= 51 && weatherCode <= 94) return "Pluvieux";
   if (weatherCode >= 95) return "Orage";
-};
+  return "";
+}
 
-const wind = (windDirection) => {
+function wind(windDirection) {
   if (windDirection >= 0 && windDirection < 22.5) return "N";
   if (windDirection >= 22.5 && windDirection < 67.5) return "NNE";
   if (windDirection >= 67.5 && windDirection < 112.5) return "NE";
@@ -29,7 +23,7 @@ const wind = (windDirection) => {
   if (windDirection >= 247.5 && windDirection < 292.5) return "SE";
   if (windDirection >= 292.5 && windDirection < 337.5) return "SSE";
   return windDirection;
-};
+}
 
 function Algo() {
   const [localisation, setLocalisation] = useState("100");
@@ -47,15 +41,15 @@ function Algo() {
   // Fontion pour récupérer : localisation, userLevel, data dans Filters
   function handleSelectLoc(event) {
     setLocalisation(event.target.value);
-    console.log(localisation);
+    console.info(localisation);
   }
   function handleSelectLev(event) {
     setUserLevel(event.target.value);
-    console.log(userLevel);
+    console.info(userLevel);
   }
   function handleSelectDate(event) {
     setDate(event.target.value);
-    console.log(date);
+    console.info(date);
   }
 
   // Récupération des données API :
@@ -69,16 +63,16 @@ function Algo() {
       "https://api.open-meteo.com/v1/forecast?latitude=44.9791&longitude=-1.0796&current=temperature_2m,weathercode,windspeed_10m,winddirection_10m&timezone=Europe%2FBerlin"
     );
 
-    const { temperature_2m, weathercode, windspeed_10m, winddirection_10m } =
+    const { temperature, weatherCode, windSpeed, windDirection } =
       forecastResponse.data.current;
-    const { wave_height } = marineResponse.data.current;
+    const { waveHeight } = marineResponse.data.current;
 
     setData({
-      temperature_2m,
-      weathercode,
-      wave_height,
-      windspeed_10m,
-      winddirection_10m,
+      temperature,
+      weatherCode,
+      waveHeight,
+      windSpeed,
+      windDirection,
     });
   };
 
@@ -89,22 +83,41 @@ function Algo() {
   return (
     <>
       <Filters
+        // eslint-disable-next-line react/jsx-no-bind
         handleSelectLoc={handleSelectLoc}
+        // eslint-disable-next-line react/jsx-no-bind
         handleSelectDate={handleSelectDate}
+        // eslint-disable-next-line react/jsx-no-bind
         handleSelectLev={handleSelectLev}
       />
       <Spots
         data={data}
         meteo={meteo}
         wind={wind}
-        weathercode={data.weathercode}
-        temperature_2m={data.temperature_2m}
-        wave_height={data.wave_height}
-        windspeed_10m={data.windspeed_10m}
-        winddirection_10m={data.winddirection_10m}
+        weatherCode={data.weathercode}
+        temperature={data.temperature_2m}
+        waveHeight={data.wave_height}
+        windSpeed={data.windspeed_10m}
+        windDirection={data.winddirection_10m}
       />
     </>
   );
 }
 
 export default Algo;
+
+Algo.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  handleSelectDate: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/no-unused-prop-types
+  handleSelectLoc: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/no-unused-prop-types
+  handleSelectLev: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    weatherCode: PropTypes.number.isRequired,
+    temperature: PropTypes.number.isRequired,
+    waveHeight: PropTypes.number.isRequired,
+    windSpeed: PropTypes.number.isRequired,
+    windDirection: PropTypes.string.isRequired,
+  }).isRequired,
+};

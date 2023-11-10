@@ -1,27 +1,23 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/function-component-definition */
-/* eslint-disable camelcase */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-restricted-syntax */
-
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useState } from "react";
+import PropTypes from "prop-types";
 import Array from "../array/Array";
 import dataGen from "../data/dataGen";
 import "./_spots.scss";
 
-const Spots = ({
+function Spots({
   data,
   meteo,
   wind,
-  temperature_2m,
-  windspeed_10m,
-  winddirection_10m,
-  wave_height,
-  weathercode,
-}) => {
+  temperature,
+  windSpeed,
+  windDirection,
+  waveHeight,
+  weatherCode,
+}) {
   const [isDescriptionVisible, setDescriptionVisible] = useState(false);
   const [isOthersVisible, setOthersVisible] = useState(false);
 
@@ -32,11 +28,10 @@ const Spots = ({
     setOthersVisible(!isOthersVisible);
   };
 
-  console.log(weathercode, temperature_2m, wave_height, windspeed_10m);
   return (
     <>
       <div className="spotsContainer">
-        <img className="imgSpot" onClick={toggleDescription} />
+        <img className="imgSpot" onClick={toggleDescription} alt="" />
         <div className="infoSpot">
           <h4 className="titleSpot">Titre du spot</h4>
           <div className="introSpot">
@@ -82,11 +77,11 @@ const Spots = ({
             data={data}
             meteo={meteo}
             wind={wind}
-            weathercode={weathercode}
-            temperature_2m={temperature_2m}
-            wave_height={wave_height}
-            windspeed_10m={windspeed_10m}
-            winddirection_10m={winddirection_10m}
+            weathercode={weatherCode}
+            temperature_2m={temperature}
+            wave_height={waveHeight}
+            windspeed_10m={windSpeed}
+            winddirection_10m={windDirection}
           />
         </div>
       </div>
@@ -135,17 +130,28 @@ const Spots = ({
               data={data}
               meteo={meteo}
               wind={wind}
-              weathercode={weathercode}
-              temperature_2m={temperature_2m}
-              wave_height={wave_height}
-              windspeed_10m={windspeed_10m}
-              winddirection_10m={winddirection_10m}
+              weatherCode={weatherCode}
+              temperature={temperature}
+              waveHeight={waveHeight}
+              windSpeed={windSpeed}
+              windDirection={windDirection}
             />
           </div>
         </div>
       ))}
     </>
   );
-};
+}
 
 export default Spots;
+
+Spots.propTypes = {
+  meteo: PropTypes.number.isRequired,
+  wind: PropTypes.number.isRequired,
+  weatherCode: PropTypes.number.isRequired,
+  temperature: PropTypes.number.isRequired,
+  waveHeight: PropTypes.number.isRequired,
+  windSpeed: PropTypes.number.isRequired,
+  windDirection: PropTypes.string.isRequired,
+  data: PropTypes.shape.isRequired,
+};
