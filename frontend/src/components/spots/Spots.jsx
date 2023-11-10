@@ -1,7 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Array from "../array/Array";
@@ -31,7 +27,9 @@ function Spots({
   return (
     <>
       <div className="spotsContainer">
-        <img className="imgSpot" onClick={toggleDescription} alt="" />
+        <button type="button" onClick={toggleDescription}>
+          <img className="imgSpot" alt="" />
+        </button>
         <div className="infoSpot">
           <h4 className="titleSpot">Titre du spot</h4>
           <div className="introSpot">
@@ -41,14 +39,20 @@ function Spots({
             </p>
           </div>
           <div
+            role="button"
+            aria-hidden="true"
             className={`descriptionSpot ${
               isDescriptionVisible ? "visible" : "hidden"
             }`}
             onClick={toggleDescription}
           >
-            <p className="toggleButton" onClick={toggleDescription}>
+            <button
+              type="button"
+              className="toggleButton"
+              onClick={toggleDescription}
+            >
               {isDescriptionVisible ? "- " : "+ "}Description
-            </p>{" "}
+            </button>{" "}
             {isDescriptionVisible ? (
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
@@ -58,13 +62,19 @@ function Spots({
             ) : null}
           </div>
           <div
+            role="button"
+            aria-hidden="true"
             className={`others ${isOthersVisible ? "visible" : "hidden"}`}
             onClick={toggleOthers}
           >
-            <p className="toggleButton" onClick={toggleOthers}>
+            <button
+              type="button"
+              className="toggleButton"
+              onClick={toggleOthers}
+            >
               {isOthersVisible ? "- " : "+ "}
               Autres infos
-            </p>
+            </button>
             {isOthersVisible ? (
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
@@ -88,36 +98,50 @@ function Spots({
 
       {dataGen.dataSpots.map((dataSpot) => (
         <div className="spotsContainer">
-          <img
-            key={dataSpot.id}
-            className="imgSpot"
-            src={dataSpot.imgSrc}
-            onClick={toggleDescription}
-          />
+          <button type="button" onClick={toggleDescription}>
+            <img
+              key={dataSpot.id}
+              className="imgSpot"
+              src={dataSpot.imgSrc}
+              alt="spot"
+            />
+          </button>
           <div className="infoSpot">
             <h4 className="titleSpot">{dataSpot.name}</h4>
             <div className="introSpot">
               <p>{dataSpot.intro}</p>
             </div>
             <div
+              role="button"
+              aria-hidden="true"
               className={`descriptionSpot ${
                 isDescriptionVisible ? "visible" : "hidden"
               }`}
               onClick={toggleDescription}
             >
-              <p className="toggleButton" onClick={toggleDescription}>
+              <button
+                type="button"
+                className="toggleButton"
+                onClick={toggleDescription}
+              >
                 {isDescriptionVisible ? "- " : "+ "}Description
-              </p>{" "}
+              </button>{" "}
               {isDescriptionVisible ? <p>{dataSpot.desc}</p> : null}
             </div>
             <div
+              role="button"
+              aria-hidden="true"
               className={`others ${isOthersVisible ? "visible" : "hidden"}`}
               onClick={toggleOthers}
             >
-              <p className="toggleButton" onClick={toggleOthers}>
+              <button
+                type="button"
+                className="toggleButton"
+                onClick={toggleOthers}
+              >
                 {isOthersVisible ? "- " : "+ "}
                 Autres infos
-              </p>
+              </button>
               {isOthersVisible ? (
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
