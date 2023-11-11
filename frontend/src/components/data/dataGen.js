@@ -151,7 +151,8 @@ const dataSpots = [
     latitude: 43.69106669834545,
     longitude: 7.27919241979722,
     name: "Nice - Promenade des Anglais Est - Alpes-Maritimes",
-    imgSrc: "dog-2289451_1280.jpg",
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2017/05/06/10/32/dog-2289451_640.jpg",
     intro:
       "Une seule vague par décennies, de plus imprévisible, on peut y apercevoir un surfeur pas très matinal en tee shirt jaune quasiment tous les jours, vous pouvez pas le louper !",
     desc: "Vous pouvez attendre la vague en mangeant des glaces, je vous conseille à la framboise !",
