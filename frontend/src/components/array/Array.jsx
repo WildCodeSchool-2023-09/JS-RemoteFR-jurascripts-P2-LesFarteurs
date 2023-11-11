@@ -1,29 +1,58 @@
 import "./_array.scss";
 import PropTypes from "prop-types";
 
-function Array({ data, meteo, wind }) {
+function Array({
+  temperature,
+  waveHeight,
+  windSpeed,
+  weatherCode,
+  windDirection,
+}) {
+  // fonction pour transformer les weathercode en strings
+  const meteo = (weatherC) => {
+    if (weatherC === 0) return "Ensoleillé";
+    if (weatherC >= 1 && weatherC <= 3) return "Éclaircies";
+    if (weatherC >= 45 && weatherC <= 48) return "Nuageux";
+    if (weatherC >= 51 && weatherC <= 94) return "Pluvieux";
+    if (weatherC >= 95) return "Orage";
+    return "";
+  };
+
+  // fonction pour transformer les windDirection en strings
+  const wind = (windDir) => {
+    if (windDir >= 0 && windDir < 22.5) return "N";
+    if (windDir >= 22.5 && windDir < 67.5) return "NNE";
+    if (windDir >= 67.5 && windDir < 112.5) return "NE";
+    if (windDir >= 112.5 && windDir < 157.5) return "ENE";
+    if (windDir >= 157.5 && windDir < 202.5) return "E";
+    if (windDir >= 202.5 && windDir < 247.5) return "ESE";
+    if (windDir >= 247.5 && windDir < 292.5) return "SE";
+    if (windDir >= 292.5 && windDir < 337.5) return "SSE";
+    return windDir;
+  };
+
   return (
     <div className="dataContainer">
       <span className="weather">
         <img src="./src/assets/img/ensoleillé.png" alt="logo1" />
-        {meteo(data.weatherCode)}
+        {meteo(weatherCode)}
       </span>
 
       <span className="temp">
         <img src="./src/assets/img/temp.png" alt="logo2" />
-        {data.temperature}°C
+        {temperature}°C
       </span>
 
       <span className="waveHeight">
         <img src="./src/assets/img/waveHeight.png" alt="logo3" />
-        {data.waveHeight} m
+        {waveHeight} m
       </span>
 
       <span className="windS">
         <img src="./src/assets/img/windSD.png" alt="logo4" />
-        {data.windSpeed} km/h
+        {windSpeed} km/h
       </span>
-      <span className="windD">{wind(data.windDirection)}</span>
+      <span className="windD">{wind(windDirection)}</span>
     </div>
   );
 }
@@ -31,13 +60,9 @@ function Array({ data, meteo, wind }) {
 export default Array;
 
 Array.propTypes = {
-  meteo: PropTypes.number.isRequired,
-  wind: PropTypes.number.isRequired,
-  data: PropTypes.shape({
-    weatherCode: PropTypes.number.isRequired,
-    temperature: PropTypes.number.isRequired,
-    waveHeight: PropTypes.number.isRequired,
-    windSpeed: PropTypes.number.isRequired,
-    windDirection: PropTypes.string.isRequired,
-  }).isRequired,
+  weatherCode: PropTypes.number.isRequired,
+  temperature: PropTypes.number.isRequired,
+  waveHeight: PropTypes.number.isRequired,
+  windSpeed: PropTypes.number.isRequired,
+  windDirection: PropTypes.number.isRequired,
 };
