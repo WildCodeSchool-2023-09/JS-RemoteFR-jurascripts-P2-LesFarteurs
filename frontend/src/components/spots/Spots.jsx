@@ -5,9 +5,6 @@ import dataGen from "../data/dataGen";
 import "./_spots.scss";
 
 function Spots({
-  data,
-  meteo,
-  wind,
   temperature,
   windSpeed,
   windDirection,
@@ -84,27 +81,19 @@ function Spots({
             ) : null}
           </div>
           <Array
-            data={data}
-            meteo={meteo}
-            wind={wind}
-            weathercode={weatherCode}
-            temperature_2m={temperature}
-            wave_height={waveHeight}
-            windspeed_10m={windSpeed}
-            winddirection_10m={windDirection}
+            weatherCode={weatherCode}
+            temperature={temperature}
+            waveHeight={waveHeight}
+            windSpeed={windSpeed}
+            windDirection={windDirection}
           />
         </div>
       </div>
 
       {dataGen.dataSpots.map((dataSpot) => (
-        <div className="spotsContainer">
+        <div key={dataSpot.id} className="spotsContainer">
           <button type="button" onClick={toggleDescription}>
-            <img
-              key={dataSpot.id}
-              className="imgSpot"
-              src={dataSpot.imgSrc}
-              alt="spot"
-            />
+            <img className="imgSpot" src={dataSpot.imgSrc} alt="spot" />
           </button>
           <div className="infoSpot">
             <h4 className="titleSpot">{dataSpot.name}</h4>
@@ -151,9 +140,6 @@ function Spots({
               ) : null}
             </div>
             <Array
-              data={data}
-              meteo={meteo}
-              wind={wind}
               weatherCode={weatherCode}
               temperature={temperature}
               waveHeight={waveHeight}
@@ -170,12 +156,9 @@ function Spots({
 export default Spots;
 
 Spots.propTypes = {
-  meteo: PropTypes.number.isRequired,
-  wind: PropTypes.number.isRequired,
   weatherCode: PropTypes.number.isRequired,
   temperature: PropTypes.number.isRequired,
   waveHeight: PropTypes.number.isRequired,
   windSpeed: PropTypes.number.isRequired,
-  windDirection: PropTypes.string.isRequired,
-  data: PropTypes.shape.isRequired,
+  windDirection: PropTypes.number.isRequired,
 };
