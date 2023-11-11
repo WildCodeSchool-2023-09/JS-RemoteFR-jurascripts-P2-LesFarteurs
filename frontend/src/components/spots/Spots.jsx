@@ -87,11 +87,11 @@ function Spots({
             data={data}
             meteo={meteo}
             wind={wind}
-            weathercode={weatherCode}
-            temperature_2m={temperature}
-            wave_height={waveHeight}
-            windspeed_10m={windSpeed}
-            winddirection_10m={windDirection}
+            weatherCode={weatherCode}
+            temperature={temperature}
+            waveHeight={waveHeight}
+            windSpeed={windSpeed}
+            windDirection={windDirection}
           />
         </div>
       </div>
