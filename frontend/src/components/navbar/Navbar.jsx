@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./_navbar.scss";
 
 function Navbar() {
@@ -5,13 +6,16 @@ function Navbar() {
     <nav className="navbar">
       <ul className="links">
         <li>
-          <a href="home">Home</a>
+          <Link to="/">Accueil</Link>
         </li>
         <li>
-          <a href="infos">Infos et définitions</a>
+          <Link to="/infos">Infos et définitions</Link>
         </li>
         <li>
-          <a href="contact">Contact</a>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
         </li>
       </ul>
     </nav>

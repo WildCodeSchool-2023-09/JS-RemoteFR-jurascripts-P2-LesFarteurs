@@ -1,7 +1,13 @@
 import "./_infos.scss";
+import Coolitude from "../../components/coolitude/Coolitude";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 
 function Infos() {
   return (
+    <>
+      <Coolitude />
+      <Navbar />
     <div className="infos">
       {" "}
       Infos et consignes;
@@ -117,6 +123,10 @@ function Infos() {
         </p>
       </section>
     </div>
+
+      <Footer />
+    </>
+
   );
 }
 
