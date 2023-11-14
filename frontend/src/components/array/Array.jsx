@@ -20,14 +20,14 @@ function Array({
 
   // fonction pour transformer les windDirection en strings
   const wind = (windDir) => {
-    if (windDir >= 0 && windDir < 22.5) return "N";
-    if (windDir >= 22.5 && windDir < 67.5) return "NNE";
-    if (windDir >= 67.5 && windDir < 112.5) return "NE";
-    if (windDir >= 112.5 && windDir < 157.5) return "ENE";
-    if (windDir >= 157.5 && windDir < 202.5) return "E";
-    if (windDir >= 202.5 && windDir < 247.5) return "ESE";
-    if (windDir >= 247.5 && windDir < 292.5) return "SE";
-    if (windDir >= 292.5 && windDir < 337.5) return "SSE";
+    if (windDir >= 0 && windDir < 22.5) return "Nord";
+    if (windDir >= 22.5 && windDir < 67.5) return "Nord Nord Est";
+    if (windDir >= 67.5 && windDir < 112.5) return "Nord Est";
+    if (windDir >= 112.5 && windDir < 157.5) return "Est Nord Est";
+    if (windDir >= 157.5 && windDir < 202.5) return "Est";
+    if (windDir >= 202.5 && windDir < 247.5) return "Est Sud Est";
+    if (windDir >= 247.5 && windDir < 292.5) return "Sud Est";
+    if (windDir >= 292.5 && windDir < 337.5) return "Sud Sud Est";
     return windDir;
   };
 
