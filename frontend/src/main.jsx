@@ -4,7 +4,7 @@ import "./styles/index.css";
 import App from "./App";
 import Infos from "./pages/infos/Infos";
 import Contact from "./pages/contact/Contact";
-import Login from "./pages/login/Login";
+import Error from "./pages/error/Error";
 
 const router = createBrowserRouter([
   {
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
   {
-    path: "/login",
-    element: <Login />,
+    path: "/error",
+    element: <Error />,
   },
 ]);
 
