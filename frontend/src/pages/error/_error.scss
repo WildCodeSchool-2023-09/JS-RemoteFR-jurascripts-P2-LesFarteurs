@@ -1,0 +1,15 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100wv;
+}
+
+.error_img {
+  margin: 3vh;
+}

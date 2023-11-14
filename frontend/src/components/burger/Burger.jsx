@@ -14,8 +14,8 @@ function Burger() {
         <div className="burger-icon" />
       </button>
       <div className="menu-items">
-        <a href="home">Home</a>
-        <a href="info">Infos sur le Surf</a>
+        <a href="home">Accueil</a>
+        <a href="info">Infos et définitions</a>
         <a href="contact">Contact</a>
       </div>
     </div>

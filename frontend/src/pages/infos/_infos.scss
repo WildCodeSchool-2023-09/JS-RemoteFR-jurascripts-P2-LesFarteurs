@@ -2,5 +2,45 @@
 @import "src/styles/_mixins.scss";
 
 .infos {
-  background-color: red;
+  background-color: #205464;
+  padding: 30px;
+}
+
+h1 {
+  margin: 5vh auto;
+  text-align: center;
+}
+
+h2 {
+  margin: 5vh auto;
+}
+
+h3 {
+  margin: 5vh auto;
+}
+h4 {
+  margin: 2vh auto;
+}
+
+.imgtableau {
+  display: flex;
+  margin: 5vh auto;
+  justify-content: center;
+  .tableausurf {
+    width: 570px;
+    height: 270px;
+  }
+}
+
+.surfcharles {
+  display: flex;
+  margin: 5vh auto;
+  justify-content: space-between;
+  .previsions {
+    padding-right: 40px;
+  }
+  .surfeur4 {
+    width: 280px;
+    height: 330px;
+  }
 }

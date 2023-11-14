@@ -27,7 +27,8 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
           </select>
         </button>
       </div>
-      <div className="levels">
+
+      <div className="levelButtonContainer">
         <div className="levelButtonContainer">
           <button type="button" onClick={() => setButtonPopup(true)}>
             <img id="lev" src="./public/pictos/Niveau.png" alt="niveau" />
@@ -72,6 +73,7 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
       </div>
 
       <div className="localisation">
+
         <img
           id="loc"
           src="./public/pictos/Localisation.png"

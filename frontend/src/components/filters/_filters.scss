@@ -28,6 +28,7 @@
     cursor: pointer;
     width: calc(50px + 2vw);
     height: auto;
+    background-color: transparent;
   }
 
   ul li {
@@ -92,6 +93,7 @@
     0 16px 40px rgba(14, 21, 47, 0.4);
   position: relative;
   border-radius: 3px;
+  outline: none;
 
   select {
     font-size: 0.5rem;
