@@ -10,47 +10,52 @@ function Infos() {
       <Navbar />
       <div className="infos">
         {" "}
-        Infos et consignes;
         <section className="condition">
-          <h1>
-            Comprendre les conditions météos et le choix de ton niveau de surf
-          </h1>
-          <h2> Les prévisions de conditions de surf</h2>
+          <br />
+          <h1>Tout comprendre sur le Surf et ses Dangers</h1>
+          <br />
+          <br />
           <p>
-            Ce site web choisi le spot idéal en fonction de la houle et des
-            conditions météo(Vent, direction du vent, soleil). Pour comprendre
-            ces données, une explication vous est proposé ci-dessous.
-          </p>
-          <p>
-            Aujourd'hui, de nombreux sites internet offrent des prévisions
-            fiables de houle et de vagues. Mais savez-vous les exploiter ? Voici
-            les clés de compréhension qui vous aideront à décoder facilement les
-            informations utiles pour optimiser vos sessions de surf.
-          </p>
-          <p>
+            La première chose à se dire, c'est est-ce que je suis dans le bon
+            état d'esprit aujourd'hui pour surfer ? Ta réponse est Oui ?! Alors
+            let's go !
+            <br />
+            <br />
             Les planches sont sur le toit, les combinaisons sont dans le coffre,
-            et après 6h de route ou 30min voir moins pour les plus chanceux,
-            vous êtes enfin sur la plage. Mais les conditions vous
-            permettront-elles de surfer ? Pour vous assurer de belles sessions,
-            mieux vaut anticiper plutôt que de s'en remettre au hasard !
+            et après 30 min de route ou 6h pour certains, vous êtes enfin sur la
+            plage. Mais les conditions vous permettront-elles de surfer ?
+            <br />
+            Pour vous assurer de belles sessions, mieux vaut anticiper plutôt
+            que de s'en remettre au hasard !
           </p>
-          <p>
-            En préambule, notez bien que l'on parlera de houle en mer et de
-            vagues lorsque celle-ci est déformée en touchant la côte.
-          </p>
-          <h3>Tout d'abord, comment se créer une vague ?</h3>
-          <p>
-            Le vent est l'unique paramètre de la formation de la houle en mer,
-            il peut aussi bien la renforcer que la réduire. 3 éléments peuvent
-            alors agir pour construire la puissance de la houle.• La force avec
-            laquelle le vent souffle sur l'eau • La durée de l'évènement météo,
-            de quelques heures à plusieurs jours • La surface sur laquelle
-            s'exprime l'évènement météo (de quelques Kms² à la moitié de
-            l'atlantique nord par exemple). Une fois générée, la houle chemine
-            indéfiniment tant qu'elle ne trouve pas d'obstacle (vents
-            contraires, haut fonds, îles et continents).
-          </p>
-          <h3>Parlons maintenant de la fameuse vague que tu vas surfer :</h3>
+          <div className="surfcharles">
+            <div className="previsions">
+              <h2> Les prévisions de conditions de surf :</h2>
+              <p>
+                Ce site web choisit le spot idéal en fonction des conditions
+                météo en mer et sur terre.
+              </p>
+              <h4>Tout d'abord, comment se créer une vague ?</h4>
+              <p>
+                Le vent est l'unique paramètre de la formation de la houle en
+                mer, il peut aussi bien la renforcer que la réduire. Trois
+                éléments peuvent alors agir pour construire la puissance de la
+                houle : • La force avec laquelle le vent souffle sur l'eau, • La
+                durée de l'évènement météo, de quelques heures à plusieurs
+                jours, • La surface sur laquelle s'exprime l'évènement météo (de
+                quelques Kms² à la moitié de l'atlantique nord par exemple). Une
+                fois générée, la houle chemine indéfiniment tant qu'elle ne
+                trouve pas d'obstacle (vents contraires, haut fonds, îles et
+                continents).
+              </p>
+            </div>
+            <img
+              className="surfeur4"
+              src="./src/assets/img/surfeur4.jpg"
+              alt="surfeur4"
+            />
+          </div>
+          <h4>Parlons maintenant de la fameuse vague que tu vas surfer !</h4>
           <p>
             Un vent « Offshore » est un vent qui vient de la terre et va en
             direction de l'océan. Il va creuser la houle permettant de former
@@ -61,69 +66,115 @@ function Infos() {
           <p>
             À l'inverse, le vent « Onshore » souffle de l'océan vers la terre,
             il désordonne et couche les vagues, dégradant ainsi la qualité d'une
-            session mais reste reste cool pour un débutant.
+            session mais reste quand même cool pour débutant et intermédiaire.
+            Plus tu surfes plus tu progresses, c'est comme tout. L'Océan reste
+            quelques fois imprévisible, il t'offrira un jour le meilleur et
+            inversement, ça reste la nature !
           </p>
         </section>
         <section className="definition">
-          <p>image tableau</p>
-
-          <h3>Le choix du niveau de surf :</h3>
-          <p>image tableau</p>
+          <h2>Choisir son niveau de Surf & Définitions :</h2>
+          <section className="imgtableau">
+            <img
+              className="tableausurf"
+              src="./src/assets/img/tableausurf.png"
+              alt="Tableau Surf"
+            />
+          </section>
+          <h4>Niveaux</h4>
           <p>
-            Niveau : Novice = Savoir nager un minimum, jamais surfer, connait
-            aucune règle ds l'eau et les dangers
+            Novice = Savoir nager un minimum, avoir jamais ou peu surfer,
+            connait aucune règle ds l'eau et les dangers.
             <br />
-            Bon = Savoir nager, comprends l'eau un minimum(courant, remou, la
-            mousse, une vague), connait les règles(respect des autres, bien se
-            placer et revenir sans gêner..) et les dangers(secouer, courant,
-            planches et humains..), tiens un minimum en équilibre.
+            <br />
+            Bon = Savoir nager un minimum, comprends les rudiments de l'eau
+            (courant, remou, la mousse, une vague, le vent), connait les
+            règles(respect des autres, bien se placer et revenir sans gêner..)
+            et les dangers(secouer, courant, planches et humains..), tiens un
+            minimum en équilibre.
+            <br />
             <br />
             Maîtrise = Gères tout ça ! ^^
           </p>
+          <h3>Définitions</h3>
+          <p>
+            On parle de houle en mer et de vagues lorsque celle-ci est déformée
+            en touchant la côte.
+          </p>
+          <br />
           <p>
             Hauteur / Swell : La hauteur de la vague décide la difficulté et le
             choix de sa planche (Longboard = Grande planche pr vague mole,
             Shortboard= petite planche pr vague rapide et figure)
           </p>
+          <br />
           <p>
             Vent : Le vent vient frotter l'eau donc : - Peu ou pas de vent
             permet un bon swell, la vague se forme parfaitement. - En vent
             Offshore & Onshore : Un vent moyen voir rapide va venir augmenter ou
             écraser le swell. - Autres vent: Plan d'eau perturbé.
           </p>
+          <br />
+          <h4>Direction</h4>
           <p>
-            Direction : Vent Offshore = vent de terre - qui vient de l'opposé de
-            l'océan permettant de lever la houle pr former LE fameux
-            Tube(barel). Vent Onshore = vent de l'eau - vient applatir la houle
-            permettant de surfer une vague tranquille de qualité aussi. Vent
-            Cross = Tourbillon - te permet de faire la grasse matinée avec des
-            pancakes. Glass = très calme.
-          </p>
-          <p>
-            Equipements : - Corps : Eté : Short ; Short + icra(tee-shirt
-            néopène) ; Combinaison shorty Printemps Automne : à ta sauce Hiver :
-            Combinaison intégrale ; Combi intég + Cagoule + Chausson Crème
-            visage all season. - Matériel : Planche en mousse pr les colisions
-            avec toi-même et autrui & plus stable pr l'équilibre. Planche en
-            epoxy, bois... pour les confirmés, tu gagnes en vitesse et virage.
+            Vent Offshore = vent de terre - qui vient de l'opposé de l'océan
+            permettant de lever la houle pr former LE fameux Tube(barel).
+            <br />
+            <br />
+            Vent Onshore = vent de l'eau - vient applatir la houle permettant de
+            surfer une vague tranquille de qualité aussi.
+            <br />
+            <br />
+            Vent Cross = Tourbillon - te permet de faire la grasse matinée avec
+            des pancakes. Glass = très calme.
           </p>
         </section>
         <section className="consignes">
-          <h3>Consignes de sécurité </h3>
+          <h2>Choix de l'équipement</h2>
           <p>
-            Prévention : Un bon petit-déjeuner, être déter, bien s'échauffer et
-            bien s'équiper + crème visage. Jamais se trouver seul sur un spot,
-            l'observer (courant, baîne, shorebreak), choisit la bonne « porte »
-            pour rentrer dans l'eau. Danger - Call 112 & Let's Go !
+            Température chaude : Short + icra(tee-shirt néopène) ou combinaison
+            shorty.
+            <br />
+            Température froide : Combinaison intégrale voir cagoule + chausson.
+            <br />
+            Crème visage toutes les saisons même sans soleil, les UV traversent
+            quand même les nuages ! La planche de surf : En mousse pr les
+            colisions avec toi-même et autrui. Position plus stable pour
+            faciliter la pratique. En epoxy (mousse entouré de fibres collées)
+            pour les confirmés, tu gagnes en vitesse et virage.
           </p>
-          <h3>Conseils entretien équipements:</h3>
+
+          <h4>Conseils entretien équipements</h4>
           <p>
-            Pour ta board, va voir un shaper du coin Ta combi est à laver apres
-            chaque sortie pour une bonne durée de vie.
+            Après chaque session, penses à laver tous les équipements à l'eau
+            légèrement savonneuse, leur durée de vie mais aussi leur odeur n'en
+            seront que meilleures ! Pour les petits impacts sur ta board, va
+            voir un shaper du coin ! Bon surf !
           </p>
+          <h2>Les Dangers du Surf </h2>
+          <p>Si c'est votre première sortie, prenez des cours de surf !</p>
+          <p>
+            La baïne : courant en forme de cercle pouvant te tirer vers le
+            large. Se cogner à sa planche : apprendre la technique de base
+            obligatoire. Accident entre surfeurs : savoir où se placer
+            <br />
+            Bien observer le plan d'eau permet d'assurer une sécurité à soi-même
+            mais aussi celle des autres surfeurs.
+            <br />
+            Choisir la bonne « porte » pour rentrer dans l'eau évite de
+            t'exposer aux courants, aux autres surfeurs et à des efforts
+            inutiles.
+            <br />
+            Si tu es en difficulté les autres surfeurs sont là, n'hésites pas !
+            Il existe une grande solidarité à l'eau mais c'est comme la marée,
+            ça dépend de la Lune !
+            <br />
+            Danger imminent, s'il n'y a pas de Sauveteur (MNS) appelle le 112.
+          </p>
+          <br />
         </section>
       </div>
-
+      <br />
       <Footer />
     </>
   );
