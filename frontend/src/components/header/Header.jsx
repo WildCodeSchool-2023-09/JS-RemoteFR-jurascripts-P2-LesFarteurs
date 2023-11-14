@@ -6,7 +6,7 @@ function Header() {
       <div className="mask">
         <img
           className="bandeau"
-          src="./src/assets/Bandeau-men-surfing3.jpg"
+          src="/Bandeau-men-surfing3.jpg"
           alt="bandeau"
         />
       </div>
