@@ -17,8 +17,7 @@ function Contact() {
   const [isMailSent, setIsMailSent] = useState(false);
 
   const emailRegex =
-    // eslint-disable-next-line no-useless-escape
-    /^(([^<>()[\]\\.,;:\s@]+(\.[^<>()[\]\\.,;:\s@]+)*)|(\".+\"))@((([^<>()[\]\\.,;:\s@]+\.)+[^<>()[\]\\.,;:\s@]{2,}))$/;
+    /^(([^<>()[\]\\.,;:\s@]+(\.[^<>()[\]\\.,;:\s@]+)*)|(".+"))@((([^<>()[\]\\.,;:\s@]+\.)+[^<>()[\]\\.,;:\s@]{2,}))$/;
 
   const validateEmail = () => {
     if (mail) {
