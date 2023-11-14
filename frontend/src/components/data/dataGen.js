@@ -1,4 +1,4 @@
-const departements = [
+const dataSpots = [
   {
     id: 100,
     depName: "Département",
@@ -6,148 +6,6 @@ const departements = [
   {
     id: 6,
     depName: "Alpes-Maritimes",
-    latNord: 44.361051257141,
-    latSud: 43.480065494401,
-  },
-  {
-    id: 14,
-    depName: "Calvados",
-    latNord: 49.429859840723,
-    latSud: 48.752223582274,
-    longEst: 0.44627431224134,
-    longOuest: -1.1595014604014,
-  },
-  {
-    id: 17,
-    depName: "Charente-Maritime",
-    latNord: 46.371051399922,
-    latSud: 45.088810634907,
-    longEst: 0.005823224821197,
-    longOuest: -1.5614800452621,
-  },
-  {
-    id: 2,
-    depName: "Corse",
-    latNord: 50.069271974234,
-    latSud: 48.837795469902,
-  },
-  {
-    id: 22,
-    depName: "Côtes-d'Armor",
-    latNord: 48.867411825697,
-    latSud: 48.035478415172,
-    longEst: -1.9089921410274,
-    longOuest: -3.663669588163,
-  },
-  {
-    id: 29,
-    depName: "Finistère",
-    latNord: 48.75230874743,
-    latSud: 47.762638930067,
-    longEst: -3.3880788564101,
-    longOuest: -5.138001239929,
-  },
-  {
-    id: 33,
-    depName: "Gironde",
-    latNord: 45.574691325999,
-    latSud: 44.193811119459,
-    longEst: 0.31506020240148,
-    longOuest: -1.2617334302552,
-  },
-  {
-    id: 34,
-    depName: "Hérault",
-    latNord: 43.969527164685,
-    latSud: 43.212804132866,
-  },
-  {
-    id: 35,
-    depName: "Ille-et-Vilaine",
-    latNord: 48.704854504824,
-    latSud: 47.631356309182,
-    longEst: -1.0168893967587,
-    longOuest: -2.289084836122,
-  },
-  {
-    id: 40,
-    depName: "Landes",
-    latNord: 44.532195517275,
-    latSud: 43.487949116697,
-    longEst: 0.13672631290526,
-    longOuest: -1.524870110434,
-  },
-  {
-    id: 50,
-    depName: "Manche",
-    latNord: 49.725557927402,
-    latSud: 48.458282754255,
-    longEst: -0.73732101904671,
-    longOuest: -1.9472733176655,
-  },
-  {
-    id: 56,
-    depName: "Morbihan",
-    latNord: 48.210884763611,
-    latSud: 47.283069445657,
-    longEst: -2.0357552590146,
-    longOuest: -3.7321436369252,
-  },
-  {
-    id: 59,
-    depName: "Nord",
-    latNord: 51.08854370897,
-    latSud: 49.969186662527,
-    longEst: 4.2279959931456,
-    longOuest: 2.0677049871716,
-  },
-  {
-    id: 62,
-    depName: "Pas-de-Calais",
-    latNord: 50.020975633738,
-    latSud: 48.996158010558,
-    longEst: 3.1883563131291,
-    longOuest: 1.5577948179294,
-  },
-  {
-    id: 64,
-    depName: "Pyrénées-Atlantiques",
-    latNord: 43.596401195938,
-    latSud: 42.777515930774,
-    longEst: 0.02629551293813,
-    longOuest: -1.7908870919282,
-  },
-
-  {
-    id: 85,
-    depName: "Vendée",
-    latNord: 47.083893903306,
-    latSud: 46.266566974958,
-    longEst: -0.53779518169029,
-    longOuest: -2.3987614706025,
-  },
-
-  {
-    id: 76,
-    depName: "Seine-Maritime",
-    latNord: 50.070851596042,
-    latSud: 49.252262168305,
-    longEst: 1.79022549105,
-    longOuest: 0.065609431053556,
-  },
-  {
-    id: 80,
-    depName: "Somme",
-    latNord: 50.366290636763,
-    latSud: 49.571762327,
-    longEst: 3.2030417908111,
-    longOuest: 1.3796981484469,
-  },
-];
-
-const dataSpots = [
-  {
-    id: "SS1",
     latitude: 43.69106669834545,
     longitude: 7.27919241979722,
     name: "Nice - Promenade des Anglais Est - Alpes-Maritimes",
@@ -159,7 +17,8 @@ const dataSpots = [
     dep: 6,
   },
   {
-    id: "SS2",
+    id: 34,
+    depName: "Hérault",
     latitude: 43.28516314116665,
     longitude: 3.529026975365399,
     name: "Cap d'Agde - Plade du Mole - Hérault",
@@ -171,7 +30,8 @@ const dataSpots = [
     dep: 34,
   },
   {
-    id: "SS3",
+    id: 2,
+    depName: "Corse",
     latitude: 41.93595848347769,
     longitude: 8.621024342983032,
     name: "Ajaccio - Capo di Feno - Corse",
@@ -183,7 +43,8 @@ const dataSpots = [
     dep: 2,
   },
   {
-    id: "SSO1",
+    id: 64,
+    depName: "Pyrénées-Atlantiques",
     latitude: 43.37667854866965,
     longitude: -1.7805677824278443,
     name: "Hendaye - Sokoburu - Pays Basque",
@@ -195,7 +56,8 @@ const dataSpots = [
     dep: 64,
   },
   {
-    id: "SSO2",
+    id: 40,
+    depName: "Landes",
     latitude: 43.70965724440656,
     longitude: -1.4392527381729847,
     name: "Seignosse - Le Penon - Landes",
@@ -207,7 +69,8 @@ const dataSpots = [
     dep: 40,
   },
   {
-    id: "SSO3",
+    id: 33,
+    depName: "Gironde",
     latitude: 45.00263680291888,
     longitude: -1.2044503307609156,
     name: "Lacanau - La Centrale - Gironde",
@@ -219,7 +82,8 @@ const dataSpots = [
     dep: 33,
   },
   {
-    id: "SO1",
+    id: 17,
+    depName: "Charente-Maritime",
     latitude: 45.73916020259519,
     longitude: -1.2457990882763914,
     name: "La Tremblade - Côte Sauvage - Charente-Maritime",
@@ -231,7 +95,8 @@ const dataSpots = [
     dep: 17,
   },
   {
-    id: "SO2",
+    id: 18,
+    depName: "Charente-Maritime",
     latitude: 46.25519266044832,
     longitude: -1.5210299641023917,
     name: "Ile de Ré - Le Petit Bec - Charente-Maritime",
@@ -240,10 +105,11 @@ const dataSpots = [
     desc: "Le spot du Petit Bec est un spot de surf de qualité, qui offre de belles vagues pour les surfeurs ayant de tous niveaux en fonction des périodes de l'année.",
     intro:
       "C'est un spot très apprécié des surfeurs de la région grâce à ses vagues régulières et puissantes, qui peuvent atteindre facilement 2 mètres de hauteur en période de bonne houle. La plage du Petit Bec se trouve à l'extrémité nord de l'île, près du phare des Baleines, et est accessible en voiture, en vélo ou à pied depuis les Portes-en-Ré. Il y a plusieurs parkings dans les environs, ainsi qu'une aire de pique-nique et des toilettes publiques.",
-    dep: 17,
+    dep: 18,
   },
   {
-    id: "SO3",
+    id: 85,
+    depName: "Vendée",
     latitude: 46.489084205333576,
     longitude: -1.781196033078667,
     name: "Les Sables-d'Olonnes - Vendée",
@@ -255,7 +121,8 @@ const dataSpots = [
     dep: 85,
   },
   {
-    id: "N01",
+    id: 56,
+    depName: "Morbihan",
     latitude: 47.521385780277114,
     longitude: -3.1565533991256167,
     name: "Saint-Pierre-Quiberon - Port Blanc - Morbihan",
@@ -267,7 +134,8 @@ const dataSpots = [
     dep: 56,
   },
   {
-    id: "N02",
+    id: 29,
+    depName: "Finistère",
     latitude: 48.19843358347464,
     longitude: -4.5593149584212345,
     name: "Crozon - La Palue - Finistère",
@@ -279,7 +147,8 @@ const dataSpots = [
     dep: 29,
   },
   {
-    id: "N1",
+    id: 50,
+    depName: "Manche",
     latitude: 49.571055688498475,
     longitude: -1.8492953420046754,
     name: "Siouville - Plage de la Hague - Manche",
@@ -291,7 +160,8 @@ const dataSpots = [
     dep: 50,
   },
   {
-    id: "N2",
+    id: 62,
+    depName: "Pas-de-Calais",
     latitude: 50.889032279674524,
     longitude: 1.6612802462551723,
     name: "Wissant - Wissant plage - Pas-de-Calais",
@@ -333,4 +203,4 @@ const surfLevels = [
   },
 ];
 
-export default { departements, dataSpots, surfLevels };
+export default { dataSpots, surfLevels };

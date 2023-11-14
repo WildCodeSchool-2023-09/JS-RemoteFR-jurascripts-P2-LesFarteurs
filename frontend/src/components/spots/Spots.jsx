@@ -12,6 +12,7 @@ function Spots({
   windDirection,
   waveHeight,
   weatherCode,
+  selectedDepartmentId,
 }) {
   const [isDescriptionVisible, setDescriptionVisible] = useState(false);
   const [isOthersVisible, setOthersVisible] = useState(false);
@@ -23,6 +24,14 @@ function Spots({
   const toggleOthers = () => {
     setOthersVisible(!isOthersVisible);
   };
+
+  let filteredSpots = dataGen.dataSpots;
+
+  if (selectedDepartmentId) {
+    filteredSpots = dataGen.dataSpots.filter(
+      (spot) => spot.id === parseInt(selectedDepartmentId, 10)
+    );
+  }
 
   // ajout du Carrousel
   useEffect(() => {
@@ -47,73 +56,7 @@ function Spots({
         showStatus={false}
         emulateTouch
       >
-        <div className="spotsContainer">
-          <button type="button" onClick={toggleDescription}>
-            <img className="imgSpot" alt="" />
-          </button>
-          <div className="infoSpot">
-            <h4 className="titleSpot">Titre du spot</h4>
-            <div className="introSpot">
-              <p>
-                Intro : Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Facilis sed recusandae id
-              </p>
-            </div>
-            <div
-              role="button"
-              aria-hidden="true"
-              className={`descriptionSpot ${
-                isDescriptionVisible ? "visible" : "hidden"
-              }`}
-              onClick={toggleDescription}
-            >
-              <button
-                type="button"
-                className="toggleButton"
-                onClick={toggleDescription}
-              >
-                {isDescriptionVisible ? "- " : "+ "}Description
-              </button>{" "}
-              {isDescriptionVisible ? (
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Facilis sed recusandae id, eaque nisi perferendis earum eius
-                  error doloribus ut.
-                </p>
-              ) : null}
-            </div>
-            <div
-              role="button"
-              aria-hidden="true"
-              className={`others ${isOthersVisible ? "visible" : "hidden"}`}
-              onClick={toggleOthers}
-            >
-              <button
-                type="button"
-                className="toggleButton"
-                onClick={toggleOthers}
-              >
-                {isOthersVisible ? "- " : "+ "}
-                Autres infos
-              </button>
-              {isOthersVisible ? (
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dicta, ipsum soluta. Quod facere, sapiente earum laborum
-                  dignissimos blanditiis perspiciatis corporis!
-                </p>
-              ) : null}
-            </div>
-            <Array
-              weatherCode={weatherCode}
-              temperature={temperature}
-              waveHeight={waveHeight}
-              windSpeed={windSpeed}
-              windDirection={windDirection}
-            />
-          </div>
-        </div>
-        {dataGen.dataSpots.map((dataSpot) => (
+        {filteredSpots.map((dataSpot) => (
           <div key={dataSpot.id} className="spotsContainer">
             <button type="button" onClick={toggleDescription}>
               <img className="imgSpot" src={dataSpot.imgSrc} alt="spot" />
@@ -178,74 +121,7 @@ function Spots({
 
   return (
     <>
-      <div className="spotsContainer">
-        <button type="button" onClick={toggleDescription}>
-          <img className="imgSpot" alt="" />
-        </button>
-        <div className="infoSpot">
-          <h4 className="titleSpot">Titre du spot</h4>
-          <div className="introSpot">
-            <p>
-              Intro : Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Facilis sed recusandae id
-            </p>
-          </div>
-          <div
-            role="button"
-            aria-hidden="true"
-            className={`descriptionSpot ${
-              isDescriptionVisible ? "visible" : "hidden"
-            }`}
-            onClick={toggleDescription}
-          >
-            <button
-              type="button"
-              className="toggleButton"
-              onClick={toggleDescription}
-            >
-              {isDescriptionVisible ? "- " : "+ "}Description
-            </button>{" "}
-            {isDescriptionVisible ? (
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                sed recusandae id, eaque nisi perferendis earum eius error
-                doloribus ut.
-              </p>
-            ) : null}
-          </div>
-          <div
-            role="button"
-            aria-hidden="true"
-            className={`others ${isOthersVisible ? "visible" : "hidden"}`}
-            onClick={toggleOthers}
-          >
-            <button
-              type="button"
-              className="toggleButton"
-              onClick={toggleOthers}
-            >
-              {isOthersVisible ? "- " : "+ "}
-              Autres infos
-            </button>
-            {isOthersVisible ? (
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-                ipsum soluta. Quod facere, sapiente earum laborum dignissimos
-                blanditiis perspiciatis corporis!
-              </p>
-            ) : null}
-          </div>
-          <Array
-            weatherCode={weatherCode}
-            temperature={temperature}
-            waveHeight={waveHeight}
-            windSpeed={windSpeed}
-            windDirection={windDirection}
-          />
-        </div>
-      </div>
-
-      {dataGen.dataSpots.map((dataSpot) => (
+      {filteredSpots.map((dataSpot) => (
         <div key={dataSpot.id} className="spotsContainer">
           <button type="button" onClick={toggleDescription}>
             <img className="imgSpot" src={dataSpot.imgSrc} alt="spot" />
@@ -316,4 +192,5 @@ Spots.propTypes = {
   waveHeight: PropTypes.number.isRequired,
   windSpeed: PropTypes.number.isRequired,
   windDirection: PropTypes.number.isRequired,
+  selectedDepartmentId: PropTypes.number.isRequired,
 };
