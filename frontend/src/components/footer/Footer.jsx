@@ -1,4 +1,5 @@
 import "./_footer.scss";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -6,13 +7,13 @@ function Footer() {
       <p>&copy; Les Farteurs</p>
       <ul className="socialNetwork">
         <li>
-          <a href="Facebook">Facebook</a>
+          <Link to="/error">Facebook</Link>
         </li>
         <li>
-          <a href="Instagram">Instagram</a>
+          <Link to="/error">Instagram</Link>
         </li>
         <li>
-          <a href="Twitter">Twitter</a>
+          <Link to="/error">Twitter</Link>
         </li>
       </ul>
     </footer>

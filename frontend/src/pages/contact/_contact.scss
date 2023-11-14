@@ -2,5 +2,96 @@
 @import "src/styles/_mixins.scss";
 
 .contact {
-  background-color: red;
+  background: url("../../assets/img/water.gif");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.formInput {
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.floatingInput {
+  display: block;
+  font-size: $fs-p;
+  width: 100%;
+  height: 4vh;
+  background: white;
+  color: black;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+  padding: 10px;
+}
+
+.floatingInput:focus,
+textarea:focus {
+  border: 1px solid blue;
+}
+
+.floatingLabel {
+  font-size: $fs-p;
+  font-weight: 500;
+  color: $nav;
+  transition: 0.2s ease all;
+  margin-bottom: 2vh;
+}
+
+.contactBtn {
+  cursor: pointer;
+  height: calc(10px + 3vh);
+  margin-top: 3vh;
+  background-color: $nav;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: $btn_filter;
+    color: $nav;
+  }
+}
+
+textarea {
+  font-size: $fs-p;
+  margin-top: 2vh;
+  color: black;
+  border-radius: 6px;
+  outline: none;
+  padding: 10px;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.custom-popup {
+  position: fixed;
+  width: 30vw;
+  height: 15vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: $bg;
+  border: none;
+  z-index: 1;
+  text-align: center;
+  color: black;
+}
+
+.custom-popup p {
+  color: white;
+}
+
+.close-btn {
+  border: 1px solid white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px 15px;
+  border-radius: 100%;
+  cursor: pointer;
 }

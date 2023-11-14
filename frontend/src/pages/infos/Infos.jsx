@@ -35,9 +35,7 @@ function Infos() {
                 Ce site web choisit le spot idéal en fonction des conditions
                 météo en mer et sur terre.
               </p>
-
               <h4>Tout d'abord, comment se créer une vague ?</h4>
-
               <p>
                 Le vent est l'unique paramètre de la formation de la houle en
                 mer, il peut aussi bien la renforcer que la réduire. Trois
@@ -58,7 +56,6 @@ function Infos() {
             />
           </div>
           <h4>Parlons maintenant de la fameuse vague que tu vas surfer !</h4>
-
           <p>
             Un vent « Offshore » est un vent qui vient de la terre et va en
             direction de l'océan. Il va creuser la houle permettant de former
@@ -77,7 +74,6 @@ function Infos() {
         </section>
         <section className="definition">
           <h2>Choisir son niveau de Surf & Définitions :</h2>
-
           <section className="imgtableau">
             <img
               className="tableausurf"
@@ -100,9 +96,7 @@ function Infos() {
             <br />
             Maîtrise = Gères tout ça ! ^^
           </p>
-
           <h3>Définitions</h3>
-
           <p>
             On parle de houle en mer et de vagues lorsque celle-ci est déformée
             en touchant la côte.
@@ -137,7 +131,6 @@ function Infos() {
         </section>
         <section className="consignes">
           <h2>Choix de l'équipement</h2>
-
           <p>
             Température chaude : Short + icra(tee-shirt néopène) ou combinaison
             shorty.
@@ -158,11 +151,8 @@ function Infos() {
             seront que meilleures ! Pour les petits impacts sur ta board, va
             voir un shaper du coin ! Bon surf !
           </p>
-
           <h2>Les Dangers du Surf </h2>
-
           <p>Si c'est votre première sortie, prenez des cours de surf !</p>
-
           <p>
             La baïne : courant en forme de cercle pouvant te tirer vers le
             large. Se cogner à sa planche : apprendre la technique de base
@@ -185,7 +175,6 @@ function Infos() {
         </section>
       </div>
       <br />
-
       <Footer />
     </>
   );

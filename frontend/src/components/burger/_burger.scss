@@ -2,19 +2,18 @@
 @import "src/styles/_mixins.scss";
 
 .burger-menu {
+  margin: 10px;
   position: relative;
 
   .burger-button {
-    background: transparent;
+    background-color: $nav;
     border: none;
     cursor: pointer;
 
     .burger-icon {
-      width: 30px;
-      height: 2px;
-      background: #333;
-      margin: 6px 0;
-      transition: 0.4s;
+      width: 50px;
+      height: 50px;
+      background-image: url (".");
     }
   }
 
@@ -45,17 +44,17 @@
       display: block;
       padding: 10px;
       text-decoration: none;
-      color: #333;
+      color: $btn_filter;
     }
   }
 
   @media (max-width: 768px) {
     .burger-button {
-      display: block;
+      display: none;
     }
 
     .menu-items {
-      display: none;
+      display: block;
     }
 
     &.open {

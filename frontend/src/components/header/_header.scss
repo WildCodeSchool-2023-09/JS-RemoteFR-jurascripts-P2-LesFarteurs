@@ -19,8 +19,8 @@
 }
 
 .mask {
-  -webkit-mask-image: url("./src/assets/vague-mask.png");
-  mask-image: url("./src/assets/vague-mask.png");
+  -webkit-mask-image: url("/vague-mask.png");
+  mask-image: url("/vague-mask.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
