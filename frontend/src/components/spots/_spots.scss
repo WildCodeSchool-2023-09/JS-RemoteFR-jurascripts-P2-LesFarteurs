@@ -1,5 +1,6 @@
 @import "src/styles/_variables.scss";
 @import "src/styles/_mixins.scss";
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 .spotsContainer {
   display: grid;
@@ -89,6 +90,15 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
+    margin-bottom: 0;
+    span {
+      img {
+        width: 50px;
+        height: 70px;
+      }
+      justify-self: center;
+      width: 50px;
+    }
   }
 
   .imgSpot {
@@ -112,5 +122,9 @@ button {
   .others {
     padding: 1vw;
     margin-bottom: 2vh;
+  }
+  .carousel .control-dots .dot.selected,
+  .carousel .control-dots .dot:hover {
+    background: #e79950;
   }
 }
