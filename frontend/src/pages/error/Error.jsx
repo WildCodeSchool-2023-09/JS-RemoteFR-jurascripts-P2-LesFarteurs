@@ -4,12 +4,8 @@ function Error() {
   return (
     <div className="error">
       <h1> Erreur 404</h1>
-      <img
-        className="error_img"
-        src="../src/assets/img/404.gif"
-        alt="wrong away"
-      />
-      <h3> Il n'y a pas de sweel ici 😢</h3>
+      <img className="error_img" src="/404.gif" alt="wrong away" />
+      <h3> Il n'y a pas de swell ici 😢</h3>
     </div>
   );
 }

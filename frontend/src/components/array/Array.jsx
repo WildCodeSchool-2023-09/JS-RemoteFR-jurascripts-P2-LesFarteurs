@@ -34,22 +34,22 @@ function Array({
   return (
     <div className="dataContainer">
       <span className="weather">
-        <img src="./src/assets/img/ensoleillé.png" alt="logo1" />
+        <img src="/ensoleillé.png" alt="logo1" />
         {meteo(weatherCode)}
       </span>
 
       <span className="temp">
-        <img src="./src/assets/img/temp.png" alt="logo2" />
+        <img src="/temp.png" alt="logo2" />
         {temperature}°C
       </span>
 
       <span className="waveHeight">
-        <img src="./src/assets/img/waveHeight.png" alt="logo3" />
+        <img src="/waveHeight.png" alt="logo3" />
         {waveHeight} m
       </span>
 
       <span className="windS">
-        <img src="./src/assets/img/windSD.png" alt="logo4" />
+        <img src="/windSD.png" alt="logo4" />
         {windSpeed} km/h
       </span>
       <span className="windD">{wind(windDirection)}</span>

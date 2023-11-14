@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Filters from "../filters/Filters";
 import Spots from "../spots/Spots";
 
 function Algo() {
@@ -62,20 +62,13 @@ function Algo() {
   }, []);
 
   return (
-    <>
-      <Filters
-        handleSelectLoc={handleSelectLoc}
-        handleSelectDate={handleSelectDate}
-        handleSelectLev={handleSelectLev}
-      />
-      <Spots
-        weatherCode={data.weathercode}
-        temperature={data.temperature_2m}
-        waveHeight={data.wave_height}
-        windSpeed={data.windspeed_10m}
-        windDirection={data.winddirection_10m}
-      />
-    </>
+    <Spots
+      weatherCode={data.weathercode}
+      temperature={data.temperature_2m}
+      waveHeight={data.wave_height}
+      windSpeed={data.windspeed_10m}
+      windDirection={data.winddirection_10m}
+    />
   );
 }
 
