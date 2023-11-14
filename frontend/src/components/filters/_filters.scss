@@ -101,12 +101,16 @@
 }
 
 #lev {
-  width: calc(80px + 2vw);
+  width: calc(90px + 2vw);
   height: auto;
 }
 
 #loc {
-  width: calc(70px + 2vw);
+  width: calc(90px + 2vw);
+  height: auto;
+}
+#cal {
+  width: calc(90px + 2vw);
   height: auto;
 }
 
@@ -117,6 +121,10 @@ option {
 
 .infoLevel {
   text-align: left;
+}
+
+strong {
+  color: $coolitude;
 }
 
 //MEDIA QUERY//
