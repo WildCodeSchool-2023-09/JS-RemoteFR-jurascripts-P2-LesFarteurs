@@ -1,9 +1,17 @@
+import Coolitude from "../../components/coolitude/Coolitude";
+import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/navbar/Navbar";
 import "./_login.scss";
 
-const Login = () => {
-  return;
-  // eslint-disable-next-line no-unreachable
-  <div className="contact"> Contact</div>;
-};
+function Login() {
+  return (
+    <>
+      <Coolitude />
+      <Navbar />
+      <div className="login"> Login</div>
+      <Footer />
+    </>
+  );
+}
 
 export default Login;

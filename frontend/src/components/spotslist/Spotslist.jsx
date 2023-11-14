@@ -1,7 +1,6 @@
-/* eslint-disable react/function-component-definition */
 import "./_spotslist.scss";
 
-const Spotslist = () => {
+function Spotslist() {
   return (
     <div id="SpotslistContainer">
       <h1>Spotslist</h1>
@@ -9,6 +8,6 @@ const Spotslist = () => {
       <p>Spotslist Page</p>
     </div>
   );
-};
+}
 
 export default Spotslist;

@@ -1,5 +1,6 @@
 @import "src/styles/_variables.scss";
 @import "src/styles/_mixins.scss";
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 .spotsContainer {
   display: grid;
@@ -33,7 +34,7 @@
 
 .descriptionSpot,
 .others {
-  background-color: #126a6c;
+  background-color: $nav;
   color: white;
   padding: 1vw;
   margin-bottom: 2vh;
@@ -43,6 +44,11 @@
   grid-column: 1 / 2;
   font-size: $fs-p;
 }
+.introSpot {
+  font-size: $fs-p;
+  padding: 1vw;
+  margin-bottom: 1vw;
+}
 
 .imgSpot {
   display: flex;
@@ -51,6 +57,7 @@
   height: 95%;
   background-image: url("./src/assets/img/plage.jpeg");
   background-size: cover;
+  object-fit: cover;
   border: none;
   grid-column: 2 / 3;
   grid-row: 1 / 3;
@@ -72,6 +79,10 @@
   cursor: pointer;
 }
 
+button {
+  background-color: transparent;
+  border-style: none;
+}
 //MEDIA QUERY//
 @media screen and (max-width: 768px) {
   .spotsContainer {
@@ -79,6 +90,15 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
+    margin-bottom: 0;
+    span {
+      img {
+        width: 50px;
+        height: 70px;
+      }
+      justify-self: center;
+      width: 50px;
+    }
   }
 
   .imgSpot {
@@ -102,5 +122,9 @@
   .others {
     padding: 1vw;
     margin-bottom: 2vh;
+  }
+  .carousel .control-dots .dot.selected,
+  .carousel .control-dots .dot:hover {
+    background: #e79950;
   }
 }
