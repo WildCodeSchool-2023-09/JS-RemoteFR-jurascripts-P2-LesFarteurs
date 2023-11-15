@@ -45,3 +45,13 @@ h4 {
     height: 330px;
   }
 }
+
+.danger {
+  display: flex;
+  margin: 2vh auto;
+  align-items: center;
+  #dangerous {
+    margin: 1vh 2vw;
+    justify-content: flex-start;
+  }
+}
