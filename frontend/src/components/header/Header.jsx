@@ -16,8 +16,9 @@ function Header() {
       <br />
       <div className="subtitle">
         <p>
-          Simple : choisis la date, ton niveau de surf et la ville la plus
-          proche de chez toi. LE spot idéal est choisi en suivant !
+          Simple : Choisis la date, ton niveau de surf et le département où tu
+          veux surfer. Si les condtions météos sont réunies, un ou plusieurs
+          spots te sont proposés en suivant !
         </p>
       </div>
     </header>

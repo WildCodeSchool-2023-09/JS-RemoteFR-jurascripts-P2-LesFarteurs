@@ -1,9 +1,20 @@
 import "./_infos.scss";
+import { useEffect } from "react";
 import Coolitude from "../../components/coolitude/Coolitude";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import "../../styles/index.css";
 
 function Infos() {
+  useEffect(() => {
+    const hash = window.location.hash.slice(1); // Remove the '#' character from the hash
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
   return (
     <>
       <Coolitude />
@@ -151,7 +162,10 @@ function Infos() {
             seront que meilleures ! Pour les petits impacts sur ta board, va
             voir un shaper du coin ! Bon surf !
           </p>
-          <h2>Les Dangers du Surf </h2>
+          <div className="danger">
+            <img src="/danger.png" alt="logo_danger" />
+            <h2 id="dangerous">Les Dangers du Surf </h2>
+          </div>
           <p>Si c'est votre première sortie, prenez des cours de surf !</p>
           <p>
             La baïne : courant en forme de cercle pouvant te tirer vers le
