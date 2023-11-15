@@ -4,7 +4,7 @@
 .title {
   margin-top: -10vh;
   margin-left: 4vw;
-  font-size: $fs-h3;
+  font-size: $fs-h1;
   text-align: start;
 }
 
@@ -35,6 +35,7 @@
 @media screen and (max-width: 650px) {
   .title {
     margin-top: 0vh;
+    margin-left: 4vw;
   }
   .subtitle {
     width: 80%;
