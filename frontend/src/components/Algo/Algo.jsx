@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Filters from "../filters/Filters";
 import Spots from "../spots/Spots";
 import dataGen from "../data/dataGen";
+import Filters from "../filters/Filters";
 
 function Algo() {
   // useState pour récupérer les choix de l'utilisateur dans Filters
