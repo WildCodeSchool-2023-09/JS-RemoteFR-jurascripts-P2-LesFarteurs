@@ -3,7 +3,6 @@ import Coolitude from "./components/coolitude/Coolitude";
 import Header from "./components/header/Header";
 import Alert from "./components/alert/Alert";
 import Algo from "./components/Algo/Algo";
-import Burger from "./components/burger/Burger";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Filters from "./components/filters/Filters";
@@ -28,7 +27,7 @@ function App() {
     <div className="app">
       {smallScreen ? (
         <div>
-          <Burger />
+          <Navbar />
           <Header />
           <Alert />
           <Algo />
@@ -40,7 +39,6 @@ function App() {
         <div>
           <Coolitude />
           <Navbar />
-          <Burger />
           <Header />
           <Alert />
           <Algo />
