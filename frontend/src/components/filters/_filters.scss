@@ -28,6 +28,7 @@
     cursor: pointer;
     width: calc(50px + 2vw);
     height: auto;
+    background-color: transparent;
   }
 
   ul li {
@@ -92,6 +93,7 @@
     0 16px 40px rgba(14, 21, 47, 0.4);
   position: relative;
   border-radius: 3px;
+  outline: none;
 
   select {
     font-size: 0.5rem;
@@ -99,12 +101,16 @@
 }
 
 #lev {
-  width: calc(80px + 2vw);
+  width: calc(90px + 2vw);
   height: auto;
 }
 
 #loc {
-  width: calc(70px + 2vw);
+  width: calc(90px + 2vw);
+  height: auto;
+}
+#cal {
+  width: calc(90px + 2vw);
   height: auto;
 }
 
@@ -115,6 +121,10 @@ option {
 
 .infoLevel {
   text-align: left;
+}
+
+strong {
+  color: $coolitude;
 }
 
 //MEDIA QUERY//

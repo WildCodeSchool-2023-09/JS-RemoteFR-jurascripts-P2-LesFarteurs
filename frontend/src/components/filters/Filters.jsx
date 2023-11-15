@@ -9,9 +9,8 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
   return (
     <section className="filtersContainer">
       <div className="calendar">
-        <img id="cal" src="./src/assets/img/calendar.png" alt="calendrier" />
+        <img id="cal" src="./public/pictos/Date.png" alt="calendrier" />
         <button type="button" className="calendar">
-          Date
           <select
             className="levelButton"
             onChange={(event) => handleSelectDate(event)}
@@ -28,26 +27,23 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
           </select>
         </button>
       </div>
-      <div className="levels">
+
+      <div className="levelButtonContainer">
         <div className="levelButtonContainer">
-          <img id="lev" src="./src/assets/img/level.png" alt="niveau" />
+          <button type="button" onClick={() => setButtonPopup(true)}>
+            <img id="lev" src="./public/pictos/Niveau.png" alt="niveau" />
+          </button>
           <div className="niveau">
             <button type="button" className="levelTitle">
               {" "}
-              Niveau
               <select className="levelButton" onChange={handleSelectLev}>
+                <option value="" disabled selected hidden>
+                  Choisis ton niveau
+                </option>
                 <option value="novice">Novice</option>
                 <option value="inter">Intermédiaire</option>
                 <option value="pro">Confirmé</option>
               </select>
-            </button>
-
-            <button
-              type="button"
-              className="infolevel"
-              onClick={() => setButtonPopup(true)}
-            >
-              i
             </button>
           </div>
         </div>
@@ -57,22 +53,23 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
             <h3>Mon niveau</h3>
             <br />
             <p>
-              Novice = Prendre 2/3 cours avec un moniteur de surf. Savoir nager
-              un minimum, jamais surfé, connait aucune règle dans l’eau et les
-              dangers (regarde la rubrique "infos et définitions").
+              <strong>Novice</strong> Prendre 2/3 cours avec un moniteur de
+              surf. Savoir nager un minimum, jamais surfé, ne connaît aucune
+              règle dans l’eau ni les dangers (regarde la rubrique "Infos et
+              définitions").
               <br />
               <br />
-              intermédiaire = Savoir nager, comprend l’eau un minimum (courant,
-              remou, la mousse, une vague), connait les règles (respect des
-              autres, par où rentrer pour bien se placer et revenir sans
-              gêner...) et les dangers (courant, ta position de planche et les
-              autres surfeurs), tenir un minimum debout sur sa planche.
+              <strong>Intermédiaire</strong> Savoir nager, comprend l’eau un
+              minimum (courant, remou, la mousse, une vague), connait les règles
+              (respect des autres, par où rentrer pour bien se placer et revenir
+              sans gêner...) et les dangers (courant, ta position de planche et
+              les autres surfeurs), tenir un minimum debout sur sa planche.
               <br />
               <br />
-              Confirmé = gère tout ça ! 😉
+              <strong>Confirmé</strong> Gère tout ça ! 😉
               <br />
               <br />
-              PS: Choisis bien ton équipement !
+              PS : Choisis bien ton équipement !
             </p>
           </div>
         </Popup>
@@ -81,22 +78,17 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
       <div className="localisation">
         <img
           id="loc"
-          src="./src/assets/img/localisation.png"
+          src="./public/pictos/Localisation.png"
           alt="localisation"
         />
         <button type="button" className="localisation">
-          Localisation
           <select
             className="localisationButton"
             onChange={(event) => handleSelectLoc(event)}
           >
-            {dataGen.departements.map((departement) => (
-              <option
-                key={departement.depName}
-                id={departement.id}
-                value={departement.id}
-              >
-                {departement.depName}
+            {dataGen.dataSpots.map((dataSpot) => (
+              <option key={dataSpot.id} id={dataSpot.id} value={dataSpot.id}>
+                {dataSpot.depName}
               </option>
             ))}
           </select>

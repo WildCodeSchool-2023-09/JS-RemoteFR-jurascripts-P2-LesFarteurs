@@ -1,29 +1,48 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Filters from "../filters/Filters";
 import Spots from "../spots/Spots";
+import dataGen from "../data/dataGen";
+import Filters from "../filters/Filters";
 
 function Algo() {
   // useState pour récupérer les choix de l'utilisateur dans Filters
-  const [localisation, setLocalisation] = useState("100");
+
   const [userLevel, setUserLevel] = useState("novice");
   const [date, setDate] = useState("today");
+  const [selectedDepartmentCoords, setSelectedDepartmentCoords] = useState({
+    latitude: 0,
+    longitude: 0,
+  });
+  const [selectedDepartmentId, setSelectedDepartmentId] = useState(null);
 
   // useState pour récupérer les data des deux API
   const [data, setData] = useState({
-    temperature_2m: "",
-    weathercode: "",
-    wave_height: "",
-    windspeed_10m: "",
-    winddirection_10m: "",
+    temperature_2m: 0,
+    weathercode: 0,
+    wave_height: 0,
+    windspeed_10m: 0,
+    winddirection_10m: 0,
   });
 
   // Fontion pour récupérer : localisation, userLevel, depuis Filters
   const handleSelectLoc = (event) => {
-    setLocalisation(event.target.value);
-    console.info(localisation);
+    const selectedDept = event.target.value;
+    setSelectedDepartmentId(selectedDept);
+
+    const selectedDepartment = dataGen.dataSpots.find(
+      (dep) => dep.id === parseInt(selectedDept, 10)
+    );
+
+    if (selectedDepartment) {
+      setSelectedDepartmentCoords({
+        latitude: selectedDepartment.latitude,
+        longitude: selectedDepartment.longitude,
+      });
+    }
   };
+
   const handleSelectLev = (event) => {
     setUserLevel(event.target.value);
     console.info(userLevel);
@@ -37,11 +56,11 @@ function Algo() {
 
   const dataResponse = async () => {
     const marineResponse = await axios.get(
-      "https://marine-api.open-meteo.com/v1/marine?latitude=44.9791&longitude=-1.0796&current=wave_height&timezone=Europe%2FBerlin"
+      `https://marine-api.open-meteo.com/v1/marine?latitude=${selectedDepartmentCoords.latitude}&longitude=${selectedDepartmentCoords.longitude}&current=wave_height&timezone=Europe%2FBerlin`
     );
 
     const forecastResponse = await axios.get(
-      "https://api.open-meteo.com/v1/forecast?latitude=44.9791&longitude=-1.0796&current=temperature_2m,weathercode,windspeed_10m,winddirection_10m&timezone=Europe%2FBerlin"
+      `https://api.open-meteo.com/v1/forecast?latitude=${selectedDepartmentCoords.latitude}&longitude=${selectedDepartmentCoords.longitude}&current=temperature_2m,weathercode,windspeed_10m,winddirection_10m&timezone=Europe%2FBerlin`
     );
 
     const { temperature_2m, weathercode, windspeed_10m, winddirection_10m } =
@@ -59,7 +78,7 @@ function Algo() {
 
   useEffect(() => {
     dataResponse();
-  }, []);
+  }, [selectedDepartmentCoords]);
 
   return (
     <>
@@ -69,11 +88,13 @@ function Algo() {
         handleSelectLev={handleSelectLev}
       />
       <Spots
+        selectedDepartmentCoords={selectedDepartmentCoords}
         weatherCode={data.weathercode}
         temperature={data.temperature_2m}
         waveHeight={data.wave_height}
         windSpeed={data.windspeed_10m}
         windDirection={data.winddirection_10m}
+        selectedDepartmentId={selectedDepartmentId}
       />
     </>
   );

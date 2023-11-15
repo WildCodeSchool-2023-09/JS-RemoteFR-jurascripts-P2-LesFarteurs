@@ -24,7 +24,7 @@ function Popup({ trigger, setTrigger, children }) {
 export default Popup;
 
 Popup.propTypes = {
-  children: PropTypes.symbol.isRequired,
+  children: PropTypes.func.isRequired,
   trigger: PropTypes.bool.isRequired,
-  setTrigger: PropTypes.bool.isRequired,
+  setTrigger: PropTypes.func.isRequired,
 };

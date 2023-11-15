@@ -4,7 +4,8 @@
 .title {
   margin-top: -10vh;
   margin-left: 4vw;
-  font-size: $fs-h3;
+  font-size: $fs-h1;
+  text-align: start;
 }
 
 .subtitle {
@@ -19,8 +20,8 @@
 }
 
 .mask {
-  -webkit-mask-image: url("./src/assets/vague-mask.png");
-  mask-image: url("./src/assets/vague-mask.png");
+  -webkit-mask-image: url("/vague-mask.png");
+  mask-image: url("/vague-mask.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -34,6 +35,7 @@
 @media screen and (max-width: 650px) {
   .title {
     margin-top: 0vh;
+    margin-left: 4vw;
   }
   .subtitle {
     width: 80%;
