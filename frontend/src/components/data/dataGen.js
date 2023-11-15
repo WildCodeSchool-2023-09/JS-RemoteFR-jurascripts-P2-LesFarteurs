@@ -1,8 +1,8 @@
 const dataSpots = [
-  {
-    id: 100,
-    depName: "Département",
-  },
+  // {
+  //   id: 100,
+  //   depName: "Département",
+  // },
   {
     id: 64,
     depName: "Pyrénées-Atlantiques",
@@ -14,6 +14,32 @@ const dataSpots = [
     desc: "Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... A noter : le stationnement est payant.",
     intro:
       "Du fait de sa proximité avec le centre-ville de Hendaye, le spot est très fréquenté surtout l'été. ",
+    dep: 64,
+  },
+  {
+    id: 65,
+    depName: "Pyrénées-Atlantiques",
+    latitude: 43.41489464501376,
+    longitude: -1.6303522734640663,
+    name: "Saint-Jean-de-Luz - Lafiténia - Pays Basque",
+    intro:
+      "Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales. Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute.",
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2017/08/27/15/20/surfing-2686393_640.jpg",
+    desc: "Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... A noter : le stationnement est payant.",
+    dep: 64,
+  },
+  {
+    id: 66,
+    depName: "Pyrénées-Atlantiques",
+    latitude: 43.478823722688155,
+    longitude: -1.568552175804201,
+    name: "Biarritz - La Côte des Basques - Pays Basque",
+    intro:
+      "C'est un spot de surf emblématique de la ville de Biarritz. Avec une vue sur la Villa Belza au nord, autant vous dire que le cadre est exceptionnel !",
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2017/07/07/09/26/sea-2480836_1280.jpg",
+    desc: "Situé proche du centre ville, le spot bénéficie de toutes les infrastructures de confort possibles (douches, toilettes, restaurants, ...) Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales. Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute.",
     dep: 64,
   },
   {
@@ -30,6 +56,30 @@ const dataSpots = [
     dep: 34,
   },
   {
+    id: 35,
+    depName: "Hérault",
+    latitude: 43.527838787216886,
+    longitude: 3.9384545509533764,
+    name: "Palavas-les-Flots - Plage Sarrail - Hérault",
+    intro: "Le spot de surf de Sarrail est réputé pour ses vagues puissantes.",
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2018/05/22/11/05/wave-3421128_640.jpg",
+    desc: "Les vagues ici sont connues pour leur puissance et leur constance, attirant les surfeurs toute l'année. Les vagues de taille modérée à grande conviennent aux surfeurs expérimentés. Avec une orientation principale vers le sud, Palavas-les-Flots offre des opportunités de ride excitantes.",
+    dep: 34,
+  },
+  {
+    id: 36,
+    depName: "Hérault",
+    latitude: 43.098782966686684,
+    longitude: 3.1180456278923874,
+    name: "Gruissant - Plage des Chalets - Hérault",
+    intro: "La hauteur de houle à Gruissan Plage est en océan ouvert.",
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2022/09/17/19/38/ocean-7461681_640.jpg",
+    desc: "Les vagues déferlantes seront souvent plus petites sur ce spot moins exposé.",
+    dep: 34,
+  },
+  {
     id: 2,
     depName: "Corse",
     latitude: 41.93595848347769,
@@ -40,6 +90,32 @@ const dataSpots = [
     desc: "Perdu dans un cadre sauvage au milieu du cap à l'ouest d'Ajaccio et surplombé pas sa tour en ruines, ce beach break à l'eau turquoise permet de surfer dans un environnement idyllique. Lorsque de belles houles sont au rendez-vous, les sessions peuvent être magiques, sinon pensez au Paddle ou au kayak.",
     intro:
       "Le Capo di Feno abrite un petit coin de paradis azur. Si les vagues ne sont pas toujours au rendez-vous, le spot de surf, ses petites paillottes et son surf club vous donneront envie de revenir.",
+    dep: 2,
+  },
+  {
+    id: 3,
+    depName: "Corse",
+    latitude: 41.99064893022141,
+    longitude: 8.667446235987107,
+    name: "Appietto - Plage de Lava - Corse",
+    intro:
+      "Le spot de surf Plage de Lava est situé à Appietto, en Corse-du-Sud, et offre des vagues puissantes.",
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2017/04/01/15/05/big-waves-2193828_640.jpg",
+    desc: "Les vagues ici sont connues pour leur force et leur régularité, attirant les surfeurs tout au long de l'année. Avec des vagues de taille modérée à grande, cet endroit convient aux surfeurs expérimentés en quête d'action. La beauté naturelle de la Corse-du-Sud ajoute à l'attrait de ce spot, offrant une expérience de surf mémorable.",
+    dep: 2,
+  },
+  {
+    id: 4,
+    depName: "Corse",
+    latitude: 42.73581181988351,
+    longitude: 9.343601501222288,
+    name: "Farinole- Plage de Farinole - Corse",
+    intro:
+      "Ce spot corse est très peu connu, il convient au surf comme au bodyboard.",
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2018/08/20/22/16/coast-3620146_1280.jpg",
+    desc: "Perdu aussi dans un cadre sauvage, ce beach break à l'eau turquoise permet de surfer dans un environnement idyllique. Lorsque de belles houles sont au rendez-vous, les sessions peuvent être magiques, sinon pensez au Paddle ou au kayak.",
     dep: 2,
   },
   {
@@ -92,7 +168,7 @@ const dataSpots = [
     intro:
       "Le spot du Petit Bec est un spot de surf de qualité, qui offre de belles vagues pour les surfeurs de tous niveaux en fonction des périodes de l'année.",
     desc: "C'est un spot très apprécié des surfeurs de la région grâce à ses vagues régulières et puissantes, qui peuvent atteindre facilement 2 mètres de hauteur en période de bonne houle. La plage du Petit Bec se trouve à l'extrémité Nord de l'île, près du phare des Baleines, et est accessible en voiture, en vélo ou à pied depuis les Portes-en-Ré. Il y a plusieurs parkings dans les environs, ainsi qu'une aire de pique-nique et des toilettes publiques.",
-    dep: 18,
+    dep: 17,
   },
   {
     id: 85,
@@ -180,26 +256,30 @@ const surfLevels = [
     levelName: "novice",
     maxWaveHeight: 0.6,
     maxWindSpeed: 15,
-    minWaveFreq: 7,
-    maxWaveFreq: 14,
   },
   {
     level: 2,
     levelName: "inter",
-    maxWaveHeightt: 1,
+    maxWaveHeight: 1,
     maxWindSpeed: 30,
-    bestMaxWindSpeed: 12,
-    minWaveFreq: 7,
-    maxWaveFreq: 15,
   },
   {
     level: 3,
-    levelName: "pro",
-    maxWaveHeightt: 1,
-    minWindSpeed: 30,
-    bestMaxWindSpeed: 12,
-    minWaveFreq: 6,
-    maxWaveFreq: 18,
+    levelName: "conf",
+    maxWaveHeight: 2,
+    maxWindSpeed: 30,
+  },
+  {
+    level: 4,
+    levelName: "champ",
+    maxWaveHeight: 6.9,
+    maxWindSpeed: 50,
+  },
+  {
+    level: 5,
+    levelName: "storm",
+    minWaveHeight: 7,
+    minWindSpeed: 51,
   },
 ];
 
