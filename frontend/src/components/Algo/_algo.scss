@@ -1,0 +1,10 @@
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixins.scss";
+
+.carousel .control-dots .dot.selected {
+  background: $btn_filter;
+}
+.carousel .control-dots .dot:hover {
+  background: $danger;
+}

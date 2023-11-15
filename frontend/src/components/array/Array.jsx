@@ -43,17 +43,17 @@ function Array({
         {weatherInfo.label}
       </span>
 
-      <span className="temp">
+      <span>
         <img src="/temp.png" alt="logo2" />
         {temperature}°C
       </span>
 
-      <span className="waveHeight">
+      <span>
         <img src="/waveHeight.png" alt="logo3" />
         {waveHeight} m
       </span>
 
-      <span className="windS">
+      <span>
         <img src="/windSD.png" alt="logo4" />
         {windSpeed} km/h
       </span>

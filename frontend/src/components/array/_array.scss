@@ -4,7 +4,7 @@
 .dataContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
@@ -28,5 +28,6 @@
     height: calc(30px + 1vh);
     width: auto;
     padding-bottom: 10px;
+    object-fit: scale-down;
   }
 }
