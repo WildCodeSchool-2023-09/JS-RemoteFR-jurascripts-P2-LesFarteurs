@@ -77,7 +77,7 @@ function Infos() {
           <section className="imgtableau">
             <img
               className="tableausurf"
-              src="./src/assets/img/tableausurf.png"
+              src="./public/tableausurf.png"
               alt="Tableau Surf"
             />
           </section>
