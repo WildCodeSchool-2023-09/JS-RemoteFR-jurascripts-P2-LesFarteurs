@@ -5,11 +5,13 @@ import App from "./App";
 import Infos from "./pages/infos/Infos";
 import Contact from "./pages/contact/Contact";
 import Error from "./pages/error/Error";
+import Algo from "./components/Algo/Algo";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    loader: Algo.loader,
   },
   {
     path: "/home",

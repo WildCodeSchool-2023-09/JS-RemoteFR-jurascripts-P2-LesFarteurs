@@ -1,6 +1,5 @@
 @import "src/styles/_variables.scss";
 @import "src/styles/_mixins.scss";
-@import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 .spotsContainer {
   display: grid;
@@ -43,6 +42,7 @@
   text-overflow: ellipsis;
   grid-column: 1 / 2;
   font-size: $fs-p;
+  text-align: left;
 }
 .introSpot {
   font-size: $fs-p;
@@ -82,6 +82,7 @@
 button {
   background-color: transparent;
   border-style: none;
+  padding-right: 15px;
 }
 //MEDIA QUERY//
 @media screen and (max-width: 768px) {
@@ -123,8 +124,8 @@ button {
     padding: 1vw;
     margin-bottom: 2vh;
   }
-  .carousel .control-dots .dot.selected,
-  .carousel .control-dots .dot:hover {
-    background: #e79950;
+
+  button {
+    padding: 15px;
   }
 }
