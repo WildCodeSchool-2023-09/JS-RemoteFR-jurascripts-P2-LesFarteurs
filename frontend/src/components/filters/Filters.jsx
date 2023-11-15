@@ -37,6 +37,9 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
             <button type="button" className="levelTitle">
               {" "}
               <select className="levelButton" onChange={handleSelectLev}>
+                <option value="" disabled selected hidden>
+                  Choisis ton niveau
+                </option>
                 <option value="novice">Novice</option>
                 <option value="inter">Intermédiaire</option>
                 <option value="pro">Confirmé</option>
@@ -73,7 +76,6 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
       </div>
 
       <div className="localisation">
-
         <img
           id="loc"
           src="./public/pictos/Localisation.png"
@@ -84,13 +86,9 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
             className="localisationButton"
             onChange={(event) => handleSelectLoc(event)}
           >
-            {dataGen.departements.map((departement) => (
-              <option
-                key={departement.depName}
-                id={departement.id}
-                value={departement.id}
-              >
-                {departement.depName}
+            {dataGen.dataSpots.map((dataSpot) => (
+              <option key={dataSpot.id} id={dataSpot.id} value={dataSpot.id}>
+                {dataSpot.depName}
               </option>
             ))}
           </select>

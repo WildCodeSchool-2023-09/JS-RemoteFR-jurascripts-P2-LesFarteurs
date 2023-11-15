@@ -51,7 +51,7 @@ function Infos() {
             </div>
             <img
               className="surfeur4"
-              src="./src/assets/img/surfeur4.jpg"
+              src="./public/surfeur4.jpg"
               alt="surfeur4"
             />
           </div>
