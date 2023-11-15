@@ -15,7 +15,7 @@ function Coolitude() {
         onshore, c'est mort ***** Pastis Landais ***** Jean-Louis ? Apéro ?!
         ***** ALOHA ***** Vin chaud ***** Benoît le BG ***** Viens prendre des
         gaufres ! ***** Sauce Samourwild ***** Tu risques rien à part choper un
-        beau poisson :p ***** Bon Surf ! *****
+        beau poisson :p ***** Bon Surf !
       </p>
     </div>
   );

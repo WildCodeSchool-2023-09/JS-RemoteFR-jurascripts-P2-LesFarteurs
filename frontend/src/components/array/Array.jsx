@@ -10,14 +10,17 @@ function Array({
 }) {
   // fonction pour transformer les weathercode en strings
   const meteo = (weatherC) => {
-    if (weatherC === 0) return "Ensoleillé";
-    if (weatherC >= 1 && weatherC <= 3) return "Éclaircies";
-    if (weatherC >= 45 && weatherC <= 48) return "Nuageux";
-    if (weatherC >= 51 && weatherC <= 94) return "Pluvieux";
-    if (weatherC >= 95) return "Orage";
-    return "";
+    if (weatherC === 0)
+      return { label: "Ensoleillé", image: "/ensoleillé.png" };
+    if (weatherC >= 1 && weatherC <= 3)
+      return { label: "Éclaircies", image: "/eclaircies.png" };
+    if (weatherC >= 45 && weatherC <= 48)
+      return { label: "Nuageux", image: "/nuageux.png" };
+    if (weatherC >= 51 && weatherC <= 94)
+      return { label: "Pluvieux", image: "/pluvieux.png" };
+    if (weatherC >= 95) return { label: "Orage", image: "/orage.png" };
+    return { label: "", image: "" };
   };
-
   // fonction pour transformer les windDirection en strings
   const wind = (windDir) => {
     if (windDir >= 0 && windDir < 22.5) return "Nord";
@@ -31,11 +34,13 @@ function Array({
     return windDir;
   };
 
+  const weatherInfo = meteo(weatherCode);
+
   return (
     <div className="dataContainer">
       <span className="weather">
-        <img src="/ensoleillé.png" alt="logo1" />
-        {meteo(weatherCode)}
+        <img src={weatherInfo.image} alt={weatherInfo.label} />
+        {weatherInfo.label}
       </span>
 
       <span className="temp">
