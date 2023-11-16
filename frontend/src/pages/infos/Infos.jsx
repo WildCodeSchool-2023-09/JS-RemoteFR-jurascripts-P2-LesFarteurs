@@ -24,15 +24,15 @@ function Infos() {
         {" "}
         <section className="condition">
           <h1>Infos et définitions</h1>
-          <h2>Tout comprendre sur le Surf et ses dangers</h2>
+          <h2>Tout comprendre sur le surf et ses dangers</h2>
           <p>
-            La première chose à se dire, c'est est-ce que je suis dans le bon
-            état d'esprit aujourd'hui pour surfer ? Ta réponse est "oui" ?!
+            La première question à se poser, c'est est-ce que je suis dans le
+            bon état d'esprit aujourd'hui pour surfer ? La réponse est "oui" ?!
             Alors let's go !
             <br />
             <br />
-            Les planches sont sur le toit, les combinaisons sont dans le coffre,
-            et après 30 min de route ou 6h pour certains, vous êtes enfin sur la
+            Les planches sont sur le toit, les combinaisons dans le coffre, et
+            après 30 min de route ou 6h pour certains, vous êtes enfin sur la
             plage. Mais les conditions vous permettront-elles de surfer ?
             <br />
             <br />
@@ -51,13 +51,16 @@ function Infos() {
             <p>
               Le vent est l'unique paramètre de la formation de la houle en mer,
               il peut aussi bien la renforcer que la réduire. Trois éléments
-              peuvent alors agir pour construire la puissance de la houle : • La
-              force avec laquelle le vent souffle sur l'eau, • La durée de
-              l'évènement météo, de quelques heures à plusieurs jours, • La
-              surface sur laquelle s'exprime l'évènement météo (de quelques Kms²
-              à la moitié de l'atlantique nord par exemple). Une fois générée,
-              la houle chemine indéfiniment tant qu'elle ne trouve pas
-              d'obstacle (vents contraires, haut fonds, îles et continents).
+              peuvent alors agir pour construire la puissance de la houle :{" "}
+              <br />• La force avec laquelle le vent souffle sur l'eau,
+              <br />• La durée de l'évènement météo, de quelques heures à
+              plusieurs jours,
+              <br />• La surface sur laquelle s'exprime l'évènement météo (de
+              quelques Kms² à la moitié de l'atlantique nord par exemple).
+              <br />
+              Une fois générée, la houle chemine indéfiniment tant qu'elle ne
+              trouve pas d'obstacle (vents contraires, hauts fonds, îles et
+              continents).
             </p>
 
             <h4>Parlons maintenant de la fameuse vague que tu vas surfer !</h4>
@@ -72,7 +75,7 @@ function Infos() {
               À l'inverse, le vent « Onshore » souffle de l'océan vers la terre,
               il désordonne et couche les vagues, dégradant ainsi la qualité
               d'une session mais reste quand même cool pour débutant et
-              intermédiaire. Plus tu surfes plus tu progresses, c'est comme
+              intermédiaire. Plus tu surfes, plus tu progresses, c'est comme
               tout. L'Océan reste quelques fois imprévisible, il t'offrira un
               jour le meilleur et inversement, ça reste la nature !
             </p>
@@ -80,31 +83,30 @@ function Infos() {
           <img className="imgSurfeur" src={Surfeur4} alt="surfeur4" />
         </section>
         <section className="definition">
-          <h2>Choisir son niveau de Surf & définitions :</h2>
+          <h2>Choisir son niveau de surf & définitions :</h2>
           <section className="imgtableau">
             <img className="tableausurf" src={tableausurf} alt="Tableau Surf" />
           </section>
           <h4>Niveaux</h4>
           <p>
-            Novice = Savoir nager un minimum, avoir jamais ou peu surfer,
+            Novice &#x2794; Savoir nager un minimum, avoir jamais ou peu surfer,
             connait aucune règle ds l'eau et les dangers.
             <br />
             <br />
-            Intermédiaire = Savoir nager, comprend l’eau un minimum (courant,
-            remou, la mousse, une vague), connait les règles (respect des
-            autres, par où rentrer pour bien se placer et revenir sans gêner...)
-            et les dangers (courant, ta position de planche et les autres
-            surfeurs), tenir un minimum debout sur sa planche.
+            Intermédiaire &#x2794; Savoir nager, comprend l’eau un minimum
+            (courant, remou, la mousse, une vague), connait les règles (respect
+            des autres, par où rentrer pour bien se placer et revenir sans
+            gêner...) et les dangers (courant, ta position de planche et les
+            autres surfeurs), tenir un minimum debout sur sa planche.
             <br />
             <br />
-            <br />
-            Confirmé = Gères tout ça ! 😉
+            Confirmé &#x2794; Gères tout ça ! 😉
           </p>
           <br />
-          <br />
+
           <p>
-            Champion = Tu fais de la compétition, les grosses vagues ne te font
-            pas peur !
+            Champion &#x2794; Tu fais de la compétition, les grosses vagues ne
+            te font pas peur !
           </p>
           <h3>Définitions</h3>
           <p>
@@ -122,11 +124,11 @@ function Infos() {
           <br />
           <p>
             Vent :
-            <br />
-            Le vent vient frotter l'eau donc : - Peu ou pas de vent permet un
-            bon swell, la vague se forme parfaitement. - En vent Offshore &
-            Onshore : Un vent moyen voir rapide va venir augmenter ou écraser le
-            swell. - Autres vent: Plan d'eau perturbé.
+            <br /> - Peu ou pas de vent permet un bon swell, la vague se forme
+            parfaitement.
+            <br /> - En vent Offshore & Onshore : un vent moyen voir rapide va
+            venir augmenter ou écraser le swell.
+            <br /> - Autres vents : plan d'eau perturbé.
           </p>
           <br />
           <p>Direction : </p>
@@ -137,7 +139,7 @@ function Infos() {
             Vent Onshore = vent de l'eau - vient applatir la houle permettant de
             surfer une vague tranquille de qualité aussi.
             <br />
-            Vent Cross = Tourbillon - te permet de faire la grasse matinée avec
+            Vent Cross = tourbillon - te permet de faire la grasse matinée avec
             des pancakes.
             <br />
             Vent Glass = très calme.
@@ -148,16 +150,21 @@ function Infos() {
         <section className="consignes">
           <h2>Choix de l'équipement</h2>
           <p>
-            Température chaude : Short + icra (tee-shirt néopène) ou combinaison
+            Température chaude : short + icra (tee-shirt néopène) ou combinaison
             shorty.
             <br />
-            Température froide : Combinaison intégrale voir cagoule + chausson.
+            Température froide : combinaison intégrale voir cagoule + chausson.
             <br />
             Crème visage toutes les saisons même sans soleil, les UV traversent
-            quand même les nuages ! La planche de surf : En mousse pr les
-            colisions avec toi-même et autrui. Position plus stable pour
-            faciliter la pratique. En epoxy (mousse entouré de fibres collées)
-            pour les confirmés, tu gagnes en vitesse et virage.
+            quand même les nuages !
+            <br />
+            <br />
+            La planche de surf :
+            <br />
+            En mousse pr les colisions avec toi-même et autrui. Position plus
+            stable pour faciliter la pratique.
+            <br /> En epoxy (mousse entouré de fibres collées) pour les
+            confirmés, tu gagnes en vitesse et virage.
           </p>
 
           <h4>Conseils entretien équipements</h4>
@@ -165,7 +172,7 @@ function Infos() {
             Après chaque session, penses à laver tous les équipements à l'eau
             légèrement savonneuse, leur durée de vie mais aussi leur odeur n'en
             seront que meilleures ! Pour les petits impacts sur ta board, va
-            voir un shaper du coin ! Bon surf !
+            voir le shaper du coin ! Bon surf !
           </p>
         </section>
         <section className="danger">
@@ -177,8 +184,9 @@ function Infos() {
           <p>Si c'est votre première sortie, prenez des cours de surf !</p>
           <p>
             La baïne : courant en forme de cercle pouvant te tirer vers le
-            large. Se cogner à sa planche : apprendre la technique de base
-            obligatoire. Accident entre surfeurs : savoir où se placer
+            large. <br />
+            Se cogner à sa planche : apprendre la technique de base obligatoire.
+            <br /> Accident entre surfeurs : savoir où se placer.
             <br />
             Bien observer le plan d'eau permet d'assurer une sécurité à soi-même
             mais aussi celle des autres surfeurs.
@@ -191,7 +199,7 @@ function Infos() {
             Il existe une grande solidarité à l'eau mais c'est comme la marée,
             ça dépend de la Lune !
             <br />
-            Danger imminent, s'il n'y a pas de Sauveteur (MNS) appelle le 112.
+            Danger imminent, s'il n'y a pas de sauveteur (MNS) appelle le 112 !
           </p>
           <br />
         </section>

@@ -64,6 +64,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
           <div className="infoLevel">
             <h3>Mon niveau</h3>
             <p>
+              <br />
               <strong>Novice</strong> Prendre 2/3 cours avec un moniteur de
               surf. Savoir nager un minimum, jamais surfé, ne connaît aucune
               règle dans l’eau ni les dangers (regarde la rubrique "Infos et
