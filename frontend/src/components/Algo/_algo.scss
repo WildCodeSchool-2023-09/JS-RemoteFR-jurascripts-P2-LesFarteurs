@@ -9,12 +9,6 @@
   background: $danger;
 }
 
-// .carousel .control-dots {
-//   // position: relative;
-//   align-items: flex-end;
-//   bottom: 0;
-//   padding-top: 100px;
-// }
 .carousel .carousel-status {
   position: relative;
   left: 50%;
@@ -26,7 +20,7 @@
 .msg {
   width: 90%;
   margin: auto;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
   background: linear-gradient(to top right, #205464, #108888);
   box-shadow:
     0 45px 100px rgba(14, 21, 47, 0.4),
@@ -39,10 +33,10 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .carousel .carousel-status {
-    position: absolute;
-    left: 40%;
+    position: relative;
+    left: 50%;
     text-shadow: $bg;
     font-size: $fs-p;
     color: $btn_filter;

@@ -2,6 +2,8 @@
 @import "src/styles/_mixins.scss";
 
 .footerContainer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -10,40 +12,39 @@
   background-size: cover;
   opacity: 0.9;
   color: white;
-  padding: 1.5vh;
   font-size: $fs-p;
+  padding: 1.5vh 10px;
+  box-sizing: border-box;
+}
+.socialNetwork {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-  .socialNetwork {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  li {
+    padding-right: 2vw;
+    a {
+      text-decoration: none;
+      line-height: 20px;
+      text-align: center;
+      color: black;
 
-    li {
-      margin-left: 20px;
+      &:after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 1.5px;
+        width: 0;
+        background: transparent;
+        transition:
+          width 0.5s ease,
+          background-color 0.5s ease;
+      }
 
-      a {
-        text-decoration: none;
-        line-height: 20px;
-        text-align: center;
-        color: black;
-
-        &:after {
-          content: "";
-          display: block;
-          margin: auto;
-          height: 1.5px;
-          width: 0;
-          background: transparent;
-          transition:
-            width 0.5s ease,
-            background-color 0.5s ease;
-        }
-
-        &:hover:after {
-          width: 100%;
-          background: black;
-        }
+      &:hover:after {
+        width: 100%;
+        background: black;
       }
     }
   }

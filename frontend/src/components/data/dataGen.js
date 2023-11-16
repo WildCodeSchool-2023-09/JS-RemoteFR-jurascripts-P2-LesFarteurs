@@ -22,11 +22,11 @@ const dataSpots = [
     latitude: 43.41489464501376,
     longitude: -1.6303522734640663,
     name: "Saint-Jean-de-Luz - Plage Lafiténia - Pays Basque",
-    desc: "Situé proche du centre ville, le spot bénéficie de toutes les infrastructures de confort possibles (douches, toilettes, restaurants, ...) Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales. Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute.",
+    desc: "Situé proche du centre ville, le spot bénéficie de toutes les infrastructures de confort possibles (douches, toilettes, restaurants, ...). Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute. A noter : le stationnement est payant.",
     imgSrc:
       "https://cdn.pixabay.com/photo/2017/08/27/15/20/surfing-2686393_640.jpg",
     intro:
-      "Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... A noter : le stationnement est payant.",
+      "Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme.",
     dep: 64,
   },
   {
@@ -42,19 +42,7 @@ const dataSpots = [
     desc: "Situé proche du centre ville, le spot bénéficie de toutes les infrastructures de confort possibles (douches, toilettes, restaurants, ...) Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales. Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute.",
     dep: 64,
   },
-  {
-    id: 65,
-    depName: "Pyrénées-Atlantiques",
-    latitude: 43.41489464501376,
-    longitude: -1.6303522734640663,
-    name: "Saint-Jean-de-Luz - Lafiténia - Pays Basque",
-    intro:
-      "Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales.",
-    imgSrc:
-      "https://cdn.pixabay.com/photo/2017/08/27/15/20/surfing-2686393_640.jpg",
-    desc: "Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute. Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... A noter : le stationnement est payant.",
-    dep: 64,
-  },
+
   {
     id: 66,
     depName: "Pyrénées-Atlantiques",
@@ -189,10 +177,10 @@ const dataSpots = [
     longitude: -1.445829133350911,
     name: "Hossegor - Plage La Gravière - Landes",
     intro:
-      "Le spot de surf de la Gravière est l'endroit idéal pour un surfeur confirmé, il se situe en plein dans le site naturel protégé de la Côte Sauvage, à deux pas de la station balnéaire de Soorts-Hossegor.",
+      "En plein coeur de la Côte Sauvage, le spot de surf de la Gravière est l'endroit idéal pour un surfeur confirmé, il se situe à deux pas de la station balnéaire de Soorts-Hossegor.",
     imgSrc:
       "https://cdn.pixabay.com/photo/2015/09/06/01/00/surfing-926822_640.jpg",
-    desc: "Le spot est une bonne alternative à La Centrale qui elle est en plein centre-ville, plus au sud. L'accès au spot est un peu plus difficile, il est donc moins fréquenté ce qui ne l'empêche pas d'être surveillée pendant l'été. Un parking gratuit se situe non loin du spot.",
+    desc: "Ce spot est une bonne alternative à La Centrale qui elle est en plein centre-ville, plus au sud. L'accès au spot est un peu plus difficile, il est donc moins fréquenté ce qui ne l'empêche pas d'être surveillée pendant l'été. Un parking gratuit se situe non loin du spot.",
     dep: 40,
   },
   {

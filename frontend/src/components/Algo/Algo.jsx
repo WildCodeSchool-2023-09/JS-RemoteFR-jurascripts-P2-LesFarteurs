@@ -160,45 +160,94 @@ function Algo() {
 
     setFilteredSpots(updatedFilteredSpots);
   }, [selectedDepartmentId, userLevel, datas]);
-  console.info(filteredSpots);
+  const [moveFilters, setMoveFilters] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setMoveFilters(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  if (moveFilters >= 400) {
+    return (
+      <>
+        <Filters
+          handleSelectLoc={handleSelectLoc}
+          handleSelectLev={handleSelectLev}
+        />
+        <div>
+          {filteredSpots.length !== 0 ? (
+            <Carousel
+              autoPlay
+              interval={5000}
+              infiniteLoop
+              emulateTouch
+              showThumbs
+              stopOnHover
+              showIndicators={false}
+            >
+              {filteredSpots.map((spot) => (
+                <Spots
+                  dataSpot={spot}
+                  selectedDepartmentCoords={selectedDepartmentCoords}
+                  weatherCode={spot.weathercode}
+                  temperature={spot.temperature_2m}
+                  waveHeight={spot.wave_height}
+                  windSpeed={spot.windspeed_10m}
+                  windDirection={spot.winddirection_10m}
+                  selectedDepartmentId={selectedDepartmentId}
+                  key={spot.dep}
+                />
+              ))}
+            </Carousel>
+          ) : (
+            <div className="msg">
+              <p>Sélectionne un filtre pour faire apparaitre un spot ! </p>
+            </div>
+          )}
+        </div>
+      </>
+    );
+  }
   return (
-    <>
+    <div>
+      {filteredSpots.length !== 0 ? (
+        <Carousel
+          autoPlay
+          interval={5000}
+          infiniteLoop
+          emulateTouch
+          showThumbs
+          stopOnHover
+          showIndicators={false}
+        >
+          {filteredSpots.map((spot) => (
+            <Spots
+              dataSpot={spot}
+              selectedDepartmentCoords={selectedDepartmentCoords}
+              weatherCode={spot.weathercode}
+              temperature={spot.temperature_2m}
+              waveHeight={spot.wave_height}
+              windSpeed={spot.windspeed_10m}
+              windDirection={spot.winddirection_10m}
+              selectedDepartmentId={selectedDepartmentId}
+              key={spot.dep}
+            />
+          ))}
+        </Carousel>
+      ) : (
+        <div className="msg">
+          <p>Sélectionne un filtre pour faire apparaitre un spot ! </p>
+        </div>
+      )}
       <Filters
         handleSelectLoc={handleSelectLoc}
         handleSelectLev={handleSelectLev}
       />
-      <div>
-        {filteredSpots.length !== 0 ? (
-          <Carousel
-            autoPlay
-            interval={5000}
-            infiniteLoop
-            emulateTouch
-            showThumbs
-            stopOnHover
-            showIndicators={false}
-          >
-            {filteredSpots.map((spot) => (
-              <Spots
-                dataSpot={spot}
-                selectedDepartmentCoords={selectedDepartmentCoords}
-                weatherCode={spot.weathercode}
-                temperature={spot.temperature_2m}
-                waveHeight={spot.wave_height}
-                windSpeed={spot.windspeed_10m}
-                windDirection={spot.winddirection_10m}
-                selectedDepartmentId={selectedDepartmentId}
-                key={spot.dep}
-              />
-            ))}
-          </Carousel>
-        ) : (
-          <div className="msg">
-            <p>Sélectionne un filtre pour faire apparaitre un spot ! </p>
-          </div>
-        )}
-      </div>
-    </>
+    </div>
   );
 }
 
