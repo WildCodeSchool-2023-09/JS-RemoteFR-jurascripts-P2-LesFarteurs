@@ -4,7 +4,7 @@
 .dataContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 2fr 0.5fr;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;

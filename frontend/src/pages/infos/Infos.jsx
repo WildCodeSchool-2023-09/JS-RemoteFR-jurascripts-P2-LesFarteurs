@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import Coolitude from "../../components/coolitude/Coolitude";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import "../../styles/index.css";
+import Surfeur4 from "../../assets/Surfeur4.jpg";
+import tableausurf from "../../assets/tableausurf.png";
 
 function Infos() {
   useEffect(() => {
@@ -76,20 +77,12 @@ function Infos() {
               jour le meilleur et inversement, ça reste la nature !
             </p>
           </div>
-          <img
-            className="imgSurfeur"
-            src="/public/surfeur4.jpg"
-            alt="surfeur4"
-          />
+          <img className="imgSurfeur" src={Surfeur4} alt="surfeur4" />
         </section>
         <section className="definition">
           <h2>Choisir son niveau de Surf & Définitions :</h2>
           <section className="imgtableau">
-            <img
-              className="tableausurf"
-              src="/public/tableausurf.png"
-              alt="Tableau Surf"
-            />
+            <img className="tableausurf" src={tableausurf} alt="Tableau Surf" />
           </section>
           <h4>Niveaux</h4>
           <p>

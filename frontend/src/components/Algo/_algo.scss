@@ -9,6 +9,20 @@
   background: $danger;
 }
 
+// .carousel .control-dots {
+//   // position: relative;
+//   align-items: flex-end;
+//   bottom: 0;
+//   padding-top: 100px;
+// }
+.carousel .carousel-status {
+  position: relative;
+  left: 50%;
+  text-shadow: $bg;
+  font-size: $fs-p;
+  color: $btn_filter;
+}
+
 .msg {
   width: 90%;
   margin: auto;
@@ -22,5 +36,15 @@
     margin-bottom: 2rem;
     text-align: center;
     font-size: $fs-p;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .carousel .carousel-status {
+    position: absolute;
+    left: 40%;
+    text-shadow: $bg;
+    font-size: $fs-p;
+    color: $btn_filter;
   }
 }
