@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import dataGen from "../data/dataGen";
 import "./_filters.scss";
 import Popup from "../popup/Popup";
+import Niveau from "../../assets/P_Niveau.png";
 
 function Filters({ handleSelectLev, handleSelectLoc }) {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -41,7 +42,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
       <div className="levelButtonContainer">
         <div className="levelButtonContainer">
           <button type="button" onClick={() => setButtonPopup(true)}>
-            <img id="lev" src="/src/assets/P_Niveau.png" alt="niveau" />
+            <img id="lev" src={Niveau} alt="niveau" />
           </button>
           <div className="niveau">
             <button type="button" className="levelTitle">
