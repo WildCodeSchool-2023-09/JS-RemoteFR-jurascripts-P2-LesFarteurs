@@ -22,11 +22,11 @@ const dataSpots = [
     latitude: 43.41489464501376,
     longitude: -1.6303522734640663,
     name: "Saint-Jean-de-Luz - Plage Lafiténia - Pays Basque",
-    intro:
-      "Situé proche du centre ville, le spot bénéficie de toutes les infrastructures de confort possibles (douches, toilettes, restaurants, ...) Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales. Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute.",
+    desc: "Situé proche du centre ville, le spot bénéficie de toutes les infrastructures de confort possibles (douches, toilettes, restaurants, ...) Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales. Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute.",
     imgSrc:
       "https://cdn.pixabay.com/photo/2017/08/27/15/20/surfing-2686393_640.jpg",
-    desc: "Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... A noter : le stationnement est payant.",
+    intro:
+      "Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... A noter : le stationnement est payant.",
     dep: 64,
   },
   {
@@ -49,10 +49,10 @@ const dataSpots = [
     longitude: -1.6303522734640663,
     name: "Saint-Jean-de-Luz - Lafiténia - Pays Basque",
     intro:
-      "Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales. Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute.",
+      "Fer de lance du surf français depuis des décennies, ce beach break au panorama époustouflant a accueilli de nombreuses compétitions de surf nationales et internationales.",
     imgSrc:
       "https://cdn.pixabay.com/photo/2017/08/27/15/20/surfing-2686393_640.jpg",
-    desc: "Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... A noter : le stationnement est payant.",
+    desc: "Attention aux quelques rochers qui peuvent être gênants à la sortie de l'eau lorsque la marée est haute. Idéal pour débuter dans le surf ou un autre sport de glisse, le beach break de Sokoburu tient son nom du casino éponyme. Tous les types de sports de glisse y sont pratiqués : kayak, SUP, bobyboard, longboard, surf,... A noter : le stationnement est payant.",
     dep: 64,
   },
   {
@@ -115,18 +115,6 @@ const dataSpots = [
     imgSrc:
       "https://cdn.pixabay.com/photo/2018/05/22/11/05/wave-3421128_640.jpg",
     desc: "Les vagues ici sont connues pour leur puissance et leur constance, attirant les surfeurs toute l'année. Les vagues de taille modérée à grande conviennent aux surfeurs expérimentés. Avec une orientation principale vers le sud, Palavas-les-Flots offre des opportunités de ride excitantes.",
-    dep: 34,
-  },
-  {
-    id: 36,
-    depName: "Hérault",
-    latitude: 43.098782966686684,
-    longitude: 3.1180456278923874,
-    name: "Gruissant - Plage des Chalets - Hérault",
-    intro: "La hauteur de houle à Gruissan Plage est en océan ouvert.",
-    imgSrc:
-      "https://cdn.pixabay.com/photo/2022/09/17/19/38/ocean-7461681_640.jpg",
-    desc: "Les vagues déferlantes seront souvent plus petites sur ce spot moins exposé.",
     dep: 34,
   },
   {
@@ -201,10 +189,10 @@ const dataSpots = [
     longitude: -1.445829133350911,
     name: "Hossegor - Plage La Gravière - Landes",
     intro:
-      "Le spot de surf de la Gravière est l'endroit où il faut être pour un surfeur professionnel, il se situe en plein dans le site naturel protégé de la Côte Sauvage, à deux pas de la station balnéaire de Soorts-Hossegor.",
+      "Le spot de surf de la Gravière est l'endroit idéal pour un surfeur confirmé, il se situe en plein dans le site naturel protégé de la Côte Sauvage, à deux pas de la station balnéaire de Soorts-Hossegor.",
     imgSrc:
       "https://cdn.pixabay.com/photo/2015/09/06/01/00/surfing-926822_640.jpg",
-    desc: "Le spot est une bonne alternative à La Centrale qui elle est en plein centre-ville, plus au sud. La Gravière est au niveau d'une zone plus résidentielle. L'accès au spot est un peu plus difficile, ce qui en fait une plage moins fréquentée ce qui ne l'empêche pas d'être surveillée pendant l'été. Un parking gratuit se situe non loin du spot de surf de La Gravière, ce qui est un très bon point.",
+    desc: "Le spot est une bonne alternative à La Centrale qui elle est en plein centre-ville, plus au sud. L'accès au spot est un peu plus difficile, il est donc moins fréquenté ce qui ne l'empêche pas d'être surveillée pendant l'été. Un parking gratuit se situe non loin du spot.",
     dep: 40,
   },
   {
@@ -269,7 +257,7 @@ const dataSpots = [
       "Hourtin plage fait partie de ces spots de surf que l'on trouve le long de la grande bande de sable qui court entre l'estuaire de la Gironde et le bassin d'Arcachon.",
     imgSrc:
       "https://cdn.pixabay.com/photo/2021/07/30/16/51/beach-6510275_1280.jpg",
-    desc: "A l'image de ceux qu'on peut trouver de part et d'autre d'Hourtin : un beau beach break girondin accessible aux surfers de tous niveaux. Surveillez bien les prévisions surf report car c'est un spot recommandé lorsqu'il y a du surf dans la région. Avec son parking et ses commerces : club de surf, bars et restaurants, le spot de Hourtin offre un grand niveau de confort.",
+    desc: "Ce spot est un beau beach break girondin accessible aux surfers de tous niveaux. Surveillez bien les prévisions surf report car c'est un spot recommandé lorsqu'il y a du surf dans la région. Avec son parking et ses commerces : club de surf, bars et restaurants, il offre un grand niveau de confort.",
     dep: 33,
   },
   {
@@ -308,7 +296,7 @@ const dataSpots = [
       "Le spot du Petit Bec est un spot de surf de qualité, qui offre de belles vagues pour les surfeurs de tous niveaux en fonction des périodes de l'année.",
     imgSrc:
       "https://img.freepik.com/photos-gratuite/vue-grand-angle-cote-tropicale-idyllique-generee-par-ia_188544-35204.jpg?size=626&ext=jpg&ga=GA1.1.1625749900.1700054888&semt=sph",
-    desc: "C'est un spot très apprécié des surfeurs de la région grâce à ses vagues régulières et puissantes, qui peuvent atteindre facilement 2 mètres de hauteur en période de bonne houle. La plage du Petit Bec se trouve à l'extrémité Nord de l'île, près du phare des Baleines, et est accessible en voiture, en vélo ou à pied depuis les Portes-en-Ré. Il y a plusieurs parkings dans les environs, ainsi qu'une aire de pique-nique et des toilettes publiques.",
+    desc: "Spot très apprécié des surfeurs de la région grâce à ses vagues régulières et puissantes, qui peuvent atteindre facilement 2 mètres de hauteur en période de bonne houle. La plage du Petit Bec se trouve à l'extrémité Nord de l'île, près du phare des Baleines, et est accessible en voiture, en vélo ou à pied depuis les Portes-en-Ré. Il y a plusieurs parkings dans les environs, ainsi qu'une aire de pique-nique et des toilettes publiques.",
     dep: 17,
   },
   {
@@ -357,10 +345,10 @@ const dataSpots = [
     longitude: -3.1565533991256167,
     name: "Saint-Pierre-Quiberon - Plage Port Blanc - Morbihan",
     intro:
-      "La commune de Saint-Pierre-Quiberon est une ville du Morbihan réputée pour ses spots de surf. Située à l'entrée de la presqu'île de Quiberon, on y trouve les trois principaux spots de surf de la côte sauvage : Port Blanc, Port Rhu et Port Bara.",
+      "La commune de Saint-Pierre-Quiberon est une ville du Morbihan réputée pour ses spots de surf. ",
     imgSrc:
       "https://img.freepik.com/photos-gratuite/jeune-homme-surfe-vagues-ocean_23-2148823821.jpg?size=626&ext=jpg&ga=GA1.1.1625749900.1700054888&semt=sph",
-    desc: "Ceux-ci font partie de la Côte Sauvage qui est un haut lieu du surf en Bretagne. Lorsque le surf report prévoit de belles conditions de vagues il ne faut pas hésiter à y faire un tour, ne serait-ce que pour contempler le spectacle des vagues que peut offrir la Côte Sauvage.",
+    desc: "Située à l'entrée de la presqu'île de Quiberon, on y trouve les trois principaux spots de surf de la Côte sauvage (haut lieu de surf de Bretagne) : Port Blanc, Port Rhu et Port Bara. Lorsque le surf report prévoit de belles conditions de vagues il ne faut pas hésiter à y faire un tour, ne serait-ce que pour contempler le spectacle des vagues.",
     dep: 56,
   },
   {
@@ -373,7 +361,7 @@ const dataSpots = [
       "Bien exposé aux houle d'ouest / nord-ouest, Sainte-Barbe est un spot de surf accessible aux surfeurs de tous niveaux, débutants comme confirmés.",
     imgSrc:
       "https://img.freepik.com/photos-gratuite/surfeur-ocean-coucher-soleil-couper-souffle-dans-ciel-arriere-plan_181624-6844.jpg?size=626&ext=jpg&ga=GA1.1.1625749900.1700054888&semt=sph",
-    desc: " il est courant de voir pas mal de monde tant cette destination surf est prisée au niveau local. On y accède en voiture en passant par le lieu dit de Sainte-Barbe (Plouharnel), il est possible de se garer sur le parking près de la plage.",
+    desc: " Il est courant de voir pas mal de monde tant cette destination surf est prisée au niveau local. On y accède en voiture en passant par le lieu dit de Sainte-Barbe (Plouharnel), il est possible de se garer sur le parking près de la plage.",
     dep: 56,
   },
   {
@@ -396,10 +384,10 @@ const dataSpots = [
     longitude: -4.350634422646358,
     name: "Plomeur - Plage La Torche - Finistère",
     intro:
-      "La baie d'Audierne, grâce à son exposition idéale face aux houles de l'Atlantique, bénéficie d'un cadre idéal pour la pratique du surf et autres sports de glisse.",
+      "Cette plage, collée à la pointe de La Torche a su se faire un nom dans le surf breton grâce à ses belles vagues dans un cadre magnifique.",
     imgSrc:
       "https://img.freepik.com/photos-gratuite/homme-surfeur-surfant-dans-mer-belles-vagues_181624-166.jpg?w=1800&t=st=1699995766~exp=1699996366~hmac=35ec9c52d5fe3584c96939e9dea7fb096a6e9dc6927a4afa5fad9d333f97666a",
-    desc: "Cette plage, collée à la pointe de La Torche a su se faire un nom dans le surf breton grâce à ses belles vagues dans un cadre magnifique. Cette grande étendue de sable qui prend la houle plein ouest toute l'année offre régulièrement des vagues tubulaires lors des grosses houles d'automne ou d'hiver. Pas de restrictions de niveau même s'il faut faire attention aux courants qui peuvent être assez forts.",
+    desc: "Cette grande étendue de sable qui prend la houle plein ouest toute l'année offre régulièrement des vagues tubulaires lors des grosses houles d'automne ou d'hiver. Pas de restrictions de niveau même s'il faut faire attention aux courants qui peuvent être assez forts.",
     dep: 29,
   },
   {
@@ -423,7 +411,7 @@ const dataSpots = [
     name: "Locquirec - Plage Les Sables Blancs - Finistère",
     intro: "Les vagues ici sont connues pour leur qualité et leur constance.",
     imgSrc:
-      "https://img.freepik.com/photos-gratuite/homme-surfeur-surfant-dans-mer-belles-vagues_181624-166.jpg?w=1800&t=st=1699995766~exp=1699996366~hmac=35ec9c52d5fe3584c96939e9dea7fb096a6e9dc6927a4afa5fad9d333f97666a",
+      "https://img.freepik.com/photos-gratuite/jeune-homme-surfe-vagues-ocean_23-2148823821.jpg?w=826&t=st=1700159070~exp=1700159670~hmac=4be6550f00a87fade605da1c95169fa521aae5a363bf673496b9be708c09fabb",
     desc: "Avec des vagues de taille modérée à grande, cet endroit convient aux surfeurs de différents niveaux. La beauté de la côte bretonne ajoute à l'attrait de cet endroit pour les amateurs de surf.",
     dep: 29,
   },
