@@ -3,12 +3,18 @@
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: $nav;
   padding: 1.5vh;
   width: 100%;
   top: 42px;
   z-index: 1;
+
+  .navTitle {
+    display: flex;
+    align-items: center;
+    font-size: $fs-nav;
+  }
 
   .links {
     display: flex;

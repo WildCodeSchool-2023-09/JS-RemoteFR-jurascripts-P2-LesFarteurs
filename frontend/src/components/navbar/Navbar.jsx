@@ -12,6 +12,9 @@ function Navbar() {
 
   return (
     <nav id="nav" className={isOpen ? "menu-open" : ""}>
+      <div className="navTitle">
+        <p>Surf-Ta-Vague</p>
+      </div>
       <ul className="links">
         <li>
           <Link to="/">Accueil</Link>

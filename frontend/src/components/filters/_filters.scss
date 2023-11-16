@@ -21,7 +21,7 @@
   text-align: center;
   list-style: none;
   color: $btn_filter;
-  background-color: $bg;
+  background-color: transparent;
   border-style: none;
 
   img {
@@ -55,7 +55,7 @@
 
 .levelTitle,
 .infolevel {
-  background-color: $bg;
+  background-color: transparent;
   border-style: none;
 }
 
@@ -114,9 +114,9 @@
   height: auto;
 }
 
-option {
+.filtersContainer option {
   color: $nav;
-  font-size: 0.7rem;
+  font-size: $fs-p;
   background-color: $btn_filter;
 }
 
