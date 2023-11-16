@@ -83,7 +83,7 @@ function Infos() {
           />
         </section>
         <section className="definition">
-          <h2>Choisir son niveau de Surf & Définitions :</h2>
+          <h2>Choisir son niveau de Surf & définitions :</h2>
           <section className="imgtableau">
             <img
               className="tableausurf"
@@ -97,14 +97,21 @@ function Infos() {
             connait aucune règle ds l'eau et les dangers.
             <br />
             <br />
-            Bon = Savoir nager un minimum, comprends les rudiments de l'eau
-            (courant, remou, la mousse, une vague, le vent), connait les
-            règles(respect des autres, bien se placer et revenir sans gêner..)
-            et les dangers(secouer, courant, planches et humains..), tiens un
-            minimum en équilibre.
+            Intermédiaire = Savoir nager, comprend l’eau un minimum (courant,
+            remou, la mousse, une vague), connait les règles (respect des
+            autres, par où rentrer pour bien se placer et revenir sans gêner...)
+            et les dangers (courant, ta position de planche et les autres
+            surfeurs), tenir un minimum debout sur sa planche.
             <br />
             <br />
-            Maîtrise = Gères tout ça ! ^^
+            <br />
+            Confirmé = Gères tout ça ! 😉
+          </p>
+          <br />
+          <br />
+          <p>
+            Champion = Tu fais de la compétition, les grosses vagues ne te font
+            pas peur !
           </p>
           <h3>Définitions</h3>
           <p>

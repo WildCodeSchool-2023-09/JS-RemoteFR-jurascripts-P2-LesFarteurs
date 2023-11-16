@@ -156,7 +156,7 @@ function Algo() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  if (carrouselSpot <= 4000) {
+  if (carrouselSpot >= 768) {
     return (
       <>
         <Filters
@@ -195,6 +195,41 @@ function Algo() {
       </>
     );
   }
+  return (
+    <div>
+      {filteredSpots.length !== 0 ? (
+        <Carousel
+          autoPlay
+          interval={5000}
+          infiniteLoop
+          showStatus={false}
+          emulateTouch
+        >
+          {filteredSpots.map((spot) => (
+            <Spots
+              dataSpot={spot}
+              selectedDepartmentCoords={selectedDepartmentCoords}
+              weatherCode={spot.weathercode}
+              temperature={spot.temperature_2m}
+              waveHeight={spot.wave_height}
+              windSpeed={spot.windspeed_10m}
+              windDirection={spot.winddirection_10m}
+              selectedDepartmentId={selectedDepartmentId}
+              key={spot.dep}
+            />
+          ))}
+        </Carousel>
+      ) : (
+        <div className="msg">
+          <p>Sélectionne un filtre pour faire apparaitre un spot ! </p>
+        </div>
+      )}
+      <Filters
+        handleSelectLoc={handleSelectLoc}
+        handleSelectLev={handleSelectLev}
+      />
+    </div>
+  );
 }
 
 Algo.loader = async () => {

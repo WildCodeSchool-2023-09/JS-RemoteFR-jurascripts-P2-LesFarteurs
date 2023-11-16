@@ -157,15 +157,18 @@ function Contact() {
             )}
           </label>
 
-          <textarea
-            name="textarea"
-            rows="10"
-            cols="50"
-            placeholder="Votre message"
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
-            onBlur={() => isFormSubmitted && validateMessage()}
-          />
+          <label className="floatingLabel">
+            {" "}
+            Votre message{" "}
+            <textarea
+              id="message"
+              type="text"
+              className="floatingInput"
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+              onBlur={() => isFormSubmitted && validateMessage()}
+            />
+          </label>
           {isFormSubmitted && messageError && (
             <p className="errorMessage">{messageError}</p>
           )}

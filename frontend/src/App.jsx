@@ -5,7 +5,7 @@ import Alert from "./components/alert/Alert";
 import Algo from "./components/Algo/Algo";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Filters from "./components/filters/Filters";
+
 import "./styles/index.css";
 
 function App() {
@@ -31,7 +31,6 @@ function App() {
           <Header />
           <Alert />
           <Algo />
-          <Filters />
           <Coolitude />
           <Footer />
         </div>
