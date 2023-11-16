@@ -550,31 +550,35 @@ const surfLevels = [
   {
     level: 1,
     levelName: "novice",
+    minWaveHeight: 0.3,
     maxWaveHeight: 0.6,
     maxWindSpeed: 15,
   },
   {
     level: 2,
     levelName: "inter",
+    minWaveHeight: 0.4,
     maxWaveHeight: 1,
     maxWindSpeed: 30,
   },
   {
     level: 3,
     levelName: "conf",
+    minWaveHeight: 0.6,
     maxWaveHeight: 2,
     maxWindSpeed: 30,
   },
   {
     level: 4,
     levelName: "champ",
-    maxWaveHeight: 6.9,
+    minWaveHeight: 1,
+    maxWaveHeight: 7,
     maxWindSpeed: 50,
   },
   {
     level: 5,
     levelName: "storm",
-    minWaveHeight: 7,
+    minWaveHeight: 7.1,
     minWindSpeed: 51,
   },
 ];
