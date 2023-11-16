@@ -10,7 +10,8 @@ input,
 }
 
 body {
-  /* background-color: #205464; */
-  background-image: url("surfaerien.jpg");
+  background-image: url("surfaerien2.png");
+  background-color: #205464;
+  object-fit: cover;
 }
 /*# sourceMappingURL=index.css.map */
