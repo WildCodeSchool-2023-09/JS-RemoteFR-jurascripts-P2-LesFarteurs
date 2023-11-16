@@ -1,7 +1,7 @@
 @import "src/styles/_variables.scss";
 @import "src/styles/_mixins.scss";
 
-.navbar {
+nav {
   display: flex;
   justify-content: flex-end;
   background-color: $nav;
@@ -16,7 +16,7 @@
     gap: 1rem;
 
     li {
-      margin-left: 2vw;
+      margin-right: 2vw;
 
       a {
         text-decoration: none;
@@ -45,8 +45,61 @@
   }
 }
 
+#icons {
+  cursor: pointer;
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
-  .navbar {
-    display: none;
+  nav {
+    padding: 0;
+  }
+  #icons {
+    cursor: pointer;
+    display: block;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    background-color: $nav;
+  }
+
+  #icons:before {
+    content: "";
+  }
+
+  .menu-open #icons:before {
+    content: "";
+  }
+
+  .icon {
+    font-size: 30px;
+    padding-right: 15px;
+  }
+
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5%;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+    background-color: $nav;
+    margin: 0;
+    z-index: 2;
+  }
+  nav .links li {
+    margin: 0;
+  }
+  nav .links li a {
+    &:after {
+      content: "";
+    }
+    &:hover:after {
+      background-color: transparent;
+    }
+  }
+  .menu-open ul {
+    left: 0;
   }
 }

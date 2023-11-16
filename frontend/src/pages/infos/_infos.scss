@@ -5,42 +5,81 @@
   background-color: #205464;
   padding: 30px;
 }
-
-h1 {
-  margin: 5vh auto;
-  text-align: center;
+.condition {
+  margin: 5vh 2vw;
+  h1 {
+    font-size: $fs-h1;
+    margin: 1vh auto;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+    font-size: $fs-h2;
+    margin: 2vh auto 4vh;
+  }
+  p {
+    font-size: $fs-h3;
+  }
 }
 
 h2 {
-  margin: 5vh auto;
+  margin: 2vh auto;
 }
 
 h3 {
-  margin: 5vh auto;
+  margin: 3vh auto;
 }
+
 h4 {
   margin: 2vh auto;
 }
 
-.imgtableau {
+.definition,
+.consignes,
+.danger,
+.previsions {
+  margin: 5vh 2vw;
+  padding: 2vh 2vw;
+  box-shadow:
+    0 20px 20px rgba(14, 21, 47, 0.4),
+    0 16px 40px rgba(14, 21, 47, 0.4);
+}
+
+.previsions {
   display: flex;
-  margin: 5vh auto;
-  justify-content: center;
-  .tableausurf {
-    width: 570px;
-    height: 270px;
+  padding-right: 1vw;
+
+  .imgSurfeur {
+    width: 30%;
+    height: auto;
+    padding-left: 1vw;
   }
 }
 
-.surfcharles {
+.tableausurf {
+  width: 90%;
+  height: auto;
+  margin: auto 2vw;
+}
+
+.titleDanger {
   display: flex;
-  margin: 5vh auto;
-  justify-content: space-between;
-  .previsions {
-    padding-right: 40px;
+  margin: 2vh 2vw;
+  align-items: center;
+  #dangerous {
+    margin: 1vh 2vw;
+    justify-content: flex-start;
+    color: $danger;
   }
-  .surfeur4 {
-    width: 280px;
-    height: 330px;
+}
+
+@media screen and (max-width: 1250px) {
+  .previsions {
+    display: block;
+    padding-right: 1vw;
+
+    .imgSurfeur {
+      display: none;
+    }
   }
 }

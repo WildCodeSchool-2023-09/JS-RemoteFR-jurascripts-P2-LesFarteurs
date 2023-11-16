@@ -4,17 +4,28 @@ import dataGen from "../data/dataGen";
 import "./_filters.scss";
 import Popup from "../popup/Popup";
 
-function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
+function Filters({ handleSelectLev, handleSelectLoc }) {
   const [buttonPopup, setButtonPopup] = useState(false);
+  const removeDuplicates = (array, property) => {
+    const uniqueValues = new Set();
+    return array.filter((item) => {
+      const value = item[property];
+      if (!uniqueValues.has(value)) {
+        uniqueValues.add(value);
+        return true;
+      }
+      return false;
+    });
+  };
   return (
     <section className="filtersContainer">
       <div className="calendar">
-        <img id="cal" src="./public/pictos/Date.png" alt="calendrier" />
+        <img id="cal" src="./public/P_Date.png" alt="calendrier" />
         <button type="button" className="calendar">
-          <select
-            className="levelButton"
-            onChange={(event) => handleSelectDate(event)}
-          >
+          <select className="levelButton">
+            <option value="" disabled selected hidden>
+              Choisis la date
+            </option>
             <option name="today" value="today">
               Aujourd'hui
             </option>
@@ -27,11 +38,10 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
           </select>
         </button>
       </div>
-
       <div className="levelButtonContainer">
         <div className="levelButtonContainer">
           <button type="button" onClick={() => setButtonPopup(true)}>
-            <img id="lev" src="./public/pictos/Niveau.png" alt="niveau" />
+            <img id="lev" src="./public/P_Niveau.png" alt="niveau" />
           </button>
           <div className="niveau">
             <button type="button" className="levelTitle">
@@ -43,6 +53,7 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
                 <option value="novice">Novice</option>
                 <option value="inter">Intermédiaire</option>
                 <option value="pro">Confirmé</option>
+                <option value="champ">Champion</option>
               </select>
             </button>
           </div>
@@ -51,7 +62,6 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <div className="infoLevel">
             <h3>Mon niveau</h3>
-            <br />
             <p>
               <strong>Novice</strong> Prendre 2/3 cours avec un moniteur de
               surf. Savoir nager un minimum, jamais surfé, ne connaît aucune
@@ -69,25 +79,28 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
               <strong>Confirmé</strong> Gère tout ça ! 😉
               <br />
               <br />
+              <strong>Champion</strong> Tu fais de la compétition, les grosses
+              vagues ne te font pas peur !
+              <br />
+              <br />
+              <br />
               PS : Choisis bien ton équipement !
             </p>
           </div>
         </Popup>
       </div>
-
       <div className="localisation">
-        <img
-          id="loc"
-          src="./public/pictos/Localisation.png"
-          alt="localisation"
-        />
+        <img id="loc" src="./public/P_Localisation.png" alt="localisation" />
         <button type="button" className="localisation">
           <select
             className="localisationButton"
             onChange={(event) => handleSelectLoc(event)}
           >
-            {dataGen.dataSpots.map((dataSpot) => (
-              <option key={dataSpot.id} id={dataSpot.id} value={dataSpot.id}>
+            <option value="" disabled selected hidden>
+              Choisis ton département
+            </option>
+            {removeDuplicates(dataGen.dataSpots, "depName").map((dataSpot) => (
+              <option key={dataSpot.dep} value={dataSpot.dep}>
                 {dataSpot.depName}
               </option>
             ))}
@@ -101,7 +114,6 @@ function Filters({ handleSelectDate, handleSelectLev, handleSelectLoc }) {
 export default Filters;
 
 Filters.propTypes = {
-  handleSelectDate: PropTypes.func.isRequired,
   handleSelectLoc: PropTypes.func.isRequired,
   handleSelectLev: PropTypes.func.isRequired,
 };
