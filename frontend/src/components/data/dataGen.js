@@ -445,7 +445,7 @@ const dataSpots = [
     depName: "Manche",
     latitude: 49.03985932804693,
     longitude: -1.6056561209721765,
-    name: "Coutainville - Plage de l'Ecole de Voile' - Manche",
+    name: "Coutainville - Plage de l'Ecole de Voile - Manche",
     intro:
       "L'été l'absence de grosses houles en fait un spot avec peu de surfeurs. Surveillez donc bien les surf reports pour éviter les mauvaises surfprises au niveau des prévisions de vagues.",
     imgSrc:
