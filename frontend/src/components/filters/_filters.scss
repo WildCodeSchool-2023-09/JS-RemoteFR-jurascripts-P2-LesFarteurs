@@ -63,7 +63,7 @@
 .infolevel {
   border: 2px solid $coolitude;
   border-radius: 50%;
-  padding: 5px 12px;
+  // padding: 5px 12px;
   color: $coolitude;
   font-weight: bold;
 }
@@ -83,11 +83,10 @@
   border: none;
   cursor: pointer;
   display: block;
-  margin-top: 1vh;
   text-align: center;
-  padding: 0.5vh 2vw;
+  padding: 0.5vh 1vw;
   color: $txt_filter;
-  font-size: $fs-p;
+  font-size: $nav;
   font-weight: bold;
   box-shadow:
     0 45px 100px rgba(14, 21, 47, 0.4),
@@ -97,7 +96,7 @@
   outline: none;
 
   select {
-    font-size: 0.5rem;
+    font-size: $nav;
   }
 }
 
@@ -127,4 +126,23 @@
 
 strong {
   color: $coolitude;
+}
+
+@media screen and (max-width: 400px) {
+  .filtersContainer {
+    button {
+      padding: 0;
+    }
+  }
+  select {
+    font-size: calc(0.7em + 0.6vw);
+  }
+  .filtersContainer option {
+    font-size: $nav;
+  }
+  .calendarButton,
+  .levelButton,
+  .localisationButton {
+    padding: 0.5vh 0;
+  }
 }

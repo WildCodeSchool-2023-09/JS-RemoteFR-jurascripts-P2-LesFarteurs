@@ -6,8 +6,6 @@ import Algo from "./components/Algo/Algo";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 
-import "./styles/index.css";
-
 function App() {
   const [smallScreen, setSmallScreen] = useState(window.innerWidth <= 768);
 

@@ -25,7 +25,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
         <button type="button" className="calendar">
           <select className="levelButton">
             <option value="" disabled selected hidden>
-              Choisis la date
+              Date
             </option>
             <option name="today" value="today">
               Aujourd'hui
@@ -49,7 +49,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
               {" "}
               <select className="levelButton" onChange={handleSelectLev}>
                 <option value="" disabled selected hidden>
-                  Choisis ton niveau
+                  Niveau
                 </option>
                 <option value="novice">Novice</option>
                 <option value="inter">Intermédiaire</option>
@@ -98,7 +98,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
             onChange={(event) => handleSelectLoc(event)}
           >
             <option value="" disabled selected hidden>
-              Choisis ton département
+              Département
             </option>
             {removeDuplicates(dataGen.dataSpots, "depName").map((dataSpot) => (
               <option key={dataSpot.dep} value={dataSpot.dep}>
