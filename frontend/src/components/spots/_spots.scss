@@ -13,6 +13,9 @@
     0 45px 100px rgba(14, 21, 47, 0.4),
     0 16px 40px rgba(14, 21, 47, 0.4);
 }
+.spotsContainer p {
+  padding-top: 10px;
+}
 
 .titleSpot {
   padding: 1vw;
@@ -83,6 +86,7 @@ button {
   background-color: transparent;
   border-style: none;
   padding-right: 15px;
+  font-size: $fs-p;
 }
 //MEDIA QUERY//
 @media screen and (max-width: 768px) {
