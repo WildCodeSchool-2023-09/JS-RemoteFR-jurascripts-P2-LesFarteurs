@@ -41,7 +41,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
       <div className="levelButtonContainer">
         <div className="levelButtonContainer">
           <button type="button" onClick={() => setButtonPopup(true)}>
-            <img id="lev" src="./src/assets/P_Niveau.png" alt="niveau" />
+            <img id="lev" src="./assets/P_Niveau.png" alt="niveau" />
           </button>
           <div className="niveau">
             <button type="button" className="levelTitle">
