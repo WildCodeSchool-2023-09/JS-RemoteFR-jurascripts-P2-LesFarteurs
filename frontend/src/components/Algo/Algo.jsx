@@ -40,83 +40,111 @@ function Algo() {
     setUserLevel(event.target.value);
   };
 
-  // les filtres de département ET de niveaux
-  let filteredSpots = datas;
+  // Ci-dessous, les fonctions filtres alimentant le tableau "filteredSpots" qu'on vient ensuite mapper dans le return de notre composant
+  const [filteredSpots, setFilteredSpots] = useState([]);
+  let conditions = true;
 
-  if (selectedDepartmentId) {
-    filteredSpots = datas.filter(
-      (spot) => spot.dep === parseInt(selectedDepartmentId, 10)
-    );
+  useEffect(() => {
+    let updatedFilteredSpots = [];
+    // si le Dpmt est sélectionné mais pas le niveau
+    if (selectedDepartmentId && userLevel === "") {
+      updatedFilteredSpots = datas.filter(
+        (spot) => spot.dep === parseInt(selectedDepartmentId, 10)
+      );
+    }
+    // si le niveau est sélectionné mais pas le Dpmt
+    if (userLevel && selectedDepartmentId === null) {
+      if (userLevel === "novice") {
+        updatedFilteredSpots = datas.filter(
+          (spot) =>
+            spot.wave_height >= dataGen.surfLevels[0].minWaveHeight &&
+            spot.wave_height <= dataGen.surfLevels[0].maxWaveHeight &&
+            spot.windspeed_10m <= dataGen.surfLevels[0].maxWindSpeed
+        );
+      }
+      if (userLevel === "inter") {
+        updatedFilteredSpots = datas.filter(
+          (spot) =>
+            spot.wave_height >= dataGen.surfLevels[1].minWaveHeight &&
+            spot.wave_height <= dataGen.surfLevels[1].maxWaveHeight &&
+            spot.windspeed_10m <= dataGen.surfLevels[1].maxWindSpeed
+        );
+      }
+      if (userLevel === "conf") {
+        updatedFilteredSpots = datas.filter(
+          (spot) =>
+            spot.wave_height >= dataGen.surfLevels[1].minWaveHeight &&
+            spot.wave_height <= dataGen.surfLevels[2].maxWaveHeight &&
+            spot.windspeed_10m <= dataGen.surfLevels[2].maxWindSpeed
+        );
+      }
+      if (userLevel === "champ") {
+        updatedFilteredSpots = datas.filter(
+          (spot) =>
+            spot.wave_height >= dataGen.surfLevels[1].minWaveHeight &&
+            spot.wave_height < dataGen.surfLevels[3].maxWaveHeight &&
+            spot.windspeed_10m <= dataGen.surfLevels[3].maxWindSpeed
+        );
+      }
+    }
+    // si les deux filtres sont sélectionnés en même temps
+    if (userLevel !== "" && selectedDepartmentId !== null) {
+      if (userLevel === "novice") {
+        updatedFilteredSpots = datas.filter(
+          (spot) =>
+            spot.dep === parseInt(selectedDepartmentId, 10) &&
+            spot.wave_height >= dataGen.surfLevels[0].minWaveHeight &&
+            spot.wave_height <= dataGen.surfLevels[0].maxWaveHeight &&
+            spot.windspeed_10m <= dataGen.surfLevels[0].maxWindSpeed
+        );
+        if (updatedFilteredSpots.length === 0) {
+          conditions = false;
+        }
+      }
+      if (userLevel === "inter") {
+        updatedFilteredSpots = datas.filter(
+          (spot) =>
+            spot.dep === parseInt(selectedDepartmentId, 10) &&
+            spot.wave_height >= dataGen.surfLevels[0].minWaveHeight &&
+            spot.wave_height <= dataGen.surfLevels[1].maxWaveHeight &&
+            spot.windspeed_10m <= dataGen.surfLevels[1].maxWindSpeed
+        );
+        if (updatedFilteredSpots.length === 0) {
+          conditions = false;
+        }
+      }
+      if (userLevel === "conf") {
+        updatedFilteredSpots = datas.filter(
+          (spot) =>
+            spot.dep === parseInt(selectedDepartmentId, 10) &&
+            spot.wave_height >= dataGen.surfLevels[1].minWaveHeight &&
+            spot.wave_height <= dataGen.surfLevels[2].maxWaveHeight &&
+            spot.windspeed_10m <= dataGen.surfLevels[2].maxWindSpeed
+        );
+        if (updatedFilteredSpots.length === 0) {
+          conditions = false;
+        }
+      }
+      if (userLevel === "champ") {
+        updatedFilteredSpots = datas.filter(
+          (spot) =>
+            spot.dep === parseInt(selectedDepartmentId, 10) &&
+            spot.wave_height >= dataGen.surfLevels[2].minWaveHeight &&
+            spot.wave_height <= dataGen.surfLevels[3].maxWaveHeight &&
+            spot.windspeed_10m <= dataGen.surfLevels[3].maxWindSpeed
+        );
+        if (updatedFilteredSpots.length === 0) {
+          conditions = false;
+        }
+      }
+      if (!conditions) {
+        // eslint-disable-next-line no-alert
+        alert("Désolé il n'y a pas de spot à ton niveau dans ce département");
+      }
+    }
 
-    if (selectedDepartmentId && userLevel === "novice") {
-      filteredSpots = datas.filter(
-        (spot) =>
-          spot.dep === parseInt(selectedDepartmentId, 10) &&
-          spot.wave_height <= dataGen.surfLevels[0].maxWaveHeight &&
-          spot.windspeed_10m <= dataGen.surfLevels[0].maxWindSpeed
-      );
-    }
-    if (userLevel === "inter") {
-      filteredSpots = datas.filter(
-        (spot) =>
-          spot.dep === parseInt(selectedDepartmentId, 10) &&
-          spot.wave_height <= dataGen.surfLevels[1].maxWaveHeight &&
-          spot.windspeed_10m <= dataGen.surfLevels[1].maxWindSpeed
-      );
-    }
-    if (userLevel === "conf") {
-      filteredSpots = datas.filter(
-        (spot) =>
-          spot.dep === parseInt(selectedDepartmentId, 10) &&
-          spot.wave_height <= dataGen.surfLevels[2].maxWaveHeight &&
-          spot.windspeed_10m <= dataGen.surfLevels[2].maxWindSpeed
-      );
-    }
-    if (filteredSpots.length === 0) {
-      // eslint-disable-next-line no-alert
-      alert("Désolé, il n'y a pas de spot au lieu recherché pour ton niveau !");
-      setSelectedDepartmentId(null);
-    }
-  }
-  if (userLevel) {
-    if (userLevel === "novice") {
-      filteredSpots = datas.filter(
-        (spot) =>
-          spot.dep === parseInt(selectedDepartmentId, 10) ||
-          (spot.wave_height <= dataGen.surfLevels[0].maxWaveHeight &&
-            spot.windspeed_10m <= dataGen.surfLevels[0].maxWindSpeed)
-      );
-    }
-    if (userLevel === "inter") {
-      filteredSpots = datas.filter(
-        (spot) =>
-          // spot.dep === parseInt(selectedDepartmentId, 10) ||
-          spot.wave_height <= dataGen.surfLevels[1].maxWaveHeight &&
-          spot.windspeed_10m <= dataGen.surfLevels[1].maxWindSpeed
-      );
-    }
-    if (userLevel === "conf") {
-      filteredSpots = datas.filter(
-        (spot) =>
-          spot.dep === parseInt(selectedDepartmentId, 10) &&
-          spot.wave_height <= dataGen.surfLevels[2].maxWaveHeight &&
-          spot.windspeed_10m <= dataGen.surfLevels[2].maxWindSpeed
-      );
-    }
-    if (userLevel === "champ") {
-      filteredSpots = datas.filter(
-        (spot) =>
-          spot.dep === parseInt(selectedDepartmentId, 10) &&
-          spot.wave_height <= dataGen.surfLevels[3].maxWaveHeight &&
-          spot.windspeed_10m <= dataGen.surfLevels[3].maxWindSpeed
-      );
-    }
-    if (filteredSpots.length === 0) {
-      // eslint-disable-next-line no-alert
-      alert("Désolé, il n'y a pas de spot au lieu recherché pour ton niveau !");
-      setSelectedDepartmentId(null);
-    }
-  }
+    setFilteredSpots(updatedFilteredSpots);
+  }, [selectedDepartmentId, userLevel, datas]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -128,88 +156,73 @@ function Algo() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  if (carrouselSpot <= 768) {
+  if (carrouselSpot <= 4000) {
     return (
       <>
         <Filters
           handleSelectLoc={handleSelectLoc}
           handleSelectLev={handleSelectLev}
         />
-        <Carousel
-          autoPlay
-          interval={5000}
-          infiniteLoop
-          showStatus={false}
-          emulateTouch
-        >
-          {filteredSpots.map((spot) => (
-            <Spots
-              dataSpot={spot}
-              selectedDepartmentCoords={selectedDepartmentCoords}
-              weatherCode={spot.weathercode}
-              temperature={spot.temperature_2m}
-              waveHeight={spot.wave_height}
-              windSpeed={spot.windspeed_10m}
-              windDirection={spot.winddirection_10m}
-              selectedDepartmentId={selectedDepartmentId}
-              key={spot.dep}
-            />
-          ))}
-        </Carousel>
+        <div>
+          {filteredSpots.length !== 0 ? (
+            <Carousel
+              autoPlay
+              interval={5000}
+              infiniteLoop
+              showStatus={false}
+              emulateTouch
+            >
+              {filteredSpots.map((spot) => (
+                <Spots
+                  dataSpot={spot}
+                  selectedDepartmentCoords={selectedDepartmentCoords}
+                  weatherCode={spot.weathercode}
+                  temperature={spot.temperature_2m}
+                  waveHeight={spot.wave_height}
+                  windSpeed={spot.windspeed_10m}
+                  windDirection={spot.winddirection_10m}
+                  selectedDepartmentId={selectedDepartmentId}
+                  key={spot.dep}
+                />
+              ))}
+            </Carousel>
+          ) : (
+            <div className="msg">
+              <p>Sélectionne un filtre pour faire apparaitre un spot ! </p>
+            </div>
+          )}
+        </div>
       </>
     );
   }
-  return (
-    <>
-      <Filters
-        handleSelectLoc={handleSelectLoc}
-        handleSelectLev={handleSelectLev}
-      />
-      {filteredSpots.map((spot) => (
-        <Spots
-          dataSpot={spot}
-          selectedDepartmentCoords={selectedDepartmentCoords}
-          weatherCode={spot.weathercode}
-          temperature={spot.temperature_2m}
-          waveHeight={spot.wave_height}
-          windSpeed={spot.windspeed_10m}
-          windDirection={spot.winddirection_10m}
-          selectedDepartmentId={selectedDepartmentId}
-          key={spot.dep}
-        />
-      ))}
-    </>
-  );
 }
 
-Algo.loader = () => {
-  let newDatas = [];
-  dataGen.dataSpots.forEach(async (dataSpot) => {
-    const newArray = newDatas;
+Algo.loader = async () => {
+  const newDatas = await Promise.all(
+    dataGen.dataSpots.map(async (dataSpot) => {
+      const marineResponse = await axios.get(
+        `https://marine-api.open-meteo.com/v1/marine?latitude=${dataSpot.latitude}&longitude=${dataSpot.longitude}&current=wave_height&timezone=Europe%2FBerlin`
+      );
 
-    const marineResponse = await axios.get(
-      `https://marine-api.open-meteo.com/v1/marine?latitude=${dataSpot.latitude}&longitude=${dataSpot.longitude}&current=wave_height&timezone=Europe%2FBerlin`
-    );
+      const forecastResponse = await axios.get(
+        `https://api.open-meteo.com/v1/forecast?latitude=${dataSpot.latitude}&longitude=${dataSpot.longitude}&current=temperature_2m,weathercode,windspeed_10m,winddirection_10m&timezone=Europe%2FBerlin`
+      );
 
-    const forecastResponse = await axios.get(
-      `https://api.open-meteo.com/v1/forecast?latitude=${dataSpot.latitude}&longitude=${dataSpot.longitude}&current=temperature_2m,weathercode,windspeed_10m,winddirection_10m&timezone=Europe%2FBerlin`
-    );
+      const { temperature_2m, weathercode, windspeed_10m, winddirection_10m } =
+        forecastResponse.data.current;
+      const { wave_height } = marineResponse.data.current;
 
-    const { temperature_2m, weathercode, windspeed_10m, winddirection_10m } =
-      forecastResponse.data.current;
-    const { wave_height } = marineResponse.data.current;
+      return {
+        ...dataSpot,
+        temperature_2m,
+        weathercode,
+        wave_height,
+        windspeed_10m,
+        winddirection_10m,
+      };
+    })
+  );
 
-    newArray.push({
-      ...dataSpot,
-      temperature_2m,
-      weathercode,
-      wave_height,
-      windspeed_10m,
-      winddirection_10m,
-    });
-
-    newDatas = newArray;
-  });
   return newDatas;
 };
 

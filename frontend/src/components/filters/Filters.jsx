@@ -20,7 +20,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
   return (
     <section className="filtersContainer">
       <div className="calendar">
-        <img id="cal" src="./public/P_Date.png" alt="calendrier" />
+        <img id="cal" src="/P_Date.png" alt="calendrier" />
         <button type="button" className="calendar">
           <select className="levelButton">
             <option value="" disabled selected hidden>
@@ -41,7 +41,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
       <div className="levelButtonContainer">
         <div className="levelButtonContainer">
           <button type="button" onClick={() => setButtonPopup(true)}>
-            <img id="lev" src="./public/P_Niveau.png" alt="niveau" />
+            <img id="lev" src="./src/assets/P_Niveau.png" alt="niveau" />
           </button>
           <div className="niveau">
             <button type="button" className="levelTitle">
@@ -52,7 +52,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
                 </option>
                 <option value="novice">Novice</option>
                 <option value="inter">Intermédiaire</option>
-                <option value="pro">Confirmé</option>
+                <option value="conf">Confirmé</option>
                 <option value="champ">Champion</option>
               </select>
             </button>
@@ -90,7 +90,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
         </Popup>
       </div>
       <div className="localisation">
-        <img id="loc" src="./public/P_Localisation.png" alt="localisation" />
+        <img id="loc" src="/P_Localisation.png" alt="localisation" />
         <button type="button" className="localisation">
           <select
             className="localisationButton"
