@@ -23,7 +23,7 @@ function Spots({
   return (
     <>
       <div className="spotsContainer">
-        <button type="button" onClick={toggleDescription}>
+        <button id="btnImg" type="button" onClick={toggleDescription}>
           <img className="imgSpot" src={dataSpot.imgSrc} alt="spot" />
         </button>
         <div className="infoSpot">
@@ -40,6 +40,7 @@ function Spots({
             onClick={toggleDescription}
           >
             <button
+              id="plusMoins"
               type="button"
               className="toggleButton"
               onClick={toggleDescription}
