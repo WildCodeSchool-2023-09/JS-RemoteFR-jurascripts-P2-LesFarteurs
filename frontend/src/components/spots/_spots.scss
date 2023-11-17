@@ -4,14 +4,32 @@
 .spotsContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   width: 90%;
+  min-height: 470px;
   margin: auto;
-  margin-bottom: 5vh;
+  // margin-bottom: 5vh;
   background: linear-gradient(to top right, #205464, #108888);
   box-shadow:
     0 45px 100px rgba(14, 21, 47, 0.4),
     0 16px 40px rgba(14, 21, 47, 0.4);
+  button {
+    margin: auto;
+  }
+}
+.imgSpot {
+  display: flex;
+  justify-content: center;
+  height: 95%;
+  width: 95%;
+  height: 400px;
+  object-fit: cover;
+  border: none;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+.spotsContainer p {
+  padding-top: 10px;
 }
 
 .titleSpot {
@@ -50,19 +68,6 @@
   margin-bottom: 1vw;
 }
 
-.imgSpot {
-  display: flex;
-  align-self: center;
-  width: 95%;
-  height: 95%;
-  background-image: url("/plage.jpeg");
-  background-size: cover;
-  object-fit: cover;
-  border: none;
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
-}
-
 .descriptionSpot.visible,
 .others.visible {
   white-space: normal;
@@ -82,7 +87,8 @@
 button {
   background-color: transparent;
   border-style: none;
-  padding-right: 15px;
+  padding-right: 20px;
+  font-size: $fs-p;
 }
 //MEDIA QUERY//
 @media screen and (max-width: 768px) {
@@ -92,6 +98,8 @@ button {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
     margin-bottom: 0;
+    width: 90%;
+    min-height: none;
     span {
       img {
         width: 50px;
@@ -115,7 +123,7 @@ button {
   }
 
   .infoSpot {
-    margin: 1vh 3vw;
+    margin: 0.5vh 3vw;
     grid-row: 3 / 4;
   }
 

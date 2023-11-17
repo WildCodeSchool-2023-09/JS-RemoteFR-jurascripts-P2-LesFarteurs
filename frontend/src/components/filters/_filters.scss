@@ -6,6 +6,8 @@
   justify-content: space-around;
   align-items: flex-end;
   margin-bottom: 5vh;
+  width: 100%;
+  background: transparent;
 
   a {
     padding: 5px 10px;
@@ -21,11 +23,10 @@
   text-align: center;
   list-style: none;
   color: $btn_filter;
-  background-color: $bg;
+  background-color: transparent;
   border-style: none;
 
   img {
-    cursor: pointer;
     width: calc(50px + 2vw);
     height: auto;
     background-color: transparent;
@@ -55,16 +56,8 @@
 
 .levelTitle,
 .infolevel {
-  background-color: $bg;
+  background-color: transparent;
   border-style: none;
-}
-
-.infolevel {
-  border: 2px solid $coolitude;
-  border-radius: 50%;
-  padding: 5px 12px;
-  color: $coolitude;
-  font-weight: bold;
 }
 
 .levelButtonContainer {
@@ -73,6 +66,8 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0;
+  cursor: pointer;
 }
 
 .calendarButton,
@@ -82,11 +77,10 @@
   border: none;
   cursor: pointer;
   display: block;
-  margin-top: 1vh;
   text-align: center;
-  padding: 0.5vh 2vw;
+  padding: 0.5vh 1vw;
   color: $txt_filter;
-  font-size: $fs-p;
+  font-size: $nav;
   font-weight: bold;
   box-shadow:
     0 45px 100px rgba(14, 21, 47, 0.4),
@@ -96,13 +90,14 @@
   outline: none;
 
   select {
-    font-size: 0.5rem;
+    font-size: $nav;
   }
 }
 
 #lev {
   width: calc(90px + 2vw);
   height: auto;
+  cursor: pointer;
 }
 
 #loc {
@@ -114,9 +109,9 @@
   height: auto;
 }
 
-option {
+.filtersContainer option {
   color: $nav;
-  font-size: 0.7rem;
+  font-size: $fs-p;
   background-color: $btn_filter;
 }
 
@@ -126,4 +121,23 @@ option {
 
 strong {
   color: $coolitude;
+}
+
+@media screen and (max-width: 400px) {
+  .filtersContainer {
+    button {
+      padding: 0;
+    }
+  }
+  select {
+    font-size: calc(0.7em + 0.6vw);
+  }
+  .filtersContainer option {
+    font-size: $nav;
+  }
+  .calendarButton,
+  .levelButton,
+  .localisationButton {
+    padding: 0.5vh 0;
+  }
 }

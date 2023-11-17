@@ -11,7 +11,6 @@ import "./_algo.scss";
 function Algo() {
   const datas = useLoaderData();
   // useState pour récupérer les choix de l'utilisateur dans Filters
-  const [carrouselSpot, setCarrouselSpot] = useState(window.innerWidth);
   const [userLevel, setUserLevel] = useState("");
   const [selectedDepartmentCoords, setSelectedDepartmentCoords] = useState({
     latitude: 0,
@@ -61,14 +60,20 @@ function Algo() {
             spot.wave_height <= dataGen.surfLevels[0].maxWaveHeight &&
             spot.windspeed_10m <= dataGen.surfLevels[0].maxWindSpeed
         );
+        if (updatedFilteredSpots.length === 0) {
+          conditions = false;
+        }
       }
       if (userLevel === "inter") {
         updatedFilteredSpots = datas.filter(
           (spot) =>
-            spot.wave_height >= dataGen.surfLevels[1].minWaveHeight &&
+            spot.wave_height >= dataGen.surfLevels[0].minWaveHeight &&
             spot.wave_height <= dataGen.surfLevels[1].maxWaveHeight &&
             spot.windspeed_10m <= dataGen.surfLevels[1].maxWindSpeed
         );
+        if (updatedFilteredSpots.length === 0) {
+          conditions = false;
+        }
       }
       if (userLevel === "conf") {
         updatedFilteredSpots = datas.filter(
@@ -77,14 +82,24 @@ function Algo() {
             spot.wave_height <= dataGen.surfLevels[2].maxWaveHeight &&
             spot.windspeed_10m <= dataGen.surfLevels[2].maxWindSpeed
         );
+        if (updatedFilteredSpots.length === 0) {
+          conditions = false;
+        }
       }
       if (userLevel === "champ") {
         updatedFilteredSpots = datas.filter(
           (spot) =>
-            spot.wave_height >= dataGen.surfLevels[1].minWaveHeight &&
+            spot.wave_height >= dataGen.surfLevels[2].minWaveHeight &&
             spot.wave_height < dataGen.surfLevels[3].maxWaveHeight &&
             spot.windspeed_10m <= dataGen.surfLevels[3].maxWindSpeed
         );
+        if (updatedFilteredSpots.length === 0) {
+          conditions = false;
+        }
+        if (!conditions) {
+          // eslint-disable-next-line no-alert
+          alert("Désolé il n'y a pas de spot à ton niveau dans ce département");
+        }
       }
     }
     // si les deux filtres sont sélectionnés en même temps
@@ -145,10 +160,10 @@ function Algo() {
 
     setFilteredSpots(updatedFilteredSpots);
   }, [selectedDepartmentId, userLevel, datas]);
-
+  const [moveFilters, setMoveFilters] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
-      setCarrouselSpot(window.innerWidth);
+      setMoveFilters(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
 
@@ -156,7 +171,7 @@ function Algo() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  if (carrouselSpot <= 4000) {
+  if (moveFilters >= 400) {
     return (
       <>
         <Filters
@@ -169,8 +184,10 @@ function Algo() {
               autoPlay
               interval={5000}
               infiniteLoop
-              showStatus={false}
               emulateTouch
+              showThumbs
+              stopOnHover
+              showIndicators={false}
             >
               {filteredSpots.map((spot) => (
                 <Spots
@@ -195,6 +212,43 @@ function Algo() {
       </>
     );
   }
+  return (
+    <div>
+      {filteredSpots.length !== 0 ? (
+        <Carousel
+          autoPlay
+          interval={5000}
+          infiniteLoop
+          emulateTouch
+          showThumbs
+          stopOnHover
+          showIndicators={false}
+        >
+          {filteredSpots.map((spot) => (
+            <Spots
+              dataSpot={spot}
+              selectedDepartmentCoords={selectedDepartmentCoords}
+              weatherCode={spot.weathercode}
+              temperature={spot.temperature_2m}
+              waveHeight={spot.wave_height}
+              windSpeed={spot.windspeed_10m}
+              windDirection={spot.winddirection_10m}
+              selectedDepartmentId={selectedDepartmentId}
+              key={spot.dep}
+            />
+          ))}
+        </Carousel>
+      ) : (
+        <div className="msg">
+          <p>Sélectionne un filtre pour faire apparaitre un spot ! </p>
+        </div>
+      )}
+      <Filters
+        handleSelectLoc={handleSelectLoc}
+        handleSelectLev={handleSelectLev}
+      />
+    </div>
+  );
 }
 
 Algo.loader = async () => {

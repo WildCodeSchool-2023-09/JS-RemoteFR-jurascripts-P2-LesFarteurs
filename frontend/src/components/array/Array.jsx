@@ -31,6 +31,7 @@ function Array({
     if (windDir >= 202.5 && windDir < 247.5) return "Est Sud Est";
     if (windDir >= 247.5 && windDir < 292.5) return "Sud Est";
     if (windDir >= 292.5 && windDir < 337.5) return "Sud Sud Est";
+    if (windDir > 337.6) return "Nord";
     return windDir;
   };
 
@@ -44,17 +45,17 @@ function Array({
       </span>
 
       <span>
-        <img src="/temp.png" alt="logo2" />
+        <img src="./public/temp.png" alt="logo2" />
         {temperature}°C
       </span>
 
       <span>
-        <img src="/waveHeight.png" alt="logo3" />
+        <img src="./public//waveHeight.png" alt="logo3" />
         {waveHeight} m
       </span>
 
       <span>
-        <img src="/windSD.png" alt="logo4" />
+        <img src="./public/windSD.png" alt="logo4" />
         {windSpeed} km/h
       </span>
       <span className="windD">{wind(windDirection)}</span>

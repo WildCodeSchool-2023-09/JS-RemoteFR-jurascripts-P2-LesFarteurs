@@ -2,11 +2,12 @@
 @import "src/styles/_mixins.scss";
 
 .contact {
-  background: url("/public/water.gif");
+  background: url("/public/backcontact.jpg");
   background-size: cover;
   height: 100vh;
   width: 100vw;
   display: flex;
+  overflow-x: hidden;
 }
 
 .formInput {
@@ -21,16 +22,33 @@
   font-size: $fs-p;
   width: 100%;
   height: 4vh;
-  background: white;
-  color: black;
-  border: 1px solid gray;
+  background: $btn_filter;
+  opacity: 0.5;
+  color: gray;
+  border: 1px solid $nav;
   border-radius: 6px;
   outline: none;
   padding: 10px;
 }
 
+#message {
+  display: block;
+  font-size: $fs-p;
+  width: 100%;
+  height: 20vh;
+  background: $btn_filter;
+  opacity: 0.5;
+  color: gray;
+  border: 1px solid $nav;
+  border-radius: 6px;
+  outline: none;
+  padding: 10px;
+  text-align: left;
+  resize: none;
+}
+
 .floatingInput:focus,
-textarea:focus {
+#message:focus {
   border: 1px solid blue;
 }
 
@@ -55,15 +73,6 @@ textarea:focus {
   }
 }
 
-textarea {
-  font-size: $fs-p;
-  margin-top: 2vh;
-  color: black;
-  border-radius: 6px;
-  outline: none;
-  padding: 10px;
-}
-
 .errorMessage {
   color: red;
 }
@@ -71,7 +80,7 @@ textarea {
 .custom-popup {
   position: fixed;
   width: 30vw;
-  height: 15vh;
+  height: 18vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

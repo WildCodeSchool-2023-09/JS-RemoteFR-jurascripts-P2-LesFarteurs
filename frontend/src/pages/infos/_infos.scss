@@ -11,14 +11,28 @@
     font-size: $fs-h1;
     margin: 1vh auto;
     text-align: center;
+    color: #fff;
+    line-height: 1em;
+    transform: translateY(-50%);
+    width: 100%;
+
+    @include text3d(
+      adjust-color($primarycolour, $lightness: -8%),
+      $depth: 5,
+      $primaryshadowcolour:
+        adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
+      $shadowopacity: 0.01
+    );
   }
-  h2 {
-    text-align: center;
-    font-size: $fs-h2;
-    margin: 2vh auto 4vh;
-  }
+}
+
+.condition h2 {
+  text-align: center;
+  font-size: $fs-h2;
+  margin: 2vh auto 4vh;
+
   p {
-    font-size: $fs-h3;
+    font-size: $fs-p;
   }
 }
 
@@ -41,7 +55,7 @@ h4 {
   margin: 5vh 2vw;
   padding: 2vh 2vw;
   box-shadow:
-    0 20px 20px rgba(14, 21, 47, 0.4),
+    10px 10px 20px rgba(14, 21, 47, 0.4),
     0 16px 40px rgba(14, 21, 47, 0.4);
 }
 
