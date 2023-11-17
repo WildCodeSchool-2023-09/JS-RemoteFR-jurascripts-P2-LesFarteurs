@@ -4,6 +4,9 @@
 .infos {
   background-color: #205464;
   padding: 30px;
+  p {
+    font-size: $fs-p;
+  }
 }
 .condition {
   margin: 5vh 2vw;
@@ -13,16 +16,10 @@
     text-align: center;
     color: #fff;
     line-height: 1em;
-    transform: translateY(-50%);
     width: 100%;
-
-    @include text3d(
-      adjust-color($primarycolour, $lightness: -8%),
-      $depth: 5,
-      $primaryshadowcolour:
-        adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
-      $shadowopacity: 0.01
-    );
+  }
+  p {
+    margin: 0 10vw;
   }
 }
 
@@ -30,10 +27,6 @@
   text-align: center;
   font-size: $fs-h2;
   margin: 2vh auto 4vh;
-
-  p {
-    font-size: $fs-p;
-  }
 }
 
 h2 {

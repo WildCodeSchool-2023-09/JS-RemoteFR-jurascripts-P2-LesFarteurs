@@ -10,13 +10,17 @@
   margin: auto;
   // margin-bottom: 5vh;
   background: linear-gradient(to top right, #205464, #108888);
-  box-shadow:
-    0 45px 100px rgba(14, 21, 47, 0.4),
-    0 16px 40px rgba(14, 21, 47, 0.4);
-  button {
-    margin: auto;
-  }
+  box-shadow: 0 5px 30px rgba(14, 21, 47, 0.4);
 }
+
+#btnImg {
+  background: transparent;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .imgSpot {
   display: flex;
   justify-content: center;
@@ -84,12 +88,13 @@
   cursor: pointer;
 }
 
-button {
+#plusMoins {
   background-color: transparent;
   border-style: none;
   padding-right: 20px;
-  font-size: $fs-p;
+  font-size: calc(0.6rem + 0.5vw);
 }
+
 //MEDIA QUERY//
 @media screen and (max-width: 768px) {
   .spotsContainer {
@@ -108,6 +113,13 @@ button {
       justify-self: center;
       width: 50px;
     }
+  }
+
+  #btnImg {
+    background: transparent;
+    padding: 15px;
+    width: 100%;
+    height: auto;
   }
 
   .imgSpot {
@@ -131,9 +143,5 @@ button {
   .others {
     padding: 1vw;
     margin-bottom: 2vh;
-  }
-
-  button {
-    padding: 15px;
   }
 }

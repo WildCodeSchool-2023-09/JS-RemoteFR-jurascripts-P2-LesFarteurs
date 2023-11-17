@@ -45,17 +45,17 @@ function Array({
       </span>
 
       <span>
-        <img src="./public/temp.png" alt="logo2" />
+        <img src="/temp.png" alt="logo2" />
         {temperature}°C
       </span>
 
       <span>
-        <img src="./public//waveHeight.png" alt="logo3" />
+        <img src="/waveHeight.png" alt="logo3" />
         {waveHeight} m
       </span>
 
       <span>
-        <img src="./public/windSD.png" alt="logo4" />
+        <img src="/windSD.png" alt="logo4" />
         {windSpeed} km/h
       </span>
       <span className="windD">{wind(windDirection)}</span>

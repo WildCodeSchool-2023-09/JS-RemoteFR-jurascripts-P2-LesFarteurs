@@ -19,8 +19,7 @@
 
 .msg {
   width: 90%;
-  margin: auto;
-  margin-bottom: 10vh;
+  margin: 20vh auto;
   background: linear-gradient(to top right, #205464, #108888);
   box-shadow:
     0 45px 100px rgba(14, 21, 47, 0.4),
@@ -40,5 +39,8 @@
     text-shadow: $bg;
     font-size: $fs-p;
     color: $btn_filter;
+  }
+  .msg {
+    margin: 10vh auto;
   }
 }

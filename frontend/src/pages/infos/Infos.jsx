@@ -47,7 +47,7 @@ function Infos() {
               Ce site web choisit le spot idéal en fonction des conditions météo
               en mer et sur terre.
             </p>
-            <h4>Tout d'abord, comment se créer une vague ?</h4>
+            <h4>Tout d'abord, comment se créée une vague ?</h4>
             <p>
               Le vent est l'unique paramètre de la formation de la houle en mer,
               il peut aussi bien la renforcer que la réduire. Trois éléments
@@ -75,9 +75,12 @@ function Infos() {
               À l'inverse, le vent « Onshore » souffle de l'océan vers la terre,
               il désordonne et couche les vagues, dégradant ainsi la qualité
               d'une session mais reste quand même cool pour débutant et
-              intermédiaire. Plus tu surfes, plus tu progresses, c'est comme
-              tout. L'Océan reste quelques fois imprévisible, il t'offrira un
-              jour le meilleur et inversement, ça reste la nature !
+              intermédiaire.
+              <br />
+              Plus tu surfes, plus tu progresses, c'est comme tout.
+              <br />
+              L'Océan reste quelques fois imprévisible, il t'offrira un jour le
+              meilleur et inversement, ça reste la nature !
             </p>
           </div>
           <img className="imgSurfeur" src={Surfeur4} alt="surfeur4" />
@@ -90,17 +93,17 @@ function Infos() {
           <h4>Niveaux</h4>
           <p>
             Novice &#x2794; Savoir nager un minimum, avoir jamais ou peu surfer,
-            connait aucune règle ds l'eau et les dangers.
+            ne connaître aucune règle dans l'eau et les dangers.
             <br />
             <br />
-            Intermédiaire &#x2794; Savoir nager, comprend l’eau un minimum
-            (courant, remou, la mousse, une vague), connait les règles (respect
-            des autres, par où rentrer pour bien se placer et revenir sans
-            gêner...) et les dangers (courant, ta position de planche et les
-            autres surfeurs), tenir un minimum debout sur sa planche.
+            Intermédiaire &#x2794; Savoir nager, comprendre l’eau un minimum
+            (courant, remou, la mousse, une vague), connaître les règles
+            (respect des autres, par où rentrer pour bien se placer et revenir
+            sans gêner...) et les dangers (courant, ta position de planche et
+            les autres surfeurs), tenir un minimum debout sur sa planche.
             <br />
             <br />
-            Confirmé &#x2794; Gères tout ça ! 😉
+            Confirmé &#x2794; Gérer tout ça ! 😉
           </p>
           <br />
 
@@ -118,8 +121,8 @@ function Infos() {
             Hauteur / Swell :
             <br />
             La hauteur de la vague décide la difficulté et le choix de sa
-            planche (Longboard = Grande planche pr vague mole, Shortboard=
-            petite planche pr vague rapide et figure)
+            planche (Longboard = grande planche pourr vague mole, Shortboard =
+            petite planche pour vague rapide et figure).
           </p>
           <br />
           <p>
@@ -161,15 +164,15 @@ function Infos() {
             <br />
             La planche de surf :
             <br />
-            En mousse pr les colisions avec toi-même et autrui. Position plus
+            En mousse pour les colisions avec toi-même et autrui. Position plus
             stable pour faciliter la pratique.
-            <br /> En epoxy (mousse entouré de fibres collées) pour les
+            <br /> En epoxy (mousse entourée de fibres collées) pour les
             confirmés, tu gagnes en vitesse et virage.
           </p>
 
           <h4>Conseils entretien équipements</h4>
           <p>
-            Après chaque session, penses à laver tous les équipements à l'eau
+            Après chaque session, pense à laver tous les équipements à l'eau
             légèrement savonneuse, leur durée de vie mais aussi leur odeur n'en
             seront que meilleures ! Pour les petits impacts sur ta board, va
             voir le shaper du coin ! Bon surf !

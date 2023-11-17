@@ -12,6 +12,11 @@
   a {
     padding: 5px 10px;
   }
+
+  button {
+    background: transparent;
+    border: none;
+  }
 }
 
 .calendar,
@@ -95,17 +100,17 @@
 }
 
 #lev {
-  width: calc(90px + 2vw);
+  width: calc(15vh + 2vw);
   height: auto;
   cursor: pointer;
 }
 
 #loc {
-  width: calc(90px + 2vw);
+  width: calc(15vh + 2vw);
   height: auto;
 }
 #cal {
-  width: calc(90px + 2vw);
+  width: calc(15vh + 2vw);
   height: auto;
 }
 
@@ -127,6 +132,7 @@ strong {
   .filtersContainer {
     button {
       padding: 0;
+      background: transparent;
     }
   }
   select {
