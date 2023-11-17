@@ -1,3 +1,5 @@
+import Xav from "/public/xa40.jpg";
+
 const dataSpots = [
   // {
   //   id: 100,
@@ -204,8 +206,7 @@ const dataSpots = [
     name: "Contis - Plage de Contis - Landes",
     intro:
       "En face du phare de Contis, c'est un beach break de bonne qualité qui conviendra à la plupart des surfeurs.",
-    imgSrc:
-      "https://cdn.pixabay.com/photo/2019/04/27/23/09/beach-4161593_640.jpg",
+    imgSrc: "/xa40.jpg",
     desc: "Le spot se trouve à l'embouchure du courant de Contis. La présence de plusieurs écoles, surfshops, bars et restos en font un spot très sympa. On peut également loger au camping Lous Seurrots en vue d'un surf trip sur la côte landaise.",
     dep: 40,
   },

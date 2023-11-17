@@ -66,19 +66,20 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
             <p>
               <br />
               <strong>Novice</strong> Prendre 2/3 cours avec un moniteur de
-              surf. Savoir nager un minimum, jamais surfé, ne connaît aucune
-              règle dans l’eau ni les dangers (regarde la rubrique "Infos et
-              définitions").
+              surf. Savoir nager un minimum, avoir jamais ou peu surfer, ne
+              connaître aucune règle dans l'eau et les dangers. (regarde la
+              rubrique "Infos et définitions").
               <br />
               <br />
-              <strong>Intermédiaire</strong> Savoir nager, comprend l’eau un
-              minimum (courant, remou, la mousse, une vague), connait les règles
-              (respect des autres, par où rentrer pour bien se placer et revenir
-              sans gêner...) et les dangers (courant, ta position de planche et
-              les autres surfeurs), tenir un minimum debout sur sa planche.
+              <strong>Intermédiaire</strong> Savoir nager, comprendre l’eau un
+              minimum (courant, remou, la mousse, une vague), connaître les
+              règles (respect des autres, par où rentrer pour bien se placer et
+              revenir sans gêner...) et les dangers (courant, ta position de
+              planche et les autres surfeurs), tenir un minimum debout sur sa
+              planche.
               <br />
               <br />
-              <strong>Confirmé</strong> Gère tout ça ! 😉
+              <strong>Confirmé</strong> Gérer tout ça ! 😉
               <br />
               <br />
               <strong>Champion</strong> Tu fais de la compétition, les grosses
@@ -86,7 +87,7 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
               <br />
               <br />
               <br />
-              PS : Choisis bien ton équipement !
+              P.S : Choisis bien ton équipement !
             </p>
           </div>
         </Popup>

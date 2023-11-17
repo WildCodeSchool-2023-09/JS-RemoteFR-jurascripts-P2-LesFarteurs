@@ -66,6 +66,7 @@
   margin-top: 3vh;
   background-color: $nav;
   border-radius: 6px;
+  border: none;
 
   &:hover {
     background-color: $btn_filter;
@@ -102,5 +103,6 @@
   margin-bottom: 20px;
   padding: 15px 15px;
   border-radius: 100%;
+  background-color: transparent;
   cursor: pointer;
 }
