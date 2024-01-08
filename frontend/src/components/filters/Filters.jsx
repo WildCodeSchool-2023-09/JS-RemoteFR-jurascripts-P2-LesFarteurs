@@ -30,12 +30,12 @@ function Filters({ handleSelectLev, handleSelectLoc }) {
             <option name="today" value="today">
               Aujourd'hui
             </option>
-            <option name="tomorrow" value="tomorrow">
+            {/* <option name="tomorrow" value="tomorrow">
               Demain
             </option>
             <option name="dayAfterTmw" value="dayAfterTmw">
               Après-demain
-            </option>
+            </option> */}
           </select>
         </button>
       </div>
