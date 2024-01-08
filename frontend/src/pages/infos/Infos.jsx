@@ -26,10 +26,6 @@ function Infos() {
           <h1>Infos et définitions</h1>
           <h2>Tout comprendre sur le surf et ses dangers</h2>
           <p>
-            La première question à se poser, c'est est-ce que je suis dans le
-            bon état d'esprit aujourd'hui pour surfer ? La réponse est "oui" ?!
-            Alors let's go !
-            <br />
             <br />
             Les planches sont sur le toit, les combinaisons dans le coffre, et
             après 30 min de route ou 6h pour certains, vous êtes enfin sur la
@@ -47,7 +43,7 @@ function Infos() {
               Ce site web choisit le spot idéal en fonction des conditions météo
               en mer et sur terre.
             </p>
-            <h4>Tout d'abord, comment se créée une vague ?</h4>
+            <h3>Tout d'abord, comment se créée une vague ?</h3>
             <p>
               Le vent est l'unique paramètre de la formation de la houle en mer,
               il peut aussi bien la renforcer que la réduire. Trois éléments
